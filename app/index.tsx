@@ -3,8 +3,8 @@ import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/components/Effect";
 import * as Linking from "expo-linking";
+import TopBarButton from "@/components/TopBarButton";
 
-const url = "https://resume.shettydev.com";
 const defaultColor = "#B39DDB";
 const title = "Shetty's Resume";
 const content = "TODO";
@@ -14,8 +14,19 @@ export default function Index() {
   const { theme } = useMaterial3Theme({ fallbackSourceColor: defaultColor });
 
   const openResume = () => {
+    const url = "https://resume.shettydev.com";
     if (Platform.OS === "web") {
       window.location.href = url;
+    } else {
+      Linking.openURL(url);
+    }
+  };
+
+  const openGithub = () => {
+    const username = "Yttehs-HDX";
+    const url = `https://github.com/${username}`;
+    if (Platform.OS === "web") {
+      window.open(url, "_blank");
     } else {
       Linking.openURL(url);
     }
@@ -44,6 +55,21 @@ export default function Index() {
             styles.headerTitle,
           ],
           headerShadowVisible: false,
+
+          headerRight() {
+            return (
+              <View style={styles.buttonRow}>
+                <TopBarButton
+                  style={styles.button}
+                  colorScheme={colorScheme}
+                  label="Github"
+                  lib="AntDesign"
+                  icon="github"
+                  onPress={ openGithub }
+                />
+              </View>
+            );
+          },
         }} />
       <View style={[
         { backgroundColor: theme[colorScheme].secondaryContainer },
@@ -67,5 +93,14 @@ const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
     padding: 16,
+  },
+  buttonRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginRight: 24,
+  },
+  button: {
+    paddingLeft: 16,
   },
 });
