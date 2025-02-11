@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontFamily: "cursive",
     fontWeight: "bold",
+    fontSize: 20,
   },
   contentContainer: {
     flex: 1,
