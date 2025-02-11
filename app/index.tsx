@@ -45,6 +45,14 @@ export default function Index() {
                 <TopBarButton
                   style={styles.button}
                   colorScheme={colorScheme}
+                  label="Code"
+                  lib="FontAwesome5"
+                  icon="laptop-code"
+                  onPress={ () => openUrl("https://github.com/Yttehs-HDX/Resume", true) }
+                />
+                <TopBarButton
+                  style={styles.button}
+                  colorScheme={colorScheme}
                   label="Blog"
                   lib="Entypo"
                   icon="pencil"
