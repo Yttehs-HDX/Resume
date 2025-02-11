@@ -1,5 +1,5 @@
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
-import { StyleSheet, View, Image, Text } from "react-native";
+import { StyleSheet, View, Image, Text, ScrollView } from "react-native";
 
 type Props = {
   colorScheme: "light" | "dark";
@@ -11,16 +11,18 @@ export default function Introduction({ colorScheme }: Props) {
 
   return (
     <View style={styles.rowContainer}>
-      <Image
-        style={styles.image}
-        source={{ uri: "https://avatars.githubusercontent.com/u/72240633?s=400&u=7b32b5df0b0d4fa852f579e82cf78b403fa98b67&v=4" }}
-      />
-      <View style={styles.spacer} />
-      <View style={styles.labelContainer}>
-        <Text style={[styles.label, { color: fontColor }]}>
-          Hello! 私は Shetty Yttehs です
-        </Text>
-      </View>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <Image
+          style={styles.image}
+          source={{ uri: "https://avatars.githubusercontent.com/u/72240633?s=400&u=7b32b5df0b0d4fa852f579e82cf78b403fa98b67&v=4" }}
+        />
+        <View style={styles.spacer} />
+        <View style={styles.labelContainer}>
+          <Text style={[styles.label, { color: fontColor }]}>
+            Hello! 私は Shetty Yttehs です
+          </Text>
+        </View>
+      </ScrollView>
     </View>
   );
 }
