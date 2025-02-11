@@ -1,6 +1,7 @@
 import { StyleSheet, Text, useColorScheme, View } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
+import Effect from "@/components/Effect";
 
 const defaultColor = "#B39DDB";
 const title = "Shetty's Resume";
@@ -30,6 +31,7 @@ export default function Index() {
         <Text style={{ color: theme[colorScheme].onSecondaryContainer }}>
           {content}
         </Text>
+        <Effect listen={colorScheme} />
       </View>
     </>
   );
