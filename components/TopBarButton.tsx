@@ -1,11 +1,12 @@
 import { Pressable, StyleSheet, Text } from "react-native";
-import { AntDesign, MaterialIcons } from "@expo/vector-icons";
+import { AntDesign, Entypo, MaterialIcons } from "@expo/vector-icons";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 
-type IconLib = 'MaterialIcons' | 'AntDesign';
+type IconLib = 'AntDesign' | 'Entypo' | 'MaterialIcons';
 const ICON_LIBS = {
-  AntDesign,
-  MaterialIcons,
+  "AntDesign": AntDesign,
+  "Entypo": Entypo,
+  "MaterialIcons": MaterialIcons,
 };
 
 type Props = {

@@ -4,6 +4,7 @@ import { Stack } from "expo-router";
 import Effect from "@/components/Effect";
 import * as Linking from "expo-linking";
 import TopBarButton from "@/components/TopBarButton";
+import { openGithub, openUrl } from "@/components/utils/UrlUtil";
 
 const defaultColor = "#B39DDB";
 const title = "Shetty's Resume";
@@ -13,25 +14,6 @@ export default function Index() {
   const colorScheme = useColorScheme() || "light";
   const { theme } = useMaterial3Theme({ fallbackSourceColor: defaultColor });
 
-  const openResume = () => {
-    const url = "https://resume.shettydev.com";
-    if (Platform.OS === "web") {
-      window.location.href = url;
-    } else {
-      Linking.openURL(url);
-    }
-  };
-
-  const openGithub = () => {
-    const username = "Yttehs-HDX";
-    const url = `https://github.com/${username}`;
-    if (Platform.OS === "web") {
-      window.open(url, "_blank");
-    } else {
-      Linking.openURL(url);
-    }
-  };
-
   return (
     <>
       <Stack.Screen options={{
@@ -40,7 +22,7 @@ export default function Index() {
           }],
           headerTitle() {
             return (
-              <Pressable onPress={ openResume }>
+              <Pressable onPress={ () => openUrl("https://resume.shettydev.com", false) }>
                 <Text style={[
                   { color: theme[colorScheme].onPrimaryContainer },
                   styles.headerTitle,
@@ -62,10 +44,18 @@ export default function Index() {
                 <TopBarButton
                   style={styles.button}
                   colorScheme={colorScheme}
+                  label="Blog"
+                  lib="Entypo"
+                  icon="pencil"
+                  onPress={ () => openUrl("https://blog.shettydev.com", true) }
+                />
+                <TopBarButton
+                  style={styles.button}
+                  colorScheme={colorScheme}
                   label="Github"
                   lib="AntDesign"
                   icon="github"
-                  onPress={ openGithub }
+                  onPress={ () => openGithub("Yttehs-HDX") }
                 />
               </View>
             );
