@@ -1,9 +1,11 @@
-import { Pressable, StyleSheet, Text, useColorScheme, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, useColorScheme, View } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/components/Effect";
 import TopBarButton from "@/components/TopBarButton";
 import { openGithub, openUrl } from "@/components/utils/UrlUtil";
+import MainContent from "@/components/MainContent";
+import Introduction from "@/components/Introduction";
 
 const defaultColor = "#B39DDB";
 const title = "Shetty's Resume";
@@ -60,15 +62,16 @@ export default function Index() {
             );
           },
         }} />
-      <View style={[
-        { backgroundColor: theme[colorScheme].secondaryContainer },
-        styles.contentContainer
-      ]}>
-        <Text style={{ color: theme[colorScheme].onSecondaryContainer }}>
-          {content}
-        </Text>
-        <Effect listen={colorScheme} />
-      </View>
+      <ScrollView style={{ backgroundColor: theme[colorScheme].secondaryContainer }}>
+        <View style={[
+          { backgroundColor: theme[colorScheme].secondaryContainer },
+          styles.contentContainer
+        ]}>
+          <Introduction colorScheme={colorScheme} />
+          <MainContent colorScheme={colorScheme} />
+          <Effect listen={colorScheme} />
+        </View>
+      </ScrollView>
     </>
   );
 }
@@ -81,7 +84,9 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
-    padding: 16,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 24,
   },
   buttonRow: {
     flexDirection: "row",
