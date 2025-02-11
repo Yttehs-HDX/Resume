@@ -1,8 +1,7 @@
-import { Platform, Pressable, StyleSheet, Text, useColorScheme, View } from "react-native";
+import { Pressable, StyleSheet, Text, useColorScheme, View } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/components/Effect";
-import * as Linking from "expo-linking";
 import TopBarButton from "@/components/TopBarButton";
 import { openGithub, openUrl } from "@/components/utils/UrlUtil";
 
