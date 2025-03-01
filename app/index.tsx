@@ -7,7 +7,7 @@ import { openGithub, openUrl } from "@/components/utils/UrlUtil";
 import MainContent from "@/components/MainContent";
 import Introduction from "@/components/Introduction";
 
-const defaultColor = "#B39DDB";
+const defaultColor = "#1F96F2";
 const title = "Shetty's Resume";
 const content = "TODO";
 
