@@ -8,7 +8,8 @@ Powered by React Native [Expo](https://docs.expo.dev).
 
 ## URL
 
-[resume.shettydev.com](https://resume.shettydev.com)
+- Manually build: [resume.shettydev.com](https://resume.shettydev.com)
+- CI build: [resume-dev.shettydev.com](https://resume-dev.shettydev.com)
 
 ## License
 
