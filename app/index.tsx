@@ -1,17 +1,12 @@
-import { ScrollView, StyleSheet, Text, Pressable, useColorScheme, View, Dimensions } from "react-native";
+import { ScrollView, StyleSheet, Text, Pressable, useColorScheme, View, Dimensions, Platform } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/components/utils/Effect";
 import TopBarButton from "@/components/top-bar/TopBarButton";
 import { openUrl } from "@/components/utils/UrlUtil";
 import Introduction from "@/components/Introduction";
-import Card from "@/components/Card";
 import { UIConfig } from "@/storage/UIConfig";
 import { BasicInfo } from "@/constants/BasicInfo";
-import { Outstanding } from "@/constants/Outstanding";
-import { ProfessionalSkills } from "@/constants/ProfessionalSkills";
-import { Contact } from "@/constants/Contact";
-import { Education } from "@/constants/Education";
 import CardRow from "@/components/cards/CardRow";
 
 export default function Index() {
@@ -66,18 +61,20 @@ export default function Index() {
           },
         }} />
       <ScrollView style={[styles.scrollView, { backgroundColor: theme[colorScheme].surface }]}>
-        <View style={[styles.contentContainer, { backgroundColor: theme[colorScheme].surface }]}>
-          <Introduction
-            theme={theme}
-            colorScheme={colorScheme}
-            avatar={BasicInfo.Avatar}
-            nickname={BasicInfo.Nickname}
-          />
-          <CardRow
-            theme={theme}
-            colorScheme={colorScheme}
-          />
-          <Effect listen={colorScheme} />
+        <View style={styles.contentContainer}>
+          <View style={{ width: Platform.OS === 'web' ? "80%" : "100%" }}>
+            <Introduction
+              theme={theme}
+              colorScheme={colorScheme}
+              avatar={BasicInfo.Avatar}
+              nickname={BasicInfo.Nickname}
+            />
+            <CardRow
+              theme={theme}
+              colorScheme={colorScheme}
+            />
+            <Effect listen={colorScheme} />
+          </View>
         </View>
         <View style={{ height: screenHeight * 0.3 }} />
       </ScrollView>
@@ -97,7 +94,6 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
-    width: "100%",
     alignItems: "center",
     justifyContent: "center",
   },

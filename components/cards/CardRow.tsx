@@ -23,7 +23,6 @@ export default function CardRow({ theme, colorScheme }: CardRowProps) {
 
 const styles = StyleSheet.create({
   cardColumn: {
-    width: "80%",
     alignItems: "center",
     justifyContent: "center",
     gap: 32,
