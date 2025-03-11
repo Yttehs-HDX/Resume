@@ -33,6 +33,8 @@ const styles = StyleSheet.create({
   titleBackground: {
     width: "100%",
     flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     gap: 16,

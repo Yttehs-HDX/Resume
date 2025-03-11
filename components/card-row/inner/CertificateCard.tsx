@@ -2,8 +2,9 @@ import Card from "@/components/card/Card";
 import Content from "@/components/card/inner/Content";
 import Title from "@/components/card/inner/Title";
 import { Certificate } from "@/constants/Certificate";
+import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
-import { View } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 type Props = {
   theme: Material3Theme;
@@ -17,16 +18,29 @@ export default function CertificateCard({ theme, colorScheme }: Props) {
       colorScheme={colorScheme}
       title={
         <>
+          <FontAwesome name="certificate" size={24} color={theme[colorScheme].onPrimaryContainer} />
           <Title theme={theme} colorScheme={colorScheme} text={Certificate.Title} />
         </>
       }
       content={
         <View>
           {Certificate.List.map((item, index) => (
-            <Content key={index} theme={theme} colorScheme={colorScheme} text={item} />
+            <View style={styles.row}>
+              <Ionicons name="checkmark-circle" size={16} color={theme[colorScheme].onPrimaryContainer} />
+              <Content key={index} theme={theme} colorScheme={colorScheme} text={item} />
+            </View>
           ))}
         </View>
       }
     />
   );
 }
+
+const styles = StyleSheet.create({
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    gap: 8,
+  },
+});
