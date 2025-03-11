@@ -14,6 +14,6 @@ export default function Line({ theme, colorScheme }: Props) {
 const styles = StyleSheet.create({
   line: {
     height: 1,
-    width: "95%",
+    width: "100%",
   },
 });
