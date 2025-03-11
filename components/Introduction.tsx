@@ -26,7 +26,7 @@ export default function Introduction({ theme, colorScheme, avatar, nickname, lan
           <View style={styles.spacer} />
           <View style={styles.labelContainer}>
             <Text style={[styles.label, { color: fontColor }]}>
-              { (language === "jp" || undefined) && `ハロ、私は ${nickname} です` }
+              { language === "jp" || !language && `ハロ、私は ${nickname} です` }
               { language === "zh" && `你好，我是 ${nickname}` }
               { language === "en" && `Hello, I am ${nickname}` }
             </Text>

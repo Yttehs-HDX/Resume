@@ -1,7 +1,7 @@
 import * as Linking from "expo-linking";
 import { Platform } from "react-native";
 
-export const openUrl = (url: string, newTab: boolean) => {
+export const openUrl = (url: string, newTab?: boolean) => {
   switch (Platform.OS) {
     case "web":
       if (newTab) {

@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, Pressable, useColorScheme, View, Dimensions } from "react-native";
+import { ScrollView, StyleSheet, useColorScheme, View, Dimensions } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/utils/Effect";
@@ -9,6 +9,7 @@ import { UIConfig } from "@/storage/UIConfig";
 import { BasicInfo } from "@/constants/BasicInfo";
 import CardRow from "@/components/card-row/CardRow";
 import getDeviceType from "@/utils/Device";
+import Header from "@/components/Header";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -20,15 +21,12 @@ export default function Index() {
       <Stack.Screen options={{
           headerStyle: [{ backgroundColor: theme[colorScheme].primaryContainer }],
           headerTitle() {
-            return (
-              <Pressable onPress={ () => openUrl(BasicInfo.Resume, false) }>
-                <Text style={[styles.headerTitle, { color: theme[colorScheme].onPrimaryContainer }]}>
-                  {BasicInfo.NicknameShort}'s Resume
-                </Text>
-              </Pressable>
-            )
+            return <Header
+              theme={theme}
+              colorScheme={colorScheme}
+              onClick={() => openUrl(BasicInfo.Resume)}
+            />;
           },
-          headerTitleStyle: [styles.headerTitle, { color: theme[colorScheme].onPrimaryContainer }],
           headerShadowVisible: false,
           headerRight() {
             return (
@@ -93,11 +91,6 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  headerTitle: {
-    fontFamily: "cursive",
-    fontWeight: "bold",
-    fontSize: 20,
-  },
   scrollView: {
     flex: 1,
     width: "100%",
