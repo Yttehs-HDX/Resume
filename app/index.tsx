@@ -7,7 +7,7 @@ import { openUrl } from "@/utils/UrlUtil";
 import Introduction from "@/components/Introduction";
 import { UIConfig } from "@/storage/UIConfig";
 import { BasicInfo } from "@/constants/BasicInfo";
-import CardRow from "@/components/cards/CardRow";
+import CardRow from "@/components/card-row/CardRow";
 import getDeviceType from "@/utils/Device";
 
 export default function Index() {
