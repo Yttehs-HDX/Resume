@@ -39,6 +39,7 @@ export default function Introduction({ theme, colorScheme, avatar, nickname, lan
 
 const styles = StyleSheet.create({
   container: {
+    width: "80%",
     alignItems: "center",
     justifyContent: "center",
     marginVertical: 32,
