@@ -1,13 +1,14 @@
-import { ScrollView, StyleSheet, Text, Pressable, useColorScheme, View, Dimensions, Platform } from "react-native";
+import { ScrollView, StyleSheet, Text, Pressable, useColorScheme, View, Dimensions } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
-import Effect from "@/components/utils/Effect";
+import Effect from "@/utils/Effect";
 import TopBarButton from "@/components/top-bar/TopBarButton";
-import { openUrl } from "@/components/utils/UrlUtil";
+import { openUrl } from "@/utils/UrlUtil";
 import Introduction from "@/components/Introduction";
 import { UIConfig } from "@/storage/UIConfig";
 import { BasicInfo } from "@/constants/BasicInfo";
 import CardRow from "@/components/cards/CardRow";
+import getDeviceType from "@/utils/Device";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -62,7 +63,16 @@ export default function Index() {
         }} />
       <ScrollView style={[styles.scrollView, { backgroundColor: theme[colorScheme].surface }]}>
         <View style={styles.contentContainer}>
-          <View style={{ width: Platform.OS === 'web' ? "80%" : "100%" }}>
+          <View style={{ width: (() => {
+            switch (getDeviceType()) {
+              case 'tablet':
+                return "80%";
+              case 'desktop':
+                return "80%";
+              default:
+                return "100%";
+            }
+          })() }}>
             <Introduction
               theme={theme}
               colorScheme={colorScheme}
