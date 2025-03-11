@@ -7,7 +7,7 @@ import ContactCard from "./inner/ContactCard";
 import ClubExperienceCard from "./inner/ClubExperienceCard";
 import CertificateCard from "./inner/CertificateCard";
 import Line from "../card/inner/Line";
-import RepoCardList from "./inner/RepoCardList";
+import RepoCardMatrix from "./inner/RepoCardMatrix";
 
 type CardRowProps = {
   theme: Material3Theme;
@@ -24,7 +24,7 @@ export default function CardRow({ theme, colorScheme }: CardRowProps) {
       <CertificateCard theme={theme} colorScheme={colorScheme} />
       <ContactCard theme={theme} colorScheme={colorScheme} />
       <Line theme={theme} colorScheme={colorScheme} width="30%" />
-      <RepoCardList theme={theme} colorScheme={colorScheme} />
+      <RepoCardMatrix theme={theme} colorScheme={colorScheme} />
     </View>
   );
 }
