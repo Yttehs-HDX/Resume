@@ -3,7 +3,7 @@ import Title from "@/components/text-card-inner/Title";
 import Card from "@/components/Card";
 import { Contact } from "@/constants/Contact";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
-import { MaterialIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { View, StyleSheet } from "react-native";
 import ClickableContent from "@/components/text-card-inner/ClickableContent";
 import { BasicInfo } from "@/constants/BasicInfo";
@@ -21,7 +21,7 @@ export default function ContactCard({ theme, colorScheme }: Props) {
       colorScheme={colorScheme}
       title={
         <>
-          <MaterialIcons name="contact-mail" size={24} color={theme[colorScheme].onPrimaryContainer} />
+          <MaterialCommunityIcons name="link-variant" size={24} color={theme[colorScheme].onPrimaryContainer} />
           <Title theme={theme} colorScheme={colorScheme} text={Contact.Title} />
         </>
       }
