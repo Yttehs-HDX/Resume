@@ -24,7 +24,7 @@ export default function Index() {
           }],
           headerTitle() {
             return (
-              <Pressable onPress={ () => openUrl(BasicInfo.SourceCode, false) }>
+              <Pressable onPress={ () => openUrl(BasicInfo.Resume, false) }>
                 <Text style={[
                   { color: theme[colorScheme].onPrimaryContainer },
                   styles.headerTitle,
