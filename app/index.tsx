@@ -6,6 +6,7 @@ import TopBarButton from "@/components/top-bar/TopBarButton";
 import { openGithub, openUrl } from "@/components/utils/UrlUtil";
 import MainContent from "@/components/MainContent";
 import Introduction from "@/components/Introduction";
+import Card from "@/components/Card";
 
 const defaultColor = "#1F96F2";
 const title = "Shetty's Resume";
@@ -69,10 +70,10 @@ export default function Index() {
             );
           },
         }} />
-      <ScrollView style={{ backgroundColor: theme[colorScheme].secondaryContainer }}>
+      <ScrollView>
         <View style={[
-          { backgroundColor: theme[colorScheme].secondaryContainer },
-          styles.contentContainer
+          styles.contentContainer,
+          { backgroundColor: theme[colorScheme].surface },
         ]}>
           <Introduction
             theme={theme}
@@ -80,6 +81,27 @@ export default function Index() {
             avatar="https://avatars.githubusercontent.com/u/72240633?s=400&u=7b32b5df0b0d4fa852f579e82cf78b403fa98b67&v=4"
             nickname="Shetty Yttehs"
           />
+          <View style={styles.cardColumn}>
+            <Card
+              theme={theme}
+              colorScheme={colorScheme}
+              title="Card Title"
+              content="Card Content"
+            />
+            <Card
+              theme={theme}
+              colorScheme={colorScheme}
+              title="Card Title"
+              content="Card Content"
+            />
+            <Card
+              theme={theme}
+              colorScheme={colorScheme}
+              title="Card Title"
+              content="Card Content"
+            />
+          </View>
+          <MainContent colorScheme={colorScheme} />
           <MainContent colorScheme={colorScheme} />
           <Effect listen={colorScheme} />
         </View>
@@ -96,9 +118,15 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
+    width: "100%",
     alignItems: "center",
     justifyContent: "center",
-    padding: 24,
+  },
+  cardColumn: {
+    width: "80%",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 32,
   },
   buttonRow: {
     flexDirection: "row",
