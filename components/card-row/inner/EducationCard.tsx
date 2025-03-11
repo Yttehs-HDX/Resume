@@ -57,6 +57,7 @@ export default function EducationCard({ theme, colorScheme }: Props) {
 
 const styles = StyleSheet.create({
   container: {
+    width: "100%",
     alignItems: "center",
     justifyContent: "space-between",
     gap: 16,
