@@ -26,7 +26,7 @@ export default function ContactCard({ theme, colorScheme }: Props) {
         </>
       }
       content={
-        <View style={styles.column}>
+        <View>
           <View style={styles.row}>
             <Content theme={theme} colorScheme={colorScheme} text="Email: " />
             <ClickableContent
@@ -62,9 +62,6 @@ export default function ContactCard({ theme, colorScheme }: Props) {
 
 
 const styles = StyleSheet.create({
-  column: {
-    gap: -8,
-  },
   row: {
     flexDirection: "row",
   },
