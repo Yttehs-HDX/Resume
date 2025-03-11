@@ -1,25 +1,33 @@
-import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
+import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { StyleSheet, View, Image, Text, ScrollView } from "react-native";
 
 type Props = {
+  theme: Material3Theme;
   colorScheme: "light" | "dark";
+  avatar: string;
+  nickname: string;
+  language?: "jp" | "zh" | "en";
 };
 
-export default function Introduction({ colorScheme }: Props) {
-  const { theme } = useMaterial3Theme();
+export default function Introduction({ theme, colorScheme, avatar, nickname, language }: Props) {
   const fontColor = theme[colorScheme].onPrimaryContainer;
+  const avatarBackgroundColor = theme[colorScheme].inversePrimary;
 
   return (
     <View style={styles.rowContainer}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <Image
-          style={styles.image}
-          source={{ uri: "https://avatars.githubusercontent.com/u/72240633?s=400&u=7b32b5df0b0d4fa852f579e82cf78b403fa98b67&v=4" }}
-        />
+        <View style={[styles.imageContainer, { backgroundColor: avatarBackgroundColor }]}>
+          <Image
+            style={styles.image}
+            source={{ uri: avatar }}
+          />
+        </View>
         <View style={styles.spacer} />
         <View style={styles.labelContainer}>
           <Text style={[styles.label, { color: fontColor }]}>
-            Hello! 私は Shetty Yttehs です
+            { language === "jp" || language === undefined && `ハロ、私は ${nickname} です` }
+            { language === "zh" && `你好，我是 ${nickname}` }
+            { language === "en" && `Hello, I am ${nickname}` }
           </Text>
         </View>
       </ScrollView>
@@ -31,6 +39,10 @@ const styles = StyleSheet.create({
   rowContainer: {
     flexDirection: "row",
     padding: 16,
+  },
+  imageContainer: {
+    padding: 16,
+    borderRadius: 30,
   },
   image: {
     width: 100,
