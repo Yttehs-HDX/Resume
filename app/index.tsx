@@ -3,17 +3,16 @@ import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/components/utils/Effect";
 import TopBarButton from "@/components/top-bar/TopBarButton";
-import { openGithub, openUrl } from "@/components/utils/UrlUtil";
+import { openUrl } from "@/components/utils/UrlUtil";
 import MainContent from "@/components/MainContent";
 import Introduction from "@/components/Introduction";
 import Card from "@/components/Card";
-
-const defaultColor = "#1F96F2";
-const title = "Shetty's Resume";
+import { UIConfig } from "@/storage/UIConfig";
+import { BasicInfo } from "@/storage/BasicInfo";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
-  const { theme } = useMaterial3Theme({ fallbackSourceColor: defaultColor });
+  const { theme } = useMaterial3Theme({ fallbackSourceColor: UIConfig.DefaultColor });
 
   return (
     <>
@@ -23,12 +22,12 @@ export default function Index() {
           }],
           headerTitle() {
             return (
-              <Pressable onPress={ () => openUrl("https://resume.shettydev.com", false) }>
+              <Pressable onPress={ () => openUrl(BasicInfo.SourceCode, false) }>
                 <Text style={[
                   { color: theme[colorScheme].onPrimaryContainer },
                   styles.headerTitle,
                 ]}>
-                  {title}
+                  {BasicInfo.NicknameShort}'s Resume
                 </Text>
               </Pressable>
             )
@@ -48,7 +47,7 @@ export default function Index() {
                   label="Code"
                   lib="FontAwesome5"
                   icon="laptop-code"
-                  onPress={ () => openUrl("https://github.com/Yttehs-HDX/Resume", true) }
+                  onPress={ () => openUrl(BasicInfo.SourceCode, true) }
                 />
                 <TopBarButton
                   style={styles.button}
@@ -56,7 +55,7 @@ export default function Index() {
                   label="Blog"
                   lib="Entypo"
                   icon="pencil"
-                  onPress={ () => openUrl("https://blog.shettydev.com", true) }
+                  onPress={ () => openUrl(BasicInfo.Blog, true) }
                 />
                 <TopBarButton
                   style={styles.button}
@@ -64,7 +63,7 @@ export default function Index() {
                   label="Github"
                   lib="AntDesign"
                   icon="github"
-                  onPress={ () => openGithub("Yttehs-HDX") }
+                  onPress={ () => openUrl(BasicInfo.Github, true) }
                 />
               </View>
             );

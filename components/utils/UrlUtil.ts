@@ -14,8 +14,3 @@ export const openUrl = (url: string, newTab: boolean) => {
       break;
   }
 };
-
-export const openGithub = (username: string) => {
-  const url = `https://github.com/${username}`;
-  openUrl(url, true);
-};
