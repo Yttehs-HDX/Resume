@@ -5,7 +5,7 @@ import Effect from "@/components/utils/Effect";
 import TopBarButton from "@/components/top-bar/TopBarButton";
 import { openUrl } from "@/components/utils/UrlUtil";
 import Introduction from "@/components/Introduction";
-import Card from "@/components/TextCard";
+import Card from "@/components/Card";
 import { UIConfig } from "@/storage/UIConfig";
 import { BasicInfo } from "@/constants/BasicInfo";
 import { Outstanding } from "@/constants/Outstanding";
