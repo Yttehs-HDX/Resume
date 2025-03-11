@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, TouchableOpacity, useColorScheme, View } from "react-native";
+import { ScrollView, StyleSheet, Text, Pressable, useColorScheme, View } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/components/Effect";
@@ -22,14 +22,14 @@ export default function Index() {
           }],
           headerTitle() {
             return (
-              <TouchableOpacity onPress={ () => openUrl("https://resume.shettydev.com", false) }>
+              <Pressable onPress={ () => openUrl("https://resume.shettydev.com", false) }>
                 <Text style={[
                   { color: theme[colorScheme].onPrimaryContainer },
                   styles.headerTitle,
                 ]}>
                   {title}
                 </Text>
-              </TouchableOpacity>
+              </Pressable>
             )
           },
           headerTitleStyle: [
