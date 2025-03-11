@@ -35,13 +35,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
+    gap: 16,
     padding: 16,
   },
   contentBackground: {
     width: "100%",
-    flexDirection: "row",
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
+    gap: 16,
     padding: 16,
   },
 });

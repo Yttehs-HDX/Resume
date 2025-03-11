@@ -3,6 +3,7 @@ import Content from "@/components/text-card-inner/Content";
 import Title from "@/components/text-card-inner/Title";
 import { Education } from "@/constants/Education";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
+import { FontAwesome6 } from "@expo/vector-icons";
 
 type Props = {
   theme: Material3Theme;
@@ -14,7 +15,12 @@ export default function EducationCard({ theme, colorScheme }: Props) {
     <Card
       theme={theme}
       colorScheme={colorScheme}
-      title={<Title theme={theme} colorScheme={colorScheme} text={Education.Title} />}
+      title={
+        <>
+          <FontAwesome6 name="graduation-cap" size={24} color={theme[colorScheme].onPrimaryContainer} />
+          <Title theme={theme} colorScheme={colorScheme} text={Education.Title} />
+        </>
+      }
       content={<Content theme={theme} colorScheme={colorScheme} text={Education.Content} />}
     />
   );
