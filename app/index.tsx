@@ -2,7 +2,6 @@ import { ScrollView, StyleSheet, useColorScheme, View, Dimensions } from "react-
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/utils/Effect";
-import TopBarButton from "@/components/top-bar/TopBarButton";
 import { openUrl } from "@/utils/UrlUtil";
 import Introduction from "@/components/Introduction";
 import { UIConfig } from "@/storage/UIConfig";
@@ -10,6 +9,7 @@ import { BasicInfo } from "@/constants/BasicInfo";
 import CardRow from "@/components/card-row/CardRow";
 import getDeviceType from "@/utils/Device";
 import Header from "@/components/Header";
+import TopButtonRow from "@/components/TopButtonRow";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -30,32 +30,10 @@ export default function Index() {
           headerShadowVisible: false,
           headerRight() {
             return (
-              <View style={styles.buttonRow}>
-                <TopBarButton
-                  style={styles.button}
-                  colorScheme={colorScheme}
-                  label="Code"
-                  lib="FontAwesome5"
-                  icon="laptop-code"
-                  onPress={ () => openUrl(BasicInfo.SourceCode, true) }
-                />
-                <TopBarButton
-                  style={styles.button}
-                  colorScheme={colorScheme}
-                  label="Blog"
-                  lib="Entypo"
-                  icon="pencil"
-                  onPress={ () => openUrl(BasicInfo.Blog, true) }
-                />
-                <TopBarButton
-                  style={styles.button}
-                  colorScheme={colorScheme}
-                  label="Github"
-                  lib="AntDesign"
-                  icon="github"
-                  onPress={ () => openUrl(BasicInfo.Github, true) }
-                />
-              </View>
+              <TopButtonRow
+                theme={theme}
+                colorScheme={colorScheme}
+              />
             );
           },
         }} />
@@ -99,14 +77,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-  },
-  buttonRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginRight: 24,
-  },
-  button: {
-    paddingLeft: 16,
   },
 });
