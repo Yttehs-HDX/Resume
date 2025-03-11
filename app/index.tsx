@@ -1,8 +1,8 @@
 import { ScrollView, StyleSheet, Text, Pressable, useColorScheme, View } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
-import Effect from "@/components/Effect";
-import TopBarButton from "@/components/TopBarButton";
+import Effect from "@/components/utils/Effect";
+import TopBarButton from "@/components/top-bar/TopBarButton";
 import { openGithub, openUrl } from "@/components/utils/UrlUtil";
 import MainContent from "@/components/MainContent";
 import Introduction from "@/components/Introduction";
