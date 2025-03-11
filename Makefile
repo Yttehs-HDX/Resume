@@ -14,4 +14,4 @@ server:
 	@$(EXPO) start --$(PLATFORM)
 
 clean:
-	@rm -rf $(O)
+	rm -rf $(O)
