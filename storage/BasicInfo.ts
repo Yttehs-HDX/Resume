@@ -9,5 +9,5 @@ export class BasicInfo {
   static readonly SourceCode = `${this.Github}/Resume`;
 
   static readonly Email1 = "shetty@shettydev.com";
-  static readonly Email2 = "shettydev@gmail.com";
+  static readonly Email2 = "shetty.yttehs@outlook.com";
 }
