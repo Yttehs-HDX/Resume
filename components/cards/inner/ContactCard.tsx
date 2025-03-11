@@ -1,3 +1,5 @@
+import Content from "@/components/text-card-inner/Content";
+import Title from "@/components/text-card-inner/Title";
 import Card from "@/components/TextCard";
 import { Contact } from "@/constants/Contact";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
@@ -12,8 +14,8 @@ export default function ContactCard({ theme, colorScheme }: Props) {
     <Card
       theme={theme}
       colorScheme={colorScheme}
-      title={Contact.Title}
-      content={Contact.Content}
+      title={<Title theme={theme} colorScheme={colorScheme} text={Contact.Title} />}
+      content={<Content theme={theme} colorScheme={colorScheme} text={Contact.Content} />}
     />
   );
 }

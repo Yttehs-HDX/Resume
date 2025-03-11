@@ -1,13 +1,11 @@
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { View, StyleSheet } from "react-native";
-import Title from "./text-card-inner/Title";
-import Content from "./text-card-inner/Content";
 
 type Props = {
   theme: Material3Theme;
   colorScheme: "light" | "dark";
-  title: string;
-  content: string;
+  title: React.ReactNode;
+  content: React.ReactNode;
 };
 
 export default function Card({ theme, colorScheme, title, content }: Props) {
@@ -17,10 +15,10 @@ export default function Card({ theme, colorScheme, title, content }: Props) {
   return (
     <View style={styles.container}>
       <View style={[styles.titleBackground, { backgroundColor: titleBackgroundColor }]}>
-        <Title theme={theme} colorScheme={colorScheme} text={title} />
+        {title}
       </View>
       <View style={[styles.contentBackground, { backgroundColor: contentBackgroundColor }]}>
-        <Content theme={theme} colorScheme={colorScheme} text={content} />
+        {content}
       </View>
     </View>
   );
@@ -34,12 +32,14 @@ const styles = StyleSheet.create({
   },
   titleBackground: {
     width: "100%",
+    flexDirection: "row",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     padding: 16,
   },
   contentBackground: {
     width: "100%",
+    flexDirection: "row",
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     padding: 16,
