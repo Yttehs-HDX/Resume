@@ -5,6 +5,7 @@ import { Education } from "@/constants/Education";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { FontAwesome6 } from "@expo/vector-icons";
 import { View, StyleSheet, Image, AppState } from "react-native";
+import getDeviceType from "@/utils/Device";
 
 type Props = {
   theme: Material3Theme;
@@ -23,18 +24,19 @@ export default function EducationCard({ theme, colorScheme }: Props) {
         </>
       }
       content={
-        <View style={styles.row}>
-          <View style={styles.university}>
-            <View style={styles.subRow}>
+        <View style={[styles.container, {
+          flexDirection: getDeviceType() === "mobile" ? "column" : "row",
+        }]}>
+          <View style={[styles.university, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+            <View style={styles.subColumn}>
               <Image source={{ uri: Education.NEU.Avatar.UrL }} style={styles.image} resizeMode="contain" />
               <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Name} fontWeight="bold" fontSize={20} />
-            </View>
-            <View style={styles.subRow}>
               <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Major} fontSize={18} />
               <Content theme={theme} colorScheme={colorScheme} text={`${Education.NEU.Background} ${Education.NEU.Duration}`} fontSize={18} />
             </View>
           </View>
-          <View style={styles.class}>
+          {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
+          <View style={[styles.class, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
             <View style={styles.subColumn}>
               <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Courses.Title} fontWeight="bold" fontSize={18} />
               <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Courses.Content} />
@@ -44,6 +46,7 @@ export default function EducationCard({ theme, colorScheme }: Props) {
               <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Labs.Content} />
             </View>
           </View>
+          {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
         </View>
       }
     />
@@ -51,28 +54,21 @@ export default function EducationCard({ theme, colorScheme }: Props) {
 }
 
 const styles = StyleSheet.create({
-  row: {
-    flexDirection: "row",
+  container: {
     alignItems: "center",
     justifyContent: "space-between",
+    gap: 16,
+  },
+  spacer: {
+    flex: 1,
   },
   university: {
-    flex: 1,
-    alignItems: "center",
+    alignItems: "flex-start",
     justifyContent: "center",
-    gap: 16,
   },
   class: {
-    flex: 1,
-    alignItems: "center",
+    alignItems: "flex-start",
     justifyContent: "center",
-    gap: 16,
-  },
-  subRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 16,
   },
   subColumn: {
     alignItems: "flex-start",
