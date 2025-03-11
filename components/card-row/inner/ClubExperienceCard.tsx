@@ -26,26 +26,30 @@ export default function ClubExperienceCard({ theme, colorScheme }: Props) {
       }
       content={
         <View style={styles.container}>
-          <View style={[styles.row, {
-            flexDirection: getDeviceType() === "mobile" ? "column" : "row",
-          }]}>
-            {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-            <View style={[styles.club, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
-              <View style={styles.subColumn}>
-                <Content theme={theme} colorScheme={colorScheme} text={`${ClubExperience.ClubList[0].Name} - ${ClubExperience.ClubList[0].Job}`} fontWeight="bold" fontSize={18} />
-                <Content theme={theme} colorScheme={colorScheme} text={ClubExperience.ClubList[0].Duration} fontSize={18} />
+          {ClubExperience.ClubList.map((club, index) => (
+            <View key={index} style={styles.column}>
+              { index !== 0 && <Line theme={theme} colorScheme={colorScheme} /> }
+              <View style={[styles.row, {
+                flexDirection: getDeviceType() === "mobile" ? "column" : "row",
+              }]}>
+                {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
+                <View style={[styles.club, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+                  <View style={styles.subColumn}>
+                    <Content theme={theme} colorScheme={colorScheme} text={`${club.Name} - ${club.Job}`} fontWeight="bold" fontSize={18} />
+                    <Content theme={theme} colorScheme={colorScheme} text={club.Duration} fontSize={18} />
+                  </View>
+                </View>
+                {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
+                <View style={[styles.description, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+                  <View style={styles.subColumn}>
+                    <Content theme={theme} colorScheme={colorScheme} text={club.Description.Title} fontWeight="bold" fontSize={18} />
+                    <Content theme={theme} colorScheme={colorScheme} text={club.Description.Content} />
+                  </View>
+                </View>
+                {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
               </View>
             </View>
-            {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-            <View style={[styles.description, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
-              <View style={styles.subColumn}>
-                <Content theme={theme} colorScheme={colorScheme} text={ClubExperience.ClubList[0].Description.Title} fontWeight="bold" fontSize={18} />
-                <Content theme={theme} colorScheme={colorScheme} text={ClubExperience.ClubList[0].Description.Content} />
-              </View>
-            </View>
-            {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-          </View>
-          <Line theme={theme} colorScheme={colorScheme} />
+          ))}
         </View>
       }
     />
@@ -54,6 +58,12 @@ export default function ClubExperienceCard({ theme, colorScheme }: Props) {
 
 const styles = StyleSheet.create({
   container: {
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 16,
+  },
+  column: {
     width: "100%",
     alignItems: "center",
     justifyContent: "center",
@@ -69,10 +79,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   club: {
+    flex: 3,
     alignItems: "flex-start",
     justifyContent: "center",
   },
   description: {
+    flex: 6,
     alignItems: "flex-start",
     justifyContent: "center",
   },
