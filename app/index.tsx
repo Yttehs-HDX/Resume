@@ -4,12 +4,13 @@ import { Stack } from "expo-router";
 import Effect from "@/components/utils/Effect";
 import TopBarButton from "@/components/top-bar/TopBarButton";
 import { openUrl } from "@/components/utils/UrlUtil";
-import MainContent from "@/components/MainContent";
 import Introduction from "@/components/Introduction";
 import Card from "@/components/Card";
 import { UIConfig } from "@/storage/UIConfig";
 import { BasicInfo } from "@/storage/BasicInfo";
 import { Outstanding } from "@/storage/card/Outstanding";
+import { ProfessionalSkills } from "@/storage/card/ProfessionalSkills";
+import { Contact } from "@/storage/card/Contact";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -84,6 +85,18 @@ export default function Index() {
               colorScheme={colorScheme}
               title={Outstanding.Title}
               content={Outstanding.Content}
+            />
+            <Card
+              theme={theme}
+              colorScheme={colorScheme}
+              title={ProfessionalSkills.Title}
+              content={ProfessionalSkills.Content}
+            />
+            <Card
+              theme={theme}
+              colorScheme={colorScheme}
+              title={Contact.Title}
+              content={Contact.Content}
             />
           </View>
           <Effect listen={colorScheme} />
