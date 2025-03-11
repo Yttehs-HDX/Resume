@@ -1,10 +1,9 @@
 import { View, StyleSheet } from "react-native";
-import Card from "@/components/TextCard";
-import { Outstanding } from "@/constants/Outstanding";
-import { ProfessionalSkills } from "@/constants/ProfessionalSkills";
-import { Education } from "@/constants/Education";
-import { Contact } from "@/constants/Contact";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
+import OutstandingCard from "./inner/OutstandingCard";
+import ProfessionalSkillsCard from "./inner/ProfessionalSkillsCard";
+import EducationCard from "./inner/EducationCard";
+import ContactCard from "./inner/ContactCard";
 
 type CardRowProps = {
   theme: Material3Theme;
@@ -14,30 +13,10 @@ type CardRowProps = {
 export default function CardRow({ theme, colorScheme }: CardRowProps) {
   return (
     <View style={styles.cardColumn}>
-      <Card
-        theme={theme}
-        colorScheme={colorScheme}
-        title={Outstanding.Title}
-        content={Outstanding.Content}
-      />
-      <Card
-        theme={theme}
-        colorScheme={colorScheme}
-        title={ProfessionalSkills.Title}
-        content={ProfessionalSkills.Content}
-      />
-      <Card
-        theme={theme}
-        colorScheme={colorScheme}
-        title={Education.Title}
-        content={Education.Content}
-      />
-      <Card
-        theme={theme}
-        colorScheme={colorScheme}
-        title={Contact.Title}
-        content={Contact.Content}
-      />
+      <OutstandingCard theme={theme} colorScheme={colorScheme} />
+      <ProfessionalSkillsCard theme={theme} colorScheme={colorScheme} />
+      <EducationCard theme={theme} colorScheme={colorScheme} />
+      <ContactCard theme={theme} colorScheme={colorScheme} />
     </View>
   );
 }
