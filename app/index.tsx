@@ -9,6 +9,7 @@ import Introduction from "@/components/Introduction";
 import Card from "@/components/Card";
 import { UIConfig } from "@/storage/UIConfig";
 import { BasicInfo } from "@/storage/BasicInfo";
+import { Outstanding } from "@/storage/card/Outstanding";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -69,39 +70,22 @@ export default function Index() {
             );
           },
         }} />
-      <ScrollView>
-        <View style={[
-          styles.contentContainer,
-          { backgroundColor: theme[colorScheme].surface },
-        ]}>
+      <ScrollView style={[styles.scrollView, { backgroundColor: theme[colorScheme].surface }]}>
+        <View style={[styles.contentContainer, { backgroundColor: theme[colorScheme].surface }]}>
           <Introduction
             theme={theme}
             colorScheme={colorScheme}
-            avatar="https://avatars.githubusercontent.com/u/72240633?s=400&u=7b32b5df0b0d4fa852f579e82cf78b403fa98b67&v=4"
-            nickname="Shetty Yttehs"
+            avatar={BasicInfo.Avatar}
+            nickname={BasicInfo.Nickname}
           />
           <View style={styles.cardColumn}>
             <Card
               theme={theme}
               colorScheme={colorScheme}
-              title="Card Title"
-              content="Card Content"
-            />
-            <Card
-              theme={theme}
-              colorScheme={colorScheme}
-              title="Card Title"
-              content="Card Content"
-            />
-            <Card
-              theme={theme}
-              colorScheme={colorScheme}
-              title="Card Title"
-              content="Card Content"
+              title={Outstanding.Title}
+              content={Outstanding.Content}
             />
           </View>
-          <MainContent colorScheme={colorScheme} />
-          <MainContent colorScheme={colorScheme} />
           <Effect listen={colorScheme} />
         </View>
       </ScrollView>
@@ -114,6 +98,10 @@ const styles = StyleSheet.create({
     fontFamily: "cursive",
     fontWeight: "bold",
     fontSize: 20,
+  },
+  scrollView: {
+    flex: 1,
+    width: "100%",
   },
   contentContainer: {
     flex: 1,

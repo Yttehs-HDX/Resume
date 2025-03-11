@@ -15,5 +15,6 @@ export default function Content({ theme, colorScheme, text }: Props) {
 const styles = StyleSheet.create({
   content: {
     fontSize: 16,
+    lineHeight: 32,
   },
 });
