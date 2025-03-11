@@ -25,9 +25,9 @@ export default function CertificateCard({ theme, colorScheme }: Props) {
       content={
         <View>
           {Certificate.List.map((item, index) => (
-            <View style={styles.row}>
+            <View key={index} style={styles.row}>
               <Ionicons name="checkmark-circle" size={16} color={theme[colorScheme].onPrimaryContainer} />
-              <Content key={index} theme={theme} colorScheme={colorScheme} text={item} />
+              <Content theme={theme} colorScheme={colorScheme} text={item} />
             </View>
           ))}
         </View>
