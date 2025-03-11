@@ -5,11 +5,13 @@ type Props = {
   theme: Material3Theme;
   colorScheme: "light" | "dark";
   text: string;
+  fontSize?: number;
+  fontWeight?: "normal" | "bold";
 };
 
-export default function Content({ theme, colorScheme, text }: Props) {
+export default function Content({ theme, colorScheme, text, fontSize, fontWeight }: Props) {
   const textColor = theme[colorScheme].onPrimaryContainer;
-  return <Text style={[styles.content, { color: textColor }]}>{text}</Text>;
+  return <Text style={[styles.content, { color: textColor, fontSize, fontWeight }]}>{text}</Text>;
 }
 
 const styles = StyleSheet.create({

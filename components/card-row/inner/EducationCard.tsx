@@ -24,26 +24,26 @@ export default function EducationCard({ theme, colorScheme }: Props) {
       }
       content={
         <View style={styles.row}>
-          <Image
-            source={{ uri: Education.NEU.Avatar.UrL }}
-            style={styles.image}
-            resizeMode="contain"
-          />
-          <Content
-            theme={theme}
-            colorScheme={colorScheme}
-            text={Education.NEU.Name}
-          />
-          <Content
-            theme={theme}
-            colorScheme={colorScheme}
-            text={Education.NEU.Major}
-          />
-          <Content
-            theme={theme}
-            colorScheme={colorScheme}
-            text={`${Education.NEU.Background} ${Education.NEU.Duration}`}
-          />
+          <View style={styles.university}>
+            <View style={styles.subRow}>
+              <Image source={{ uri: Education.NEU.Avatar.UrL }} style={styles.image} resizeMode="contain" />
+              <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Name} fontWeight="bold" fontSize={20} />
+            </View>
+            <View style={styles.subRow}>
+              <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Major} fontSize={18} />
+              <Content theme={theme} colorScheme={colorScheme} text={`${Education.NEU.Background} ${Education.NEU.Duration}`} fontSize={18} />
+            </View>
+          </View>
+          <View style={styles.class}>
+            <View style={styles.subColumn}>
+              <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Courses.Title} fontWeight="bold" fontSize={18} />
+              <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Courses.Content} />
+              <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Clubs.Title} fontWeight="bold" fontSize={18} />
+              <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Clubs.Content} />
+              <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Labs.Title} fontWeight="bold" fontSize={18} />
+              <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Labs.Content} />
+            </View>
+          </View>
         </View>
       }
     />
@@ -55,7 +55,28 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+  },
+  university: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
     gap: 16,
+  },
+  class: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 16,
+  },
+  subRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 16,
+  },
+  subColumn: {
+    alignItems: "flex-start",
+    justifyContent: "center",
   },
   image: {
     width: 100,
