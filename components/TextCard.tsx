@@ -1,7 +1,7 @@
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { View, StyleSheet } from "react-native";
-import Title from "./card-inner/Title";
-import Content from "./card-inner/Content";
+import Title from "./text-card-inner/Title";
+import Content from "./text-card-inner/Content";
 
 type Props = {
   theme: Material3Theme;
