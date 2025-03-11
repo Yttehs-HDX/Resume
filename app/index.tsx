@@ -11,6 +11,7 @@ import { BasicInfo } from "@/storage/BasicInfo";
 import { Outstanding } from "@/storage/card/Outstanding";
 import { ProfessionalSkills } from "@/storage/card/ProfessionalSkills";
 import { Contact } from "@/storage/card/Contact";
+import { Education } from "@/storage/card/Education";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -83,6 +84,12 @@ export default function Index() {
               colorScheme={colorScheme}
               title={ProfessionalSkills.Title}
               content={ProfessionalSkills.Content}
+            />
+            <Card
+              theme={theme}
+              colorScheme={colorScheme}
+              title={Education.Title}
+              content={Education.Content}
             />
             <Card
               theme={theme}
