@@ -7,11 +7,12 @@ import { openUrl } from "@/components/utils/UrlUtil";
 import Introduction from "@/components/Introduction";
 import Card from "@/components/TextCard";
 import { UIConfig } from "@/storage/UIConfig";
-import { BasicInfo } from "@/storage/BasicInfo";
-import { Outstanding } from "@/storage/card/Outstanding";
-import { ProfessionalSkills } from "@/storage/card/ProfessionalSkills";
-import { Contact } from "@/storage/card/Contact";
-import { Education } from "@/storage/card/Education";
+import { BasicInfo } from "@/constants/BasicInfo";
+import { Outstanding } from "@/constants/Outstanding";
+import { ProfessionalSkills } from "@/constants/ProfessionalSkills";
+import { Contact } from "@/constants/Contact";
+import { Education } from "@/constants/Education";
+import CardRow from "@/components/cards/CardRow";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -72,35 +73,13 @@ export default function Index() {
             avatar={BasicInfo.Avatar}
             nickname={BasicInfo.Nickname}
           />
-          <View style={styles.cardColumn}>
-            <Card
-              theme={theme}
-              colorScheme={colorScheme}
-              title={Outstanding.Title}
-              content={Outstanding.Content}
-            />
-            <Card
-              theme={theme}
-              colorScheme={colorScheme}
-              title={ProfessionalSkills.Title}
-              content={ProfessionalSkills.Content}
-            />
-            <Card
-              theme={theme}
-              colorScheme={colorScheme}
-              title={Education.Title}
-              content={Education.Content}
-            />
-            <Card
-              theme={theme}
-              colorScheme={colorScheme}
-              title={Contact.Title}
-              content={Contact.Content}
-            />
-            <View style={{ height: screenHeight * 0.3 }} />
-          </View>
+          <CardRow
+            theme={theme}
+            colorScheme={colorScheme}
+          />
           <Effect listen={colorScheme} />
         </View>
+        <View style={{ height: screenHeight * 0.3 }} />
       </ScrollView>
     </>
   );
@@ -121,12 +100,6 @@ const styles = StyleSheet.create({
     width: "100%",
     alignItems: "center",
     justifyContent: "center",
-  },
-  cardColumn: {
-    width: "80%",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 32,
   },
   buttonRow: {
     flexDirection: "row",
