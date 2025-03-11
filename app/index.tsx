@@ -65,12 +65,12 @@ export default function Index() {
         <View style={styles.contentContainer}>
           <View style={{ width: (() => {
             switch (getDeviceType()) {
+              case 'mobile':
+                return "95%";
               case 'tablet':
-                return "80%";
-              case 'desktop':
-                return "80%";
+                return "95%";
               default:
-                return "100%";
+                return "90%";
             }
           })() }}>
             <Introduction
