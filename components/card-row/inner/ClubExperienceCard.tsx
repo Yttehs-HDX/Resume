@@ -6,6 +6,7 @@ import { ClubExperience } from "@/constants/ClubExperience";
 import { View, StyleSheet, Image } from "react-native";
 import getDeviceType from "@/utils/Device";
 import Line from "@/components/card/inner/Line";
+import { MaterialIcons } from "@expo/vector-icons";
 
 type Props = {
   theme: Material3Theme;
@@ -19,6 +20,7 @@ export default function ClubExperienceCard({ theme, colorScheme }: Props) {
       colorScheme={colorScheme}
       title={
         <>
+          <MaterialIcons name="group" size={24} color={theme[colorScheme].onPrimaryContainer} />
           <Title theme={theme} colorScheme={colorScheme} text={ClubExperience.Title} />
         </>
       }
