@@ -27,9 +27,11 @@ export default function EducationCard({ theme, colorScheme }: Props) {
         <View style={[styles.container, {
           flexDirection: getDeviceType() === "mobile" ? "column" : "row",
         }]}>
+          {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
+          <Image source={{ uri: Education.NEU.Avatar.UrL }} style={styles.image} resizeMode="contain" />
+          {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
           <View style={[styles.university, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
             <View style={styles.subColumn}>
-              <Image source={{ uri: Education.NEU.Avatar.UrL }} style={styles.image} resizeMode="contain" />
               <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Name} fontWeight="bold" fontSize={20} />
               <Content theme={theme} colorScheme={colorScheme} text={Education.NEU.Major} fontSize={18} />
               <Content theme={theme} colorScheme={colorScheme} text={`${Education.NEU.Background} ${Education.NEU.Duration}`} fontSize={18} />
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   image: {
-    width: 100,
-    height: 50,
+    width: 200,
+    height: 100,
   },
 });
