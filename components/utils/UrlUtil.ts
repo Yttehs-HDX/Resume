@@ -1,4 +1,5 @@
-import { Linking, Platform } from "react-native";
+import * as Linking from "expo-linking";
+import { Platform } from "react-native";
 
 export const openUrl = (url: string, newTab: boolean) => {
   switch (Platform.OS) {
@@ -13,4 +14,8 @@ export const openUrl = (url: string, newTab: boolean) => {
       Linking.openURL(url);
       break;
   }
+};
+
+export const openEmail = (email: string) => {
+  openUrl(`mailto:${email}`, true);
 };
