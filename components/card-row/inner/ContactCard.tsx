@@ -32,8 +32,8 @@ export default function ContactCard({ theme, colorScheme }: Props) {
             <ClickableContent
               theme={theme}
               colorScheme={colorScheme}
-              text={BasicInfo.Email1}
-              onClick={() => openEmail(BasicInfo.Email1)}
+              text={Contact.Email1}
+              onClick={() => openEmail(Contact.Email1)}
             />
           </View>
           <View style={styles.row}>
@@ -41,8 +41,8 @@ export default function ContactCard({ theme, colorScheme }: Props) {
             <ClickableContent
               theme={theme}
               colorScheme={colorScheme}
-              text={BasicInfo.Email2}
-              onClick={() => openEmail(BasicInfo.Email2)}
+              text={Contact.Email2}
+              onClick={() => openEmail(Contact.Email2)}
             />
           </View>
           <View style={styles.row}>
@@ -50,8 +50,8 @@ export default function ContactCard({ theme, colorScheme }: Props) {
             <ClickableContent
               theme={theme}
               colorScheme={colorScheme}
-              text={BasicInfo.CoolApkUsername}
-              onClick={() => openUrl(BasicInfo.CoolApk, true)}
+              text={Contact.CoolApkUsername}
+              onClick={() => openUrl(Contact.CoolApk, true)}
             />
           </View>
         </View>
