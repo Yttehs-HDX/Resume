@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, Pressable, useColorScheme, View } from "react-native";
+import { ScrollView, StyleSheet, Text, Pressable, useColorScheme, View, Dimensions } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/components/utils/Effect";
@@ -15,31 +15,23 @@ import { Contact } from "@/storage/card/Contact";
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
   const { theme } = useMaterial3Theme({ fallbackSourceColor: UIConfig.DefaultColor });
+  const screenHeight = Dimensions.get("window").height;
 
   return (
     <>
       <Stack.Screen options={{
-          headerStyle: [{
-            backgroundColor: theme[colorScheme].primaryContainer,
-          }],
+          headerStyle: [{ backgroundColor: theme[colorScheme].primaryContainer }],
           headerTitle() {
             return (
               <Pressable onPress={ () => openUrl(BasicInfo.Resume, false) }>
-                <Text style={[
-                  { color: theme[colorScheme].onPrimaryContainer },
-                  styles.headerTitle,
-                ]}>
+                <Text style={[styles.headerTitle, { color: theme[colorScheme].onPrimaryContainer }]}>
                   {BasicInfo.NicknameShort}'s Resume
                 </Text>
               </Pressable>
             )
           },
-          headerTitleStyle: [
-            { color: theme[colorScheme].onPrimaryContainer },
-            styles.headerTitle,
-          ],
+          headerTitleStyle: [styles.headerTitle, { color: theme[colorScheme].onPrimaryContainer }],
           headerShadowVisible: false,
-
           headerRight() {
             return (
               <View style={styles.buttonRow}>
@@ -98,6 +90,7 @@ export default function Index() {
               title={Contact.Title}
               content={Contact.Content}
             />
+            <View style={{ height: screenHeight * 0.3 }} />
           </View>
           <Effect listen={colorScheme} />
         </View>
