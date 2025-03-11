@@ -1,4 +1,4 @@
-import { Pressable, ScrollView, StyleSheet, Text, useColorScheme, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TouchableOpacity, useColorScheme, View } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Effect from "@/components/Effect";
@@ -9,7 +9,6 @@ import Introduction from "@/components/Introduction";
 
 const defaultColor = "#1F96F2";
 const title = "Shetty's Resume";
-const content = "TODO";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -23,14 +22,14 @@ export default function Index() {
           }],
           headerTitle() {
             return (
-              <Pressable onPress={ () => openUrl("https://resume.shettydev.com", false) }>
+              <TouchableOpacity onPress={ () => openUrl("https://resume.shettydev.com", false) }>
                 <Text style={[
                   { color: theme[colorScheme].onPrimaryContainer },
                   styles.headerTitle,
                 ]}>
                   {title}
                 </Text>
-              </Pressable>
+              </TouchableOpacity>
             )
           },
           headerTitleStyle: [
