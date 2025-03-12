@@ -47,7 +47,9 @@ function ContentInner({ theme, colorScheme }: ContentInnerProps) {
       flexDirection: getDeviceType() === "mobile" ? "column" : "row",
     }]}>
       {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-      <Image source={{ uri: Education.NEU.Avatar.UrL }} style={styles.image} resizeMode="contain" />
+      <View style={[styles.imageContainer, { backgroundColor: theme[colorScheme].inversePrimary }]}>
+        <Image source={{ uri: Education.NEU.Avatar.UrL }} style={styles.image} resizeMode="contain" />
+      </View>
       {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
       <View style={[styles.university, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
         <View style={styles.subColumn}>
@@ -96,6 +98,11 @@ const styles = StyleSheet.create({
   subColumn: {
     alignItems: "flex-start",
     justifyContent: "center",
+  },
+  imageContainer: {
+    borderRadius: 64,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
   },
   image: {
     width: 200,
