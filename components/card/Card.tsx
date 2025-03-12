@@ -1,5 +1,5 @@
 import { Material3Theme } from "@pchmn/expo-material3-theme";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 
 type Props = {
   theme: Material3Theme;
@@ -18,7 +18,12 @@ export default function Card({ theme, colorScheme, title, content }: Props) {
         {title}
       </View>
       <View style={[styles.contentBackground, { backgroundColor: contentBackgroundColor }]}>
-        {content}
+        <ScrollView
+          style={styles.scrollView}
+          horizontal={true}
+        >
+          {content}
+        </ScrollView>
       </View>
     </View>
   );
@@ -46,5 +51,8 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 20,
     gap: 16,
     padding: 16,
+  },
+  scrollView: {
+    width: "100%",
   },
 });
