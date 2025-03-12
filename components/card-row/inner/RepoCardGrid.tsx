@@ -8,6 +8,7 @@ import Title from "@/components/card/card-inner/Title";
 import { MaterialIcons, Octicons } from "@expo/vector-icons";
 import Content from "@/components/card/card-inner/Content";
 import { openUrl } from "@/utils/UrlUtil";
+import Capsule from "@/components/card/repo-card-inner/WarnCapsule";
 
 type Props = {
   theme: Material3Theme;
@@ -33,6 +34,10 @@ export default function RepoCardGrid({ theme, colorScheme }: Props) {
               <>
                 <Octicons name="repo" size={24} color={theme[colorScheme].onPrimaryContainer} />
                 <Title theme={theme} colorScheme={colorScheme} text={repo.fullname} />
+                <View style={styles.spacer} />
+                {repo.archived && (
+                  <Capsule theme={theme} colorScheme={colorScheme} text="Archived" />
+                )}
               </>
             }
             content={
@@ -70,6 +75,9 @@ const styles = StyleSheet.create({
     width: "100%",
     gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))",
     gap: 16,
+  },
+  spacer: {
+    flex: 1,
   },
   row: {
     flexDirection: "row",
