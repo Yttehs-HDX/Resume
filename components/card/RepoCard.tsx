@@ -1,25 +1,26 @@
 import { Material3Theme } from "@pchmn/expo-material3-theme";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 
 type Props = {
   theme: Material3Theme;
   colorScheme: "light" | "dark";
   title: React.ReactNode;
   content: React.ReactNode;
+  onClick: () => void;
 };
 
-export default function RepoCard({ theme, colorScheme, title, content }: Props) {
+export default function RepoCard({ theme, colorScheme, title, content, onClick }: Props) {
   const backgroundColor = theme[colorScheme].primaryContainer;
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onClick}>
       <View style={[styles.titleBackground, { backgroundColor }]}>
         {title}
       </View>
       <View style={[styles.contentBackground, { backgroundColor }]}>
         {content}
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

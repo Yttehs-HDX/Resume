@@ -7,6 +7,7 @@ import { fetchAllGithubRepos, GithubRepoUiState } from "@/components/card/repo-c
 import Title from "@/components/card/card-inner/Title";
 import { MaterialIcons, Octicons } from "@expo/vector-icons";
 import Content from "@/components/card/card-inner/Content";
+import { openUrl } from "@/utils/UrlUtil";
 
 type Props = {
   theme: Material3Theme;
@@ -56,6 +57,7 @@ export default function RepoCardGrid({ theme, colorScheme }: Props) {
                 )}
               </View>
             }
+            onClick={() => openUrl(repo.url, true)}
           />
         )}
       />
