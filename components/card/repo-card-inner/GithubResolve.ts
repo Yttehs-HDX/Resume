@@ -14,6 +14,18 @@ export const fetchAllGithubRepos = async () => {
           githubRepoUiState.languageColor = languageColor;
         }
         repos.push(githubRepoUiState);
+      } else {
+        repos.push(new GithubRepoUiState(
+          `https://github.com/${user.Username}/${repo.Name}`,
+          repo.Name,
+          `${user.Username}/${repo.Name}`,
+          "Loading...",
+          0,
+          0,
+          0,
+          null,
+          false,
+        ));
       }
     }
   }
