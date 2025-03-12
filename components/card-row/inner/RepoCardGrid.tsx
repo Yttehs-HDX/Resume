@@ -6,7 +6,7 @@ type Props = {
   colorScheme: "light" | "dark";
 };
 
-export default function RepoCardMatrix({ theme, colorScheme }: Props) {
+export default function RepoCardGrid({ theme, colorScheme }: Props) {
   return (
     <View style={styles.container}>
       <Text>Test</Text>
