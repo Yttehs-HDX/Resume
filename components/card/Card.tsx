@@ -18,12 +18,7 @@ export default function Card({ theme, colorScheme, title, content }: Props) {
         {title}
       </View>
       <View style={[styles.contentBackground, { backgroundColor: contentBackgroundColor }]}>
-        <ScrollView
-          style={styles.scrollView}
-          horizontal={true}
-        >
-          {content}
-        </ScrollView>
+        {content}
       </View>
     </View>
   );
@@ -51,8 +46,5 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 20,
     gap: 16,
     padding: 16,
-  },
-  scrollView: {
-    width: "100%",
   },
 });

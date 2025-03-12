@@ -3,7 +3,7 @@ import Content from "@/components/card/card-inner/Content";
 import Title from "@/components/card/card-inner/Title";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { ClubExperience } from "@/constants/ClubExperience";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, ScrollView } from "react-native";
 import getDeviceType from "@/utils/Device";
 import Line from "@/components/card/card-inner/Line";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -25,38 +25,43 @@ export default function ClubExperienceCard({ theme, colorScheme }: Props) {
         </>
       }
       content={
-        <View style={styles.container}>
-          {ClubExperience.ClubList.map((club, index) => (
-            <View key={index} style={styles.column}>
-              { index !== 0 && <Line theme={theme} colorScheme={colorScheme} /> }
-              <View style={[styles.row, {
-                flexDirection: getDeviceType() === "mobile" ? "column" : "row",
-              }]}>
-                {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-                <View style={[styles.club, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
-                  <View style={styles.subColumn}>
-                    <Content theme={theme} colorScheme={colorScheme} text={`${club.Name} - ${club.Job}`} fontWeight="bold" fontSize={18} />
-                    <Content theme={theme} colorScheme={colorScheme} text={club.Duration} fontSize={18} />
+        <ScrollView horizontal style={styles.scrollView}>
+          <View style={styles.container}>
+            {ClubExperience.ClubList.map((club, index) => (
+              <View key={index} style={styles.column}>
+                { index !== 0 && <Line theme={theme} colorScheme={colorScheme} /> }
+                <View style={[styles.row, {
+                  flexDirection: getDeviceType() === "mobile" ? "column" : "row",
+                }]}>
+                  {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
+                  <View style={[styles.club, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+                    <View style={styles.subColumn}>
+                      <Content theme={theme} colorScheme={colorScheme} text={`${club.Name} - ${club.Job}`} fontWeight="bold" fontSize={18} />
+                      <Content theme={theme} colorScheme={colorScheme} text={club.Duration} fontSize={18} />
+                    </View>
                   </View>
-                </View>
-                {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-                <View style={[styles.description, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
-                  <View style={styles.subColumn}>
-                    <Content theme={theme} colorScheme={colorScheme} text={club.Description.Title} fontWeight="bold" fontSize={18} />
-                    <Content theme={theme} colorScheme={colorScheme} text={club.Description.Content} />
+                  {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
+                  <View style={[styles.description, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+                    <View style={styles.subColumn}>
+                      <Content theme={theme} colorScheme={colorScheme} text={club.Description.Title} fontWeight="bold" fontSize={18} />
+                      <Content theme={theme} colorScheme={colorScheme} text={club.Description.Content} />
+                    </View>
                   </View>
+                  {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
                 </View>
-                {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
               </View>
-            </View>
-          ))}
-        </View>
+            ))}
+          </View>
+        </ScrollView>
       }
     />
   );
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    width: "100%",
+  },
   container: {
     width: "100%",
     alignItems: "center",
