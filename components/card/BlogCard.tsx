@@ -11,9 +11,10 @@ type Props = {
   url: string;
   title: string;
   description: string;
+  date: string;
 };
 
-export default function BlogCard({ theme, colorScheme, url, title, description }: Props) {
+export default function BlogCard({ theme, colorScheme, url, title, description, date }: Props) {
   const backgroundColor = theme[colorScheme].primaryContainer;
 
   return (
@@ -26,6 +27,10 @@ export default function BlogCard({ theme, colorScheme, url, title, description }
       </View>
       <View style={[styles.contentBackground, { backgroundColor }]}>
         <Content theme={theme} colorScheme={colorScheme} text={description} />
+        <View style={styles.row}>
+          <View style={styles.spacer} />
+          <Content theme={theme} colorScheme={colorScheme} text={date} />
+        </View>
       </View>
     </TouchableOpacity>
   );
@@ -57,5 +62,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 8,
     paddingBottom: 16,
+  },
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 16,
+  },
+  spacer: {
+    flex: 1,
   },
 });

@@ -20,6 +20,7 @@ export default function BlogCardGrid({ theme, colorScheme }: Props) {
             url={passage.Url}
             title={passage.Title}
             description={passage.Description}
+            date={passage.Date}
           />
         )}
       />

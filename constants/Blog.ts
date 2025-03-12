@@ -8,11 +8,13 @@ export class Blog {
       Url: `${BasicInfo.Blog}/2025/03/09/react-native-mobx`,
       Title: "React Native MobX",
       Description: "如何在 React Native 项目中实现 MVVM 架构",
+      Date: "2025-03-09",
     },
     {
       Url: `${BasicInfo.Blog}/2024/12/30/react-native-and-kotlin-multiplatform`,
       Title: "Comparison of React Native and Kotlin Multiplatform",
       Description: "My feedback for React Native and Kotlin Multiplatform",
+      Date: "2024-12-30",
     },
   ];
 }
