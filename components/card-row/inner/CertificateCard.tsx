@@ -39,7 +39,7 @@ export default function CertificateCard({ theme, colorScheme }: Props) {
 const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "baseline",
     justifyContent: "flex-start",
     gap: 8,
   },
