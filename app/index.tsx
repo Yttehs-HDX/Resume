@@ -14,7 +14,7 @@ import Line from "@/components/card/card-inner/Line";
 import RepoCardGrid from "@/components/RepoCardGrid";
 import SubTitle from "@/components/SubTitle";
 import { GithubRepos } from "@/constants/GithubRepos";
-import BlogCardGrid from "@/components/BLogCardGrid";
+import BlogCardGrid from "@/components/BlogCardGrid";
 import { Blog } from "@/constants/Blog";
 
 export default function Index() {
