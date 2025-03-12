@@ -12,7 +12,7 @@ export default function Header({ theme, colorScheme, onClick }: Props) {
   return (
     <Pressable onPress={onClick}>
       <Text style={[styles.headerTitle, { color: theme[colorScheme].onPrimaryContainer }]}>
-        {`${BasicInfo.NicknameShort}'s Resume ( ゜- ゜)つロ乾杯~`}
+        {`${BasicInfo.NicknameShort}'s Resume`}
       </Text>
     </Pressable>
   );
