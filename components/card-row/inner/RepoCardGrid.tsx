@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import RepoCard from "@/components/card/RepoCard";
 import { FlatGrid } from 'react-native-super-grid';
@@ -33,7 +33,9 @@ export default function RepoCardGrid({ theme, colorScheme }: Props) {
             title={
               <>
                 <Octicons name="repo" size={24} color={theme[colorScheme].onPrimaryContainer} />
-                <Title theme={theme} colorScheme={colorScheme} text={repo.fullname} />
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                  <Title theme={theme} colorScheme={colorScheme} text={repo.fullname} />
+                </ScrollView>
                 <View style={styles.spacer} />
                 {repo.archived && (
                   <Capsule theme={theme} colorScheme={colorScheme} text="Archived" />
