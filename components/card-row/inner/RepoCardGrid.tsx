@@ -56,6 +56,14 @@ export default function RepoCardGrid({ theme, colorScheme }: Props) {
                     <Octicons name="eye" size={16} color={theme[colorScheme].onPrimaryContainer} />
                     <Content theme={theme} colorScheme={colorScheme} text={repo.watchers.toString()} />
                   </View>
+                  <View style={styles.spacer} />
+                  {repo.language && (
+                    <View style={styles.subRow}>
+                      <MaterialIcons name="language" size={16} color={theme[colorScheme].onPrimaryContainer} />
+                      <Content theme={theme} colorScheme={colorScheme} text={repo.language} />
+                    </View>
+                  )}
+                  <View style={styles.spacer} />
                 </View>
                 {repo.detailedDescription && (
                   <Content theme={theme} colorScheme={colorScheme} text={repo.detailedDescription} />

@@ -30,6 +30,7 @@ async function getGithubResolve(username: string, repo: string) {
       data.stargazers_count,
       data.forks_count,
       data.watchers_count,
+      data.language,
       data.archived,
     );
   } catch (error) {
@@ -47,9 +48,10 @@ export class GithubRepoUiState {
   stars: number;
   forks: number;
   watchers: number;
+  language: string | null;
   archived: boolean;
 
-  constructor(url: string, name: string, fullname: string, description: string, stars: number, forks: number, watchers: number, archived: boolean) {
+  constructor(url: string, name: string, fullname: string, description: string, stars: number, forks: number, watchers: number, language: string | null, archived: boolean) {
     this.url = url;
     this.name = name;
     this.fullname = fullname;
@@ -58,6 +60,7 @@ export class GithubRepoUiState {
     this.stars = stars;
     this.forks = forks;
     this.watchers = watchers;
+    this.language = language;
     this.archived = archived;
   }
 }
