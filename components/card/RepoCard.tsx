@@ -4,10 +4,12 @@ import { View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import Title from "./card-inner/Title";
 import Capsule from "./repo-card-inner/WarnCapsule";
 import Content from "./card-inner/Content";
+import { openUrl } from "@/utils/UrlUtil";
 
 type Props = {
   theme: Material3Theme;
   colorScheme: "light" | "dark";
+  url: string;
   fullname: string;
   description: string;
   stars: number;
@@ -17,14 +19,13 @@ type Props = {
   languageColor?: string;
   detailedDescription?: string;
   archived: boolean;
-  onClick: () => void;
 };
 
-export default function RepoCard({ theme, colorScheme, fullname, description, stars, forks, watchers, language, languageColor, detailedDescription, archived, onClick }: Props) {
+export default function RepoCard({ theme, colorScheme, url, fullname, description, stars, forks, watchers, language, languageColor, detailedDescription, archived }: Props) {
   const backgroundColor = theme[colorScheme].primaryContainer;
 
   return (
-    <TouchableOpacity style={styles.container} onPress={onClick}>
+    <TouchableOpacity style={styles.container} onPress={() => openUrl(url, true)}>
       <View style={[styles.titleBackground, { backgroundColor }]}>
         <Octicons name="repo" size={24} color={theme[colorScheme].onPrimaryContainer} />
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
