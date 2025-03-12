@@ -6,7 +6,7 @@ import EducationCard from "./inner/EducationCard";
 import ContactCard from "./inner/ContactCard";
 import ClubExperienceCard from "./inner/ClubExperienceCard";
 import CertificateCard from "./inner/CertificateCard";
-import Line from "../card/inner/Line";
+import Line from "../card/card-inner/Line";
 import RepoCardGrid from "./inner/RepoCardGrid";
 
 type CardRowProps = {

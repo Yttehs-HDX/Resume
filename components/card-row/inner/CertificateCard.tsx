@@ -1,6 +1,6 @@
 import Card from "@/components/card/Card";
-import Content from "@/components/card/inner/Content";
-import Title from "@/components/card/inner/Title";
+import Content from "@/components/card/card-inner/Content";
+import Title from "@/components/card/card-inner/Title";
 import { Certificate } from "@/constants/Certificate";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Material3Theme } from "@pchmn/expo-material3-theme";

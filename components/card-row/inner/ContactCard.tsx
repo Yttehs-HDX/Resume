@@ -1,11 +1,11 @@
-import Content from "@/components/card/inner/Content";
-import Title from "@/components/card/inner/Title";
+import Content from "@/components/card/card-inner/Content";
+import Title from "@/components/card/card-inner/Title";
 import Card from "@/components/card/Card";
 import { Contact } from "@/constants/Contact";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { View, StyleSheet } from "react-native";
-import ClickableContent from "@/components/card/inner/ClickableContent";
+import ClickableContent from "@/components/card/card-inner/ClickableContent";
 import { BasicInfo } from "@/constants/BasicInfo";
 import { openEmail, openUrl } from "@/utils/UrlUtil";
 
