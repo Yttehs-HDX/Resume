@@ -1,6 +1,6 @@
 import { BasicInfo } from "@/constants/BasicInfo";
 import { View, StyleSheet } from "react-native";
-import TopBarButton from "./top-bar/TopBarButton";
+import TopBarButton from "./inner/TopBarButton";
 import { openUrl } from "@/utils/UrlUtil";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { FontAwesome5, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
