@@ -25,36 +25,51 @@ export default function ClubExperienceCard({ theme, colorScheme }: Props) {
         </>
       }
       content={
-        <ScrollView horizontal style={styles.scrollView}>
-          <View style={styles.container}>
-            {ClubExperience.ClubList.map((club, index) => (
-              <View key={index} style={styles.column}>
-                { index !== 0 && <Line theme={theme} colorScheme={colorScheme} /> }
-                <View style={[styles.row, {
-                  flexDirection: getDeviceType() === "mobile" ? "column" : "row",
-                }]}>
-                  {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-                  <View style={[styles.club, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
-                    <View style={styles.subColumn}>
-                      <Content theme={theme} colorScheme={colorScheme} text={`${club.Name} - ${club.Job}`} fontWeight="bold" fontSize={18} />
-                      <Content theme={theme} colorScheme={colorScheme} text={club.Duration} fontSize={18} />
-                    </View>
-                  </View>
-                  {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-                  <View style={[styles.description, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
-                    <View style={styles.subColumn}>
-                      <Content theme={theme} colorScheme={colorScheme} text={club.Description.Title} fontWeight="bold" fontSize={18} />
-                      <Content theme={theme} colorScheme={colorScheme} text={club.Description.Content} />
-                    </View>
-                  </View>
-                  {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-                </View>
-              </View>
-            ))}
-          </View>
-        </ScrollView>
+        getDeviceType() !== "mobile" ? (
+          <ScrollView horizontal style={styles.scrollView}>
+            <ContentInner theme={theme} colorScheme={colorScheme} />
+          </ScrollView>
+        ) : (
+          <ContentInner theme={theme} colorScheme={colorScheme} />
+        )
       }
     />
+  );
+}
+
+type ContentInnerProps = {
+  theme: Material3Theme;
+  colorScheme: "light" | "dark";
+};
+
+function ContentInner({ theme, colorScheme }: ContentInnerProps) {
+  return (
+    <View style={styles.container}>
+      {ClubExperience.ClubList.map((club, index) => (
+        <View key={index} style={styles.column}>
+          { index !== 0 && <Line theme={theme} colorScheme={colorScheme} /> }
+          <View style={[styles.row, {
+            flexDirection: getDeviceType() === "mobile" ? "column" : "row",
+          }]}>
+            {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
+            <View style={[styles.club, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+              <View style={styles.subColumn}>
+                <Content theme={theme} colorScheme={colorScheme} text={`${club.Name} - ${club.Job}`} fontWeight="bold" fontSize={18} />
+                <Content theme={theme} colorScheme={colorScheme} text={club.Duration} fontSize={18} />
+              </View>
+            </View>
+            {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
+            <View style={[styles.description, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+              <View style={styles.subColumn}>
+                <Content theme={theme} colorScheme={colorScheme} text={club.Description.Title} fontWeight="bold" fontSize={18} />
+                <Content theme={theme} colorScheme={colorScheme} text={club.Description.Content} />
+              </View>
+            </View>
+            {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
+          </View>
+        </View>
+      ))}
+    </View>
   );
 }
 
