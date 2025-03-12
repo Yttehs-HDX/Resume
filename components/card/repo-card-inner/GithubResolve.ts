@@ -15,17 +15,20 @@ export const fetchAllGithubRepos = async () => {
         }
         repos.push(githubRepoUiState);
       } else {
-        repos.push(new GithubRepoUiState(
+        let offlineRepo = new GithubRepoUiState(
           `https://github.com/${user.Username}/${repo.Name}`,
           repo.Name,
           `${user.Username}/${repo.Name}`,
-          "Loading...",
-          0,
-          0,
-          0,
-          null,
+          "Waiting for GitHub API...",
+          -1,
+          -1,
+          -1,
+          "Unknown",
           false,
-        ));
+        );
+        offlineRepo.detailedDescription = repo.Description;
+        offlineRepo.languageColor = "#666";
+        repos.push(offlineRepo);
       }
     }
   }
@@ -33,7 +36,7 @@ export const fetchAllGithubRepos = async () => {
 };
 
 async function getGithubResolve(username: string, repo: string) {
-  const url = `https://api.github.com/repos/${username}/${repo}`;
+  const url = `https://api.githuxxxxb.com/repos/${username}/${repo}`;
 
   try {
     const response = await axios.get(url,
