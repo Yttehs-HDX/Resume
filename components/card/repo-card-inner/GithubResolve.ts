@@ -1,5 +1,6 @@
 import { GithubRepos } from "@/constants/GithubRepos";
 import axios from "axios";
+import { getLanguageColor } from "./LanguageColor";
 
 export const fetchAllGithubRepos = async () => {
   const repos: GithubRepoUiState[] = [];
@@ -8,6 +9,10 @@ export const fetchAllGithubRepos = async () => {
       let githubRepoUiState = await getGithubResolve(user.Username, repo.Name);
       if (githubRepoUiState) {
         githubRepoUiState.detailedDescription = repo.Description;
+        if (githubRepoUiState.language) {
+          const languageColor = await getLanguageColor(githubRepoUiState.language);
+          githubRepoUiState.languageColor = languageColor;
+        }
         repos.push(githubRepoUiState);
       }
     }
@@ -49,6 +54,7 @@ export class GithubRepoUiState {
   forks: number;
   watchers: number;
   language: string | null;
+  languageColor: string | null;
   archived: boolean;
 
   constructor(url: string, name: string, fullname: string, description: string, stars: number, forks: number, watchers: number, language: string | null, archived: boolean) {
@@ -61,6 +67,7 @@ export class GithubRepoUiState {
     this.forks = forks;
     this.watchers = watchers;
     this.language = language;
+    this.languageColor = null;
     this.archived = archived;
   }
 }

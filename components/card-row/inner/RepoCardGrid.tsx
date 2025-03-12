@@ -41,33 +41,39 @@ export default function RepoCardGrid({ theme, colorScheme }: Props) {
               </>
             }
             content={
-              <View>
-                <Content theme={theme} colorScheme={colorScheme} text={repo.description} />
-                <View style={styles.row}>
-                  <View style={styles.subRow}>
-                    <MaterialIcons name="star" size={16} color={theme[colorScheme].onPrimaryContainer} />
-                    <Content theme={theme} colorScheme={colorScheme} text={repo.stars.toString()} />
-                  </View>
-                  <View style={styles.subRow}>
-                    <Octicons name="repo-forked" size={16} color={theme[colorScheme].onPrimaryContainer} />
-                    <Content theme={theme} colorScheme={colorScheme} text={repo.forks.toString()} />
-                  </View>
-                  <View style={styles.subRow}>
-                    <Octicons name="eye" size={16} color={theme[colorScheme].onPrimaryContainer} />
-                    <Content theme={theme} colorScheme={colorScheme} text={repo.watchers.toString()} />
-                  </View>
-                  <View style={styles.spacer} />
-                  {repo.language && (
+              <View style={styles.column}>
+                <View style={styles.subColumn}>
+                  <Content theme={theme} colorScheme={colorScheme} text={repo.description} />
+                  <View style={styles.row}>
                     <View style={styles.subRow}>
-                      <MaterialIcons name="language" size={16} color={theme[colorScheme].onPrimaryContainer} />
-                      <Content theme={theme} colorScheme={colorScheme} text={repo.language} />
+                      <MaterialIcons name="star" size={16} color={theme[colorScheme].onPrimaryContainer} />
+                      <Content theme={theme} colorScheme={colorScheme} text={repo.stars.toString()} />
                     </View>
-                  )}
-                  <View style={styles.spacer} />
+                    <View style={styles.subRow}>
+                      <Octicons name="repo-forked" size={16} color={theme[colorScheme].onPrimaryContainer} />
+                      <Content theme={theme} colorScheme={colorScheme} text={repo.forks.toString()} />
+                    </View>
+                    <View style={styles.subRow}>
+                      <Octicons name="eye" size={16} color={theme[colorScheme].onPrimaryContainer} />
+                      <Content theme={theme} colorScheme={colorScheme} text={repo.watchers.toString()} />
+                    </View>
+                    <View style={styles.spacer} />
+                    {repo.language && (
+                      <View style={styles.subRow}>
+                        {repo.languageColor && (
+                          <View style={[styles.languageColor, { backgroundColor: repo.languageColor }]} />
+                        )}
+                        <Content theme={theme} colorScheme={colorScheme} text={repo.language} />
+                      </View>
+                    )}
+                    <View style={styles.spacer} />
+                  </View>
                 </View>
-                {repo.detailedDescription && (
-                  <Content theme={theme} colorScheme={colorScheme} text={repo.detailedDescription} />
-                )}
+                <View style={styles.subColumn}>
+                  {repo.detailedDescription && (
+                    <Content theme={theme} colorScheme={colorScheme} text={repo.detailedDescription} />
+                  )}
+                </View>
               </View>
             }
             onClick={() => openUrl(repo.url, true)}
@@ -87,16 +93,35 @@ const styles = StyleSheet.create({
   spacer: {
     flex: 1,
   },
+  column: {
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 16,
+  },
   row: {
+    width: "100%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-start",
     gap: 16,
+  },
+  subColumn: {
+    width: "100%",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    gap: 8,
   },
   subRow: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
+  },
+  languageColor: {
+    width: 16,
+    height: 16,
+    borderRadius: 90,
   },
 });
