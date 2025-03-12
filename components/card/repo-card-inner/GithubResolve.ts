@@ -5,8 +5,9 @@ export const fetchAllGithubRepos = async () => {
   const repos: GithubRepoUiState[] = [];
   for (const user of GithubRepos.RepoList) {
     for (const repo of user.Repos) {
-      const githubRepoUiState = await getGithubResolve(user.Username, repo.Name);
+      let githubRepoUiState = await getGithubResolve(user.Username, repo.Name);
       if (githubRepoUiState) {
+        githubRepoUiState.detailedDescription = repo.Description;
         repos.push(githubRepoUiState);
       }
     }
@@ -28,6 +29,7 @@ async function getGithubResolve(username: string, repo: string) {
       data.description,
       data.stargazers_count,
       data.forks_count,
+      data.watchers_count,
       data.archived,
     );
   } catch (error) {
@@ -41,17 +43,21 @@ export class GithubRepoUiState {
   name: string;
   fullname: string;
   description: string;
+  detailedDescription: string | null;
   stars: number;
   forks: number;
+  watchers: number;
   archived: boolean;
 
-  constructor(url: string, name: string, fullname: string, description: string, stars: number, forks: number, archived: boolean) {
+  constructor(url: string, name: string, fullname: string, description: string, stars: number, forks: number, watchers: number, archived: boolean) {
     this.url = url;
     this.name = name;
     this.fullname = fullname;
     this.description = description;
+    this.detailedDescription = null;
     this.stars = stars;
     this.forks = forks;
+    this.watchers = watchers;
     this.archived = archived;
   }
 }

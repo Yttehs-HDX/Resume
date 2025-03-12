@@ -4,6 +4,9 @@ import RepoCard from "@/components/card/RepoCard";
 import { FlatGrid } from 'react-native-super-grid';
 import { useEffect, useState } from "react";
 import { fetchAllGithubRepos, GithubRepoUiState } from "@/components/card/repo-card-inner/GithubResolve";
+import Title from "@/components/card/card-inner/Title";
+import { MaterialIcons, Octicons } from "@expo/vector-icons";
+import Content from "@/components/card/card-inner/Content";
 
 type Props = {
   theme: Material3Theme;
@@ -21,15 +24,38 @@ export default function RepoCardGrid({ theme, colorScheme }: Props) {
   return (
     <View style={styles.container}>
       <FlatGrid
-        itemDimension={300}
+        itemDimension={400}
         data={githubRepos}
         renderItem={({ item: repo, index }) => (
-          <RepoCard
-            key={index}
-            theme={theme}
-            colorScheme={colorScheme}
-            title={repo.fullname}
-            content={repo.description}
+          <RepoCard key={index} theme={theme} colorScheme={colorScheme}
+            title={
+              <>
+                <Octicons name="repo" size={24} color={theme[colorScheme].onPrimaryContainer} />
+                <Title theme={theme} colorScheme={colorScheme} text={repo.fullname} />
+              </>
+            }
+            content={
+              <View>
+                <Content theme={theme} colorScheme={colorScheme} text={repo.description} />
+                <View style={styles.row}>
+                  <View style={styles.subRow}>
+                    <MaterialIcons name="star" size={16} color={theme[colorScheme].onPrimaryContainer} />
+                    <Content theme={theme} colorScheme={colorScheme} text={repo.stars.toString()} />
+                  </View>
+                  <View style={styles.subRow}>
+                    <Octicons name="repo-forked" size={16} color={theme[colorScheme].onPrimaryContainer} />
+                    <Content theme={theme} colorScheme={colorScheme} text={repo.forks.toString()} />
+                  </View>
+                  <View style={styles.subRow}>
+                    <Octicons name="eye" size={16} color={theme[colorScheme].onPrimaryContainer} />
+                    <Content theme={theme} colorScheme={colorScheme} text={repo.watchers.toString()} />
+                  </View>
+                </View>
+                {repo.detailedDescription && (
+                  <Content theme={theme} colorScheme={colorScheme} text={repo.detailedDescription} />
+                )}
+              </View>
+            }
           />
         )}
       />
@@ -42,5 +68,17 @@ const styles = StyleSheet.create({
     width: "100%",
     gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))",
     gap: 16,
+  },
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    gap: 16,
+  },
+  subRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
   },
 });
