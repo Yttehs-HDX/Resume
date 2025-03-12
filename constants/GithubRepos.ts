@@ -1,4 +1,6 @@
 export class GithubRepos {
+  static readonly Title = "开源项目";
+
   static readonly RepoList = [
     {
       Username: "Yttehs-HDX",

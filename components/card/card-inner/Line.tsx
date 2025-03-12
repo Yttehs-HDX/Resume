@@ -9,10 +9,20 @@ type Props = {
 
 export default function Line({ theme, colorScheme, width }: Props) {
   const lineColor = theme[colorScheme].outline;
-  return <View style={[styles.line, { backgroundColor: lineColor, width: width }]} />;
+
+  return (
+    <View style={styles.container}>
+      <View style={[styles.line, { backgroundColor: lineColor, width }]} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   line: {
     height: 1,
     width: "100%",

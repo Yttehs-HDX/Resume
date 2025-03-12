@@ -6,8 +6,6 @@ import EducationCard from "./inner/EducationCard";
 import ContactCard from "./inner/ContactCard";
 import ClubExperienceCard from "./inner/ClubExperienceCard";
 import CertificateCard from "./inner/CertificateCard";
-import Line from "../card/card-inner/Line";
-import RepoCardGrid from "../RepoCardGrid";
 
 type CardRowProps = {
   theme: Material3Theme;

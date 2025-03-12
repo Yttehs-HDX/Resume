@@ -12,6 +12,8 @@ import Header from "@/components/Header";
 import TopButtonRow from "@/components/TopButtonRow";
 import Line from "@/components/card/card-inner/Line";
 import RepoCardGrid from "@/components/RepoCardGrid";
+import SubTitle from "@/components/SubTitle";
+import { GithubRepos } from "@/constants/GithubRepos";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -54,6 +56,7 @@ export default function Index() {
             <Introduction theme={theme} colorScheme={colorScheme} avatar={BasicInfo.Avatar} nickname={BasicInfo.Nickname} />
             <CardRow theme={theme} colorScheme={colorScheme} />
             <Line theme={theme} colorScheme={colorScheme} width="30%" />
+            <SubTitle theme={theme} colorScheme={colorScheme} title={GithubRepos.Title} />
             <RepoCardGrid theme={theme} colorScheme={colorScheme} />
             <Effect listen={colorScheme} />
           </View>
@@ -75,8 +78,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   column: {
-    alignItems: "center",
-    justifyContent: "center",
     gap: 32,
   },
 });
