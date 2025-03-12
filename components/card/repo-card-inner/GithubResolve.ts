@@ -36,7 +36,9 @@ async function getGithubResolve(username: string, repo: string) {
   const url = `https://api.github.com/repos/${username}/${repo}`;
 
   try {
-    const response = await axios.get(url);
+    const response = await axios.get(url,
+      { timeout: 10000 }
+    );
     const data = response.data;
     // console.log(data);
     return new GithubRepoUiState(
