@@ -10,6 +10,8 @@ import CardRow from "@/components/card-row/CardRow";
 import getDeviceType from "@/utils/Device";
 import Header from "@/components/Header";
 import TopButtonRow from "@/components/TopButtonRow";
+import Line from "@/components/card/card-inner/Line";
+import RepoCardGrid from "@/components/RepoCardGrid";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -39,7 +41,7 @@ export default function Index() {
         }} />
       <ScrollView style={[styles.scrollView, { backgroundColor: theme[colorScheme].surface }]}>
         <View style={styles.contentContainer}>
-          <View style={{ width: (() => {
+          <View style={[styles.column, { width: (() => {
             switch (getDeviceType()) {
               case 'mobile':
                 return "95%";
@@ -48,17 +50,11 @@ export default function Index() {
               default:
                 return "90%";
             }
-          })() }}>
-            <Introduction
-              theme={theme}
-              colorScheme={colorScheme}
-              avatar={BasicInfo.Avatar}
-              nickname={BasicInfo.Nickname}
-            />
-            <CardRow
-              theme={theme}
-              colorScheme={colorScheme}
-            />
+          })() }]}>
+            <Introduction theme={theme} colorScheme={colorScheme} avatar={BasicInfo.Avatar} nickname={BasicInfo.Nickname} />
+            <CardRow theme={theme} colorScheme={colorScheme} />
+            <Line theme={theme} colorScheme={colorScheme} width="30%" />
+            <RepoCardGrid theme={theme} colorScheme={colorScheme} />
             <Effect listen={colorScheme} />
           </View>
         </View>
@@ -77,5 +73,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  column: {
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 32,
   },
 });
