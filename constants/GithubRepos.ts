@@ -1,5 +1,5 @@
 export class GithubRepos {
-  static readonly Title = "开源项目";
+  static readonly Title = "作品展示";
 
   static readonly RepoList = [
     {

@@ -14,6 +14,8 @@ import Line from "@/components/card/card-inner/Line";
 import RepoCardGrid from "@/components/RepoCardGrid";
 import SubTitle from "@/components/SubTitle";
 import { GithubRepos } from "@/constants/GithubRepos";
+import BlogCardGrid from "@/components/BLogCardGrid";
+import { Blog } from "@/constants/Blog";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -58,6 +60,9 @@ export default function Index() {
             <Line theme={theme} colorScheme={colorScheme} width="30%" />
             <SubTitle theme={theme} colorScheme={colorScheme} title={GithubRepos.Title} />
             <RepoCardGrid theme={theme} colorScheme={colorScheme} />
+            <Line theme={theme} colorScheme={colorScheme} width="30%" />
+            <SubTitle theme={theme} colorScheme={colorScheme} title={Blog.Title} />
+            <BlogCardGrid theme={theme} colorScheme={colorScheme} />
             <Effect listen={colorScheme} />
           </View>
         </View>

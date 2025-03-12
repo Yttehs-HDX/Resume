@@ -1,24 +1,31 @@
 import { Material3Theme } from "@pchmn/expo-material3-theme";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import Content from "./card-inner/Content";
+import Title from "./card-inner/Title";
+import { Entypo } from "@expo/vector-icons";
+import { openUrl } from "@/utils/UrlUtil";
 
 type Props = {
   theme: Material3Theme;
   colorScheme: "light" | "dark";
-  title: React.ReactNode;
-  content: React.ReactNode;
-  onClick: () => void;
+  url: string;
+  title: string;
+  description: string;
 };
 
-export default function RepoCard({ theme, colorScheme, title, content, onClick }: Props) {
+export default function BlogCard({ theme, colorScheme, url, title, description }: Props) {
   const backgroundColor = theme[colorScheme].primaryContainer;
 
   return (
-    <TouchableOpacity style={styles.container} onPress={onClick}>
+    <TouchableOpacity style={styles.container} onPress={() => openUrl(url, true)}>
       <View style={[styles.titleBackground, { backgroundColor }]}>
-        {title}
+        <Entypo name="pencil" size={24} color={theme[colorScheme].onPrimaryContainer} />
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <Title theme={theme} colorScheme={colorScheme} text={title} />
+        </ScrollView>
       </View>
       <View style={[styles.contentBackground, { backgroundColor }]}>
-        {content}
+        <Content theme={theme} colorScheme={colorScheme} text={description} />
       </View>
     </TouchableOpacity>
   );
