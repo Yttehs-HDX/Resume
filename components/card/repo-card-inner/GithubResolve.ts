@@ -40,7 +40,13 @@ async function getGithubResolve(username: string, repo: string) {
 
   try {
     const response = await axios.get(url,
-      { timeout: 10000 }
+      {
+        headers: {
+          "Accept": "application/vnd.github.v3+json",
+          // "Authorization": `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
+        timeout: 10000,
+      }
     );
     const data = response.data;
     // console.log(data);
@@ -56,7 +62,7 @@ async function getGithubResolve(username: string, repo: string) {
       data.archived,
     );
   } catch (error) {
-    console.warn(error);
+    // console.warn(error);
     return null;
   }
 }
