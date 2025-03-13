@@ -10,7 +10,7 @@ export const fetchAllGithubRepos = async () => {
       if (githubRepoUiState) {
         githubRepoUiState.detailedDescription = repo.Description;
         if (githubRepoUiState.language) {
-          const languageColor = await getLanguageColor(githubRepoUiState.language);
+          const languageColor = getLanguageColor(githubRepoUiState.language);
           githubRepoUiState.languageColor = languageColor;
         }
         repos.push(githubRepoUiState);

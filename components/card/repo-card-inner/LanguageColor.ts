@@ -1,13 +1,9 @@
-import axios from "axios";
+/**
+ * colors.json is from https://github.com/ozh/github-colors
+ */
 
-export async function getLanguageColor(language: string) {
-    const url = `https://raw.githubusercontent.com/ozh/github-colors/refs/heads/master/colors.json`;
-  try {
-    const response = await axios.get(url);
-    const data = response.data;
-    // console.log(data);
-    return data[language].color as string;
-  } catch (error) {
-    return "#FFF";
-  }
+import colors from "./colors.json";
+
+export function getLanguageColor(language: string) {
+  return colors[language as keyof typeof colors].color ?? "#666";
 }
