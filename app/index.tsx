@@ -1,7 +1,6 @@
 import { ScrollView, StyleSheet, useColorScheme, View, Dimensions } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
-import Effect from "@/utils/Effect";
 import { openUrl } from "@/utils/UrlUtil";
 import Introduction from "@/components/Introduction";
 import { UIConfig } from "@/storage/UIConfig";
@@ -63,7 +62,6 @@ export default function Index() {
             <Line theme={theme} colorScheme={colorScheme} width="30%" />
             <SubTitle theme={theme} colorScheme={colorScheme} title={Blog.Title} />
             <BlogCardGrid theme={theme} colorScheme={colorScheme} />
-            <Effect listen={colorScheme} />
           </View>
         </View>
         <View style={{ height: screenHeight * 0.3 }} />
