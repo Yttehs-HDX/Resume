@@ -4,7 +4,7 @@ import Title from "@/components/card/card-inner/Title";
 import { Education } from "@/constants/Education";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { FontAwesome6 } from "@expo/vector-icons";
-import { View, StyleSheet, Image, AppState, ScrollView } from "react-native";
+import { View, StyleSheet, Image, ScrollView } from "react-native";
 import getDeviceType from "@/utils/Device";
 
 type Props = {

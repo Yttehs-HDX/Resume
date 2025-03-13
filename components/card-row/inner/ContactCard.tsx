@@ -6,7 +6,6 @@ import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { View, StyleSheet } from "react-native";
 import ClickableContent from "@/components/card/card-inner/ClickableContent";
-import { BasicInfo } from "@/constants/BasicInfo";
 import { openEmail, openUrl } from "@/utils/UrlUtil";
 
 type Props = {

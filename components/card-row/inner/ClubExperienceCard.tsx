@@ -3,7 +3,7 @@ import Content from "@/components/card/card-inner/Content";
 import Title from "@/components/card/card-inner/Title";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { ClubExperience } from "@/constants/ClubExperience";
-import { View, StyleSheet, Image, ScrollView } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import getDeviceType from "@/utils/Device";
 import Line from "@/components/card/card-inner/Line";
 import { MaterialIcons } from "@expo/vector-icons";

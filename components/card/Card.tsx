@@ -1,5 +1,5 @@
 import { Material3Theme } from "@pchmn/expo-material3-theme";
-import { View, StyleSheet, ScrollView } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 type Props = {
   theme: Material3Theme;
