@@ -23,11 +23,11 @@ export const fetchAllGithubRepos = async () => {
           -1,
           -1,
           -1,
-          "Unknown",
+          repo.Lang,
           false,
         );
         offlineRepo.detailedDescription = repo.Description;
-        offlineRepo.languageColor = "#666";
+        offlineRepo.languageColor = getLanguageColor(repo.Lang);
         repos.push(offlineRepo);
       }
     }
