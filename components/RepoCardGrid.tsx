@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { ActivityIndicator, StyleSheet, View } from "react-native";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import RepoCard from "@/components/card/RepoCard";
 import { FlatGrid } from 'react-native-super-grid';
@@ -17,6 +17,14 @@ export default function RepoCardGrid({ theme, colorScheme }: Props) {
       setGithubRepos(repos);
     });
   }, []);
+
+  if (githubRepos.length === 0) {
+    return (
+      <View style={styles.container}>
+        <ActivityIndicator size="large" color={theme[colorScheme].onPrimaryContainer} />
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
