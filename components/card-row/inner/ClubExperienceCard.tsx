@@ -25,13 +25,7 @@ export default function ClubExperienceCard({ theme, colorScheme }: Props) {
         </>
       }
       content={
-        getDeviceType() !== "mobile" ? (
-          <ScrollView horizontal style={styles.scrollView}>
-            <ContentInner theme={theme} colorScheme={colorScheme} />
-          </ScrollView>
-        ) : (
-          <ContentInner theme={theme} colorScheme={colorScheme} />
-        )
+        <ContentInner theme={theme} colorScheme={colorScheme} />
       }
     />
   );
@@ -74,9 +68,6 @@ function ContentInner({ theme, colorScheme }: ContentInnerProps) {
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    width: "100%",
-  },
   container: {
     width: "100%",
     alignItems: "center",
