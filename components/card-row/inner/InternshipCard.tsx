@@ -20,7 +20,7 @@ export default function InternshipCard({ theme, colorScheme }: Props) {
       colorScheme={colorScheme}
       title={
         <>
-          <MaterialIcons name="group" size={24} color={theme[colorScheme].onPrimaryContainer} />
+          <MaterialIcons name="work" size={24} color={theme[colorScheme].onPrimaryContainer} />
           <Title theme={theme} colorScheme={colorScheme} text={Internship.Title} />
         </>
       }
