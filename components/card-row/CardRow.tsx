@@ -6,6 +6,7 @@ import EducationCard from "./inner/EducationCard";
 import ContactCard from "./inner/ContactCard";
 import ClubExperienceCard from "./inner/ClubExperienceCard";
 import CertificateCard from "./inner/CertificateCard";
+import InternshipCard from "./inner/InternshipCard";
 
 type CardRowProps = {
   theme: Material3Theme;
@@ -19,6 +20,7 @@ export default function CardRow({ theme, colorScheme }: CardRowProps) {
       <ProfessionalSkillsCard theme={theme} colorScheme={colorScheme} />
       <EducationCard theme={theme} colorScheme={colorScheme} />
       <ClubExperienceCard theme={theme} colorScheme={colorScheme} />
+      <InternshipCard theme={theme} colorScheme={colorScheme} />
       <CertificateCard theme={theme} colorScheme={colorScheme} />
       <ContactCard theme={theme} colorScheme={colorScheme} />
     </View>
