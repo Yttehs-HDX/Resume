@@ -25,13 +25,7 @@ export default function InternshipCard({ theme, colorScheme }: Props) {
         </>
       }
       content={
-        getDeviceType() !== "mobile" ? (
-          <ScrollView horizontal style={styles.scrollView}>
-            <ContentInner theme={theme} colorScheme={colorScheme} />
-          </ScrollView>
-        ) : (
-          <ContentInner theme={theme} colorScheme={colorScheme} />
-        )
+        <ContentInner theme={theme} colorScheme={colorScheme} />
       }
     />
   );
@@ -52,9 +46,10 @@ function ContentInner({ theme, colorScheme }: ContentInnerProps) {
             flexDirection: getDeviceType() === "mobile" ? "column" : "row",
           }]}>
             {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-            <View style={[styles.club, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+            <View style={[styles.enterprise, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
               <View style={styles.subColumn}>
-                <Content theme={theme} colorScheme={colorScheme} text={`${internship.Name} - ${internship.Job}`} fontWeight="bold" fontSize={18} />
+                <Content theme={theme} colorScheme={colorScheme} text={`${internship.Enterprise}`} fontWeight="bold" fontSize={18} />
+                <Content theme={theme} colorScheme={colorScheme} text={`${internship.Department} - ${internship.Job}`} fontWeight="bold" fontSize={18} />
                 <Content theme={theme} colorScheme={colorScheme} text={internship.Duration} fontSize={18} />
               </View>
             </View>
@@ -74,9 +69,6 @@ function ContentInner({ theme, colorScheme }: ContentInnerProps) {
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    width: "100%",
-  },
   container: {
     width: "100%",
     alignItems: "center",
@@ -98,7 +90,7 @@ const styles = StyleSheet.create({
   spacer: {
     flex: 1,
   },
-  club: {
+  enterprise: {
     flex: 3,
     alignItems: "flex-start",
     justifyContent: "center",
