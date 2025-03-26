@@ -1,4 +1,4 @@
-.PHONY : all server build clean
+.PHONY : all build preview clean
 
 EXPO := npx expo
 PLATFORM := web
@@ -10,7 +10,7 @@ all: build
 build:
 	@$(EXPO) export
 
-server:
+preview:
 	@$(EXPO) start --$(PLATFORM)
 
 clean:
