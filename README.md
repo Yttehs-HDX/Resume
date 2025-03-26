@@ -17,4 +17,4 @@ Powered by React Native [Expo](https://docs.expo.dev).
 ## License
 
 - `Program`: MIT
-- `Content` ( in `constants` directory, including my personal information ): Unshared
+- `Content` ( in `constants` directory, only my personal information ): Unshared
