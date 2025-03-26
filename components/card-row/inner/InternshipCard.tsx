@@ -46,7 +46,10 @@ function ContentInner({ theme, colorScheme }: ContentInnerProps) {
             flexDirection: getDeviceType() === "mobile" ? "column" : "row",
           }]}>
             {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-            <View style={[styles.enterprise, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+            <View style={[styles.enterprise, {
+              flex: getDeviceType() !== "mobile" ? 3 : undefined,
+              width: getDeviceType() === "mobile" ? "100%" : undefined,
+            }]}>
               <View style={styles.subColumn}>
                 <Content theme={theme} colorScheme={colorScheme} text={`${internship.Enterprise}`} fontWeight="bold" fontSize={18} />
                 <Content theme={theme} colorScheme={colorScheme} text={`${internship.Department} - ${internship.Job}`} fontWeight="bold" fontSize={18} />
@@ -54,7 +57,10 @@ function ContentInner({ theme, colorScheme }: ContentInnerProps) {
               </View>
             </View>
             {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-            <View style={[styles.description, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+            <View style={[styles.description, {
+              flex: getDeviceType() !== "mobile" ? 6 : undefined,
+              width: getDeviceType() === "mobile" ? "100%" : undefined
+            }]}>
               {internship.Description.map((description, index) => (
                 <View key={index} style={styles.subColumn}>
                   <Content theme={theme} colorScheme={colorScheme} text={description.Title} fontWeight="bold" fontSize={18} />
@@ -93,12 +99,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   enterprise: {
-    flex: 3,
     alignItems: "flex-start",
     justifyContent: "center",
   },
   description: {
-    flex: 6,
     alignItems: "flex-start",
     justifyContent: "center",
   },

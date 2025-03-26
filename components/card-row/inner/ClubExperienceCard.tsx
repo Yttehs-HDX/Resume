@@ -46,14 +46,20 @@ function ContentInner({ theme, colorScheme }: ContentInnerProps) {
             flexDirection: getDeviceType() === "mobile" ? "column" : "row",
           }]}>
             {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-            <View style={[styles.club, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+            <View style={[styles.club, {
+              flex: getDeviceType() !== "mobile" ? 3 : undefined,
+              width: getDeviceType() === "mobile" ? "100%" : undefined,
+            }]}>
               <View style={styles.subColumn}>
                 <Content theme={theme} colorScheme={colorScheme} text={`${club.Name} - ${club.Job}`} fontWeight="bold" fontSize={18} />
                 <Content theme={theme} colorScheme={colorScheme} text={club.Duration} fontSize={18} />
               </View>
             </View>
             {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
-            <View style={[styles.description, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
+            <View style={[styles.description, {
+              flex: getDeviceType() !== "mobile" ? 6 : undefined,
+              width: getDeviceType() === "mobile" ? "100%" : undefined,
+            }]}>
               <View style={styles.subColumn}>
                 <Content theme={theme} colorScheme={colorScheme} text={club.Description.Title} fontWeight="bold" fontSize={18} />
                 <Content theme={theme} colorScheme={colorScheme} text={club.Description.Content} />
@@ -90,12 +96,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   club: {
-    flex: 3,
     alignItems: "flex-start",
     justifyContent: "center",
   },
   description: {
-    flex: 6,
     alignItems: "flex-start",
     justifyContent: "center",
   },
