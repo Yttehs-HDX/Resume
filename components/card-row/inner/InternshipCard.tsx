@@ -55,10 +55,12 @@ function ContentInner({ theme, colorScheme }: ContentInnerProps) {
             </View>
             {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
             <View style={[styles.description, { width: getDeviceType() === "mobile" ? "100%" : undefined }]}>
-              <View style={styles.subColumn}>
-                <Content theme={theme} colorScheme={colorScheme} text={internship.Description.Title} fontWeight="bold" fontSize={18} />
-                <Content theme={theme} colorScheme={colorScheme} text={internship.Description.Content} />
-              </View>
+              {internship.Description.map((description, index) => (
+                <View key={index} style={styles.subColumn}>
+                  <Content theme={theme} colorScheme={colorScheme} text={description.Title} fontWeight="bold" fontSize={18} />
+                  <Content theme={theme} colorScheme={colorScheme} text={description.Content} />
+                </View>
+              ))}
             </View>
             {getDeviceType() !== "mobile" && <View style={styles.spacer} />}
           </View>
