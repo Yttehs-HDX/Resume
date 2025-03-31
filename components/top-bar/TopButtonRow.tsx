@@ -32,7 +32,7 @@ export default function TopButtonRow({ theme, colorScheme }: Props) {
       <TopBarButton
         theme={theme}
         colorScheme={colorScheme}
-        label="Github"
+        label="GitHub"
         icon={<FontAwesome5 name="github" size={24} color={color} />}
         onPress={ () => openUrl(BasicInfo.Github, true) }
       />
