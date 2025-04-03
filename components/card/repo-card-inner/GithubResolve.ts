@@ -45,7 +45,7 @@ async function getGithubResolve(username: string, repo: string) {
           "Accept": "application/vnd.github.v3+json",
           // "Authorization": `Bearer ${process.env.GITHUB_TOKEN}`,
         },
-        timeout: 10000,
+        timeout: 1000,
       }
     );
     const data = response.data;
