@@ -22,7 +22,7 @@ type Props = {
 };
 
 export default function RepoCard({ theme, colorScheme, url, fullname, description, stars, forks, watchers, language, languageColor, detailedDescription, archived }: Props) {
-  const backgroundColor = theme[colorScheme].primaryContainer;
+  const backgroundColor = theme[colorScheme].inversePrimary;
 
   return (
     <TouchableOpacity style={styles.container} onPress={() => openUrl(url, true)}>

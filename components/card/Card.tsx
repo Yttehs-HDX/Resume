@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function Card({ theme, colorScheme, title, content }: Props) {
-  const titleBackgroundColor = theme[colorScheme].primaryContainer;
+  const titleBackgroundColor = theme[colorScheme].inversePrimary;
   const contentBackgroundColor = theme[colorScheme].secondaryContainer;
 
   return (

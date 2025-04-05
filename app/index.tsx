@@ -24,7 +24,7 @@ export default function Index() {
   return (
     <>
       <Stack.Screen options={{
-          headerStyle: [{ backgroundColor: theme[colorScheme].primaryContainer }],
+          headerStyle: [{ backgroundColor: theme[colorScheme].inversePrimary }],
           headerTitle() {
             return <Header
               theme={theme}
