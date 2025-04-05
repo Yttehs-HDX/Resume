@@ -1,4 +1,5 @@
 import { openUrl } from "@/utils/UrlUtil";
+import { CertificateInfo } from "@/constants/CertificateInfo";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 
@@ -14,11 +15,15 @@ export default function Certificate({ theme, colorScheme }: Props) {
 
   return (
     <View style={[styles.container, { backgroundColor }]}>
-      <Text style={[styles.certificate, { color: fontColor }]}>© 2024 - 2025 Shetty Yttehs</Text>
+      <Text style={[styles.certificate, { color: fontColor }]}>
+        {`© ${CertificateInfo.StartYear} - ${CertificateInfo.EndYear} ${CertificateInfo.Organization}`}
+      </Text>
       <View style={styles.row}>
         <Text style={[styles.poweredBy, { color: fontColor }]}>Powered by </Text>
-        <TouchableOpacity onPress={() => openUrl("https://expo.dev", true)}>
-          <Text style={[styles.poweredBy, { color: linkColor }]}>React Native Expo</Text>
+        <TouchableOpacity onPress={() => openUrl(CertificateInfo.PoweredFrameworkUrl, true)}>
+          <Text style={[styles.poweredBy, { color: linkColor }]}>
+            {CertificateInfo.PoweredFramework}
+          </Text>
         </TouchableOpacity>
       </View>
     </View>
