@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function Introduction({ theme, colorScheme, avatar, nickname, language }: Props) {
-  const fontColor = theme[colorScheme].onPrimaryContainer;
+  const fontColor = theme[colorScheme].onSecondaryContainer;
   const avatarBackgroundColor = theme[colorScheme].inversePrimary;
 
   return (

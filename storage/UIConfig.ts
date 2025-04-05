@@ -1,3 +1,3 @@
 export class UIConfig {
-  static readonly DefaultColor = "#1F96F2";
+  static readonly DefaultColor = "#80D4DA";
 }

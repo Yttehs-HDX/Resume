@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function Title({ theme, colorScheme, text }: Props) {
-  const textColor = theme[colorScheme].onPrimaryContainer;
+  const textColor = theme[colorScheme].onSecondaryContainer;
   return <Text style={[styles.title, { color: textColor }]}>{text}</Text>;
 }
 

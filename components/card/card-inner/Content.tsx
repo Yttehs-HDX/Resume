@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function Content({ theme, colorScheme, text, fontSize, fontWeight }: Props) {
-  const textColor = theme[colorScheme].onPrimaryContainer;
+  const textColor = theme[colorScheme].onSecondaryContainer;
   return <Text style={[styles.content, { color: textColor, fontSize, fontWeight }]}>{text}</Text>;
 }
 

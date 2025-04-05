@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default function ClickableContent({ theme, colorScheme, text, fontSize, fontWeight, onClick }: Props) {
-  const textColor = theme[colorScheme].onPrimaryContainer;
+  const textColor = theme[colorScheme].onSecondaryContainer;
   return (
     <Pressable onPress={onClick}>
       <Text style={[styles.content, { color: textColor, fontSize, fontWeight }]}>{text}</Text>
