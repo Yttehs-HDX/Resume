@@ -15,6 +15,7 @@ import SubTitle from "@/components/SubTitle";
 import { GithubRepos } from "@/constants/GithubRepos";
 import BlogCardGrid from "@/components/BlogCardGrid";
 import { Blog } from "@/constants/Blog";
+import Certificate from "@/components/bottom-bar/Certificate";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
@@ -65,6 +66,7 @@ export default function Index() {
           </View>
         </View>
         <View style={{ height: screenHeight * 0.3 }} />
+        <Certificate theme={theme} colorScheme={colorScheme} />
       </ScrollView>
     </>
   );
