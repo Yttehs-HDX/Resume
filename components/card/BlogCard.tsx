@@ -15,7 +15,7 @@ type Props = {
 };
 
 export default function BlogCard({ theme, colorScheme, url, title, description, date }: Props) {
-  const backgroundColor = theme[colorScheme].inversePrimary;
+  const backgroundColor = theme[colorScheme].secondaryContainer;
 
   return (
     <TouchableOpacity style={styles.container} onPress={() => openUrl(url, true)}>
