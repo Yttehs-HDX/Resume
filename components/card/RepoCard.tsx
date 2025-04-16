@@ -25,7 +25,11 @@ export default function RepoCard({ theme, colorScheme, url, fullname, descriptio
   const backgroundColor = theme[colorScheme].secondaryContainer;
 
   return (
-    <TouchableOpacity style={styles.container} onPress={() => openUrl(url, true)}>
+    <TouchableOpacity
+      style={styles.container}
+      accessibilityRole="link"
+      onPress={() => openUrl(url, true)}
+    >
       <View style={[styles.titleBackground, { backgroundColor }]}>
         <Octicons name="repo" size={24} color={theme[colorScheme].onPrimaryContainer} />
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -78,7 +82,6 @@ export default function RepoCard({ theme, colorScheme, url, fullname, descriptio
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: "center",
     justifyContent: "center",
   },

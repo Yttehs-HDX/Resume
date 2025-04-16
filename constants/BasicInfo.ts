@@ -1,8 +1,10 @@
+import { getCurrentUrl } from "@/utils/UrlUtil";
+
 export class BasicInfo {
   static readonly Nickname = "Shetty Yttehs";
   static readonly NicknameShort = "Shetty";
 
-  static readonly Resume = "https://resume.shettydev.com";
+  static readonly Resume = getCurrentUrl();
   static readonly Blog = "https://blog.shettydev.com";
 
   static readonly Github = "https://github.com/Yttehs-HDX";

@@ -13,7 +13,7 @@ type Props = {
 export default function ClickableContent({ theme, colorScheme, text, fontSize, fontWeight, onClick }: Props) {
   const textColor = theme[colorScheme].onSecondaryContainer;
   return (
-    <Pressable onPress={onClick}>
+    <Pressable onPress={onClick} accessibilityRole="link">
       <Text style={[styles.content, { color: textColor, fontSize, fontWeight }]}>{text}</Text>
     </Pressable>
   );

@@ -16,6 +16,10 @@ export const openUrl = (url: string, newTab?: boolean) => {
   }
 };
 
+export const getCurrentUrl = () => {
+  return typeof window !== 'undefined' ? window.location.href : '';
+};
+
 export const openEmail = (email: string) => {
   openUrl(`mailto:${email}`, true);
 };

@@ -13,7 +13,7 @@ export default function TopBarButton({ theme, colorScheme, label, icon, onPress 
   const color = theme[colorScheme].onPrimaryContainer;
 
   return (
-    <Pressable style={styles.container} onPress={onPress}>
+    <Pressable style={styles.container} accessibilityRole="button" onPress={onPress}>
       {icon}
       <Text style={[styles.label, { color: color }]}>{label}</Text>
     </Pressable>

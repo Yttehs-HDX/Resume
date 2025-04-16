@@ -1,7 +1,6 @@
 import { ScrollView, StyleSheet, useColorScheme, View, Dimensions } from "react-native";
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
-import { openUrl } from "@/utils/UrlUtil";
 import Introduction from "@/components/Introduction";
 import { UIConfig } from "@/storage/UIConfig";
 import { BasicInfo } from "@/constants/BasicInfo";
@@ -30,7 +29,6 @@ export default function Index() {
             return <Header
               theme={theme}
               colorScheme={colorScheme}
-              onClick={() => openUrl(BasicInfo.Resume)}
             />;
           },
           headerShadowVisible: false,
