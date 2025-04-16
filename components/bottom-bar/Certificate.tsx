@@ -28,7 +28,10 @@ export default function Certificate({ theme, colorScheme }: Props) {
       </View>
       <View style={styles.row}>
         <Text style={[styles.poweredBy, { color: fontColor }]}>Powered by </Text>
-        <TouchableOpacity onPress={() => openUrl(CertificateInfo.PoweredFrameworkUrl, true)}>
+        <TouchableOpacity
+          onPress={() => openUrl(CertificateInfo.PoweredFrameworkUrl, true)}
+          accessibilityRole="link"
+        >
           <Text style={[styles.poweredBy, { color: linkColor }]}>
             {CertificateInfo.PoweredFramework}
           </Text>
