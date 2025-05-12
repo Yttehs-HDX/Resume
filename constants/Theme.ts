@@ -16,4 +16,6 @@ export class Theme {
     "#B7BDF8",
     "#C5CFF5",
   ];
+
+  static readonly DefaultColor = Theme.ColorList[13];
 }

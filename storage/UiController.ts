@@ -16,8 +16,7 @@ class UiController {
     makeAutoObservable(this);
   }
 
-  private _color: string = ColorList[0];
-
+  private _color: string = Theme.DefaultColor;
 
   get color() { return this._color; }
   switchColor() {
