@@ -12,7 +12,7 @@ type Props = {
 export default function Certificate({ theme, colorScheme }: Props) {
   const backgroundColor = theme[colorScheme].tertiaryContainer;
   const fontColor = theme[colorScheme].onTertiaryContainer;
-  const iconColor = theme[colorScheme].onErrorContainer;
+  const iconColor = theme[colorScheme].error;
   const linkColor = theme[colorScheme].tertiary;
 
   return (
