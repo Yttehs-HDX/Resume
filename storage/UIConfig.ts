@@ -1,19 +1,15 @@
+import { Theme } from "@/constants/Theme";
 import { makeAutoObservable, runInAction } from "mobx";
 
-const ColorList = [
-  "#B7BDF8",
-  "#A6DA95",
-  "#F5A97F",
-  "#C6A0F6",
-];
+const ColorList = Theme.ColorList;
 
-class UI {
-  static Instance: UI | null = null;
+class UiController {
+  static Instance: UiController | null = null;
   static getInstance() {
-    if (UI.Instance === null) {
-      UI.Instance = new UI();
+    if (UiController.Instance === null) {
+      UiController.Instance = new UiController();
     }
-    return UI.Instance;
+    return UiController.Instance;
   }
 
   private constructor() {
@@ -24,7 +20,7 @@ class UI {
 
 
   get color() { return this._color; }
-  rollToNextColor() {
+  switchColor() {
     const index = ColorList.indexOf(this._color);
     if (index === -1) {
       runInAction(() => {
@@ -38,6 +34,6 @@ class UI {
   }
 }
 
-export function useUi() {
-  return UI.getInstance();
+export function useUiController() {
+  return UiController.getInstance();
 }

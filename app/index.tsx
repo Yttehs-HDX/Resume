@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet, useColorScheme, View, Dimensions } from "react-
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Introduction from "@/components/Introduction";
-import { useUi } from "@/storage/UIConfig";
+import { useUiController } from "@/storage/UIConfig";
 import { BasicInfo } from "@/constants/BasicInfo";
 import CardRow from "@/components/card-row/CardRow";
 import getDeviceType from "@/utils/Device";
@@ -18,7 +18,7 @@ import Certificate from "@/components/bottom-bar/Certificate";
 
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
-  const ui = useUi();
+  const ui = useUiController();
   const { theme, updateTheme } = useMaterial3Theme({ sourceColor: ui.color });
   const screenHeight = Dimensions.get("window").height;
 
@@ -39,7 +39,7 @@ export default function Index() {
                 theme={theme}
                 colorScheme={colorScheme}
                 onRollToNextColor={() => {
-                  ui.rollToNextColor();
+                  ui.switchColor();
                   updateTheme(ui.color);
                 }}
               />
