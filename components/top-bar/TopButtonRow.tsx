@@ -8,13 +8,21 @@ import { FontAwesome5, Ionicons, MaterialCommunityIcons } from "@expo/vector-ico
 type Props = {
   theme: Material3Theme;
   colorScheme: "light" | "dark";
+  onRollToNextColor: () => void;
 };
 
-export default function TopButtonRow({ theme, colorScheme }: Props) {
+export default function TopButtonRow({ theme, colorScheme, onRollToNextColor }: Props) {
   const color = theme[colorScheme].onPrimaryContainer;
 
   return (
     <View style={styles.buttonRow}>
+      <TopBarButton
+        theme={theme}
+        colorScheme={colorScheme}
+        label="Color"
+        icon={<FontAwesome5 name="palette" size={22} color={color} />}
+        onPress={onRollToNextColor}
+      />
       <TopBarButton
         theme={theme}
         colorScheme={colorScheme}

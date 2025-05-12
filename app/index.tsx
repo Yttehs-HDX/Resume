@@ -19,7 +19,7 @@ import Certificate from "@/components/bottom-bar/Certificate";
 export default function Index() {
   const colorScheme = useColorScheme() || "light";
   const ui = useUi();
-  const { theme } = useMaterial3Theme({ fallbackSourceColor: ui.color });
+  const { theme, updateTheme } = useMaterial3Theme({ sourceColor: ui.color });
   const screenHeight = Dimensions.get("window").height;
 
   return (
@@ -38,6 +38,10 @@ export default function Index() {
               <TopButtonRow
                 theme={theme}
                 colorScheme={colorScheme}
+                onRollToNextColor={() => {
+                  ui.rollToNextColor();
+                  updateTheme(ui.color);
+                }}
               />
             );
           },
