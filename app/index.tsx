@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet, useColorScheme, View, Dimensions } from "react-
 import { useMaterial3Theme } from "@pchmn/expo-material3-theme";
 import { Stack } from "expo-router";
 import Introduction from "@/components/Introduction";
-import { useUiController } from "@/storage/UIConfig";
+import { useUiController } from "@/storage/UiController";
 import { BasicInfo } from "@/constants/BasicInfo";
 import CardRow from "@/components/card-row/CardRow";
 import getDeviceType from "@/utils/Device";
