@@ -25,7 +25,7 @@ export class Internship {
         {
           Title: "项目成果：",
           Content: [
-            "CalGPT APP 已上架 Google Play 和 App Store。",
+            "CalGPT APP 已上架 App Store。",
           ].join("\n"),
         },
       ],
