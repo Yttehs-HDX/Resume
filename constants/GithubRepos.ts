@@ -26,6 +26,15 @@ export class GithubRepos {
           ].join("\n"),
         },
         {
+          Name: "CH32-ST7735-Demo",
+          Lang: "Rust",
+          Description: [
+            "使用 ch32-hal 库与 ST7735 驱动为 CH32V307VCT6 开发的显示屏示例程序。特性如下：",
+            "- 使用 SPI 协议与 ST7735 通信",
+            "- 使用 PWM 占空比控制背光亮度",
+          ].join("\n"),
+        },
+        {
           Name: "zpacman",
           Lang: "Python",
           Description: [
