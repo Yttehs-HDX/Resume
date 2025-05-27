@@ -11,10 +11,10 @@ export class Blog {
       Date: "2025-03-09",
     },
     {
-      Url: `${BasicInfo.Blog}/2024/12/30/react-native-and-kotlin-multiplatform`,
-      Title: "Comparison of React Native and Kotlin Multiplatform",
-      Description: "My feedback for React Native and Kotlin Multiplatform",
-      Date: "2024-12-30",
+      Url: `${BasicInfo.Blog}/2025/05/10/github-workflow-custom-badge`,
+      Title: "GitHub Workflow Custom Badge",
+      Description: "使用 Workflow 创建高度自定义的 Badge",
+      Date: "2025-05-10",
     },
   ];
 }
