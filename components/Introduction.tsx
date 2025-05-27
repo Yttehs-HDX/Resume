@@ -6,10 +6,9 @@ type Props = {
   colorScheme: "light" | "dark";
   avatar: string;
   nickname: string;
-  language?: "jp" | "zh" | "en";
 };
 
-export default function Introduction({ theme, colorScheme, avatar, nickname, language }: Props) {
+export default function Introduction({ theme, colorScheme, avatar, nickname }: Props) {
   const fontColor = theme[colorScheme].onSecondaryContainer;
   const avatarBackgroundColor = theme[colorScheme].inversePrimary;
 
@@ -25,11 +24,10 @@ export default function Introduction({ theme, colorScheme, avatar, nickname, lan
           </View>
           <View style={styles.spacer} />
           <View style={styles.labelContainer}>
-            <Text style={[styles.label, { color: fontColor }]}>
-              { language === "jp" || !language && `ハロ、私は ${nickname} です` }
-              { language === "zh" && `你好，我是 ${nickname}` }
-              { language === "en" && `Hello, I am ${nickname}` }
-            </Text>
+            <View style={styles.labelRow}>
+              <Text style={[styles.label1, { color: fontColor }]}>{nickname}</Text>
+              <Text style={[styles.label2, { color: fontColor }]}>です</Text>
+            </View>
           </View>
         </ScrollView>
       </View>
@@ -65,8 +63,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 16,
   },
-  label: {
+  labelRow: {
+    flexDirection: "row",
+    alignItems: "baseline",
+    gap: 8,
+  },
+  label1: {
     fontSize: 32,
+    fontWeight: "bold",
+  },
+  label2: {
+    fontSize: 24,
     fontWeight: "bold",
   },
 });
