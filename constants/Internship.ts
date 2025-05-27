@@ -5,7 +5,7 @@ export class Internship {
     {
       Enterprise: "北京阿卡西机器人科技有限公司",
       Department: "研发部门",
-      Job: "移动 APP 开发",
+      Job: "移动 APP 开发，全栈工程师",
       Description: [
         {
           Title: "主要工作：",
@@ -13,6 +13,7 @@ export class Internship {
             "1. 作为前端项目主管，指导 React Native Expo 移动 APP 开发。",
             "2. 参与 UI 设计与实现，处理多平台差异。",
             "3. 设计 API 交互逻辑，封装抽象层接口。",
+            "4. 参与后端 API 设计，编写文档。",
           ].join("\n"),
         },
         {
@@ -29,7 +30,7 @@ export class Internship {
           ].join("\n"),
         },
       ],
-      Duration: "2025.02 - 2025.06",
+      Duration: "2025.02 - 2025.09",
     },
   ];
 }
