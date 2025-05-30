@@ -1,5 +1,6 @@
-.PHONY : all build preview clean
+.PHONY : all dependencies build preview clean
 
+NPM := npm
 EXPO := npx expo
 PLATFORM := web
 
@@ -7,8 +8,11 @@ O := dist
 
 all: build
 
-build:
-	@$(EXPO) export
+dependencies:
+	@$(NPM) install
+
+build: dependencies
+	@$(EXPO) export --platform $(PLATFORM)
 
 preview:
 	@$(EXPO) start --$(PLATFORM)
