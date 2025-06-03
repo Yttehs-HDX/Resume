@@ -3,6 +3,7 @@ import { CertificateInfo } from "@/constants/CertificateInfo";
 import { Material3Theme } from "@pchmn/expo-material3-theme";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
+import * as Animation from "react-native-animatable";
 
 type Props = {
   theme: Material3Theme;
@@ -15,13 +16,29 @@ export default function Certificate({ theme, colorScheme }: Props) {
   const iconColor = theme[colorScheme].error;
   const linkColor = theme[colorScheme].tertiary;
 
+  const pulseAnimation = {
+    from: {
+      transform: [{ scale: 0.9 }],
+    },
+    to: {
+      transform: [{ scale: 1.1 }],
+    },
+  };
+
   return (
     <View style={[styles.container, { backgroundColor }]}>
       <View style={styles.row}>
         <Text style={[styles.certificate, { color: fontColor }]}>
           {`© ${CertificateInfo.StartYear} - ${CertificateInfo.EndYear} `}
         </Text>
-        <MaterialIcons name="favorite" size={20} color={iconColor} />
+        <Animation.View
+          animation={pulseAnimation}
+          duration={600}
+          iterationCount="infinite"
+          easing="ease-in-out"
+        >
+          <MaterialIcons name="favorite" size={20} color={iconColor} />
+        </Animation.View>
         <Text style={[styles.certificate, { color: fontColor }]}>
           {` ${CertificateInfo.Organization}`}
         </Text>
