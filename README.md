@@ -1,5 +1,8 @@
 # Resume
 
+[![CI](https://github.com/Yttehs-HDX/Resume/actions/workflows/ci.yml/badge.svg)](https://github.com/Yttehs-HDX/Resume/actions/workflows/ci.yml)
+[![Dependabot Updates](https://github.com/Yttehs-HDX/Resume/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/Yttehs-HDX/Resume/actions/workflows/dependabot/dependabot-updates)
+
 My personal resume
 
 ## Features
