@@ -16,5 +16,11 @@ export class Blog {
       Description: "使用 Workflow 创建高度自定义的 Badge",
       Date: "2025-05-10",
     },
+    {
+      Url: `${BasicInfo.Blog}/2025/06/09/software-engineer-micro-program`,
+      Title: "用软件工程的思维进行单片机编程",
+      Description: "软件开发者的单片机初体验",
+      Date: "2025-06-09",
+    },
   ];
 }
