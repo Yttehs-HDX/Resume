@@ -11,16 +11,16 @@ export class Blog {
       Date: "2025-03-09",
     },
     {
-      Url: `${BasicInfo.Blog}/2025/05/10/github-workflow-custom-badge`,
-      Title: "GitHub Workflow Custom Badge",
-      Description: "使用 Workflow 创建高度自定义的 Badge",
-      Date: "2025-05-10",
-    },
-    {
       Url: `${BasicInfo.Blog}/2025/06/09/software-engineer-micro-program`,
       Title: "用软件工程的思维进行单片机编程",
       Description: "软件开发者的单片机初体验",
       Date: "2025-06-09",
+    },
+    {
+      Url: `${BasicInfo.Blog}/2025/06/15/turing-complete-simple-cond`,
+      Title: "图灵完备 8 元件 COND - 加法器解法",
+      Description: "只用 10 个元件通过 “条件判断” 关卡",
+      Date: "2025-06-15",
     },
   ];
 }
