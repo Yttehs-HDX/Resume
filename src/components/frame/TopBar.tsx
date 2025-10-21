@@ -1,5 +1,5 @@
 import { XStack } from 'tamagui'
-import { MenuButton, ThemeToggleButton, AppTitle } from './topbar-inner'
+import { MenuButton, ThemeToggleButton, AppTitle, SourceCodeButton } from './topbar-inner'
 
 interface TopBarProps {
   theme: 'light' | 'dark'
@@ -28,7 +28,10 @@ export function TopBar({ theme, onToggleTheme, onToggleDrawer, title }: TopBarPr
         <AppTitle title={title} />
       </XStack>
 
-      <ThemeToggleButton theme={theme} onToggle={onToggleTheme} />
+      <XStack alignItems="center" gap="$2">
+        <SourceCodeButton />
+        <ThemeToggleButton theme={theme} onToggle={onToggleTheme} />
+      </XStack>
     </XStack>
   )
 }
