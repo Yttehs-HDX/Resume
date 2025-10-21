@@ -32,8 +32,6 @@ const DrawerContainer = styled(YStack, {
   width: 280,
   height: '100%',
   backgroundColor: '$surfaceContainerHigh',
-  padding: '$3',
-  gap: '$2',
   position: 'absolute',
   left: 0,
   top: 0,
@@ -54,6 +52,21 @@ const DrawerContainer = styled(YStack, {
   } as const,
 })
 
+const DrawerTopBar = styled(XStack, {
+  backgroundColor: '$surfaceContainerHigh',
+  paddingHorizontal: '$8',
+  paddingVertical: '$4',
+  alignItems: 'center',
+  justifyContent: 'flex-start',
+})
+
+const DrawerContent = styled(YStack, {
+  flex: 1,
+  paddingHorizontal: '$4',
+  gap: '$3',
+  style: { overflowY: 'auto' },
+})
+
 /**
  * Side navigation drawer component
  * Displays navigation menu with active route highlighting
@@ -65,52 +78,51 @@ export function Drawer({ isOpen, onClose }: DrawerProps) {
     <>
       <DrawerBackdrop visible={isOpen} onPress={onClose} />
       <DrawerContainer open={isOpen}>
-        <Text
-          fontSize={14}
-          fontWeight="600"
-          color="$onSurfaceVariant"
-          marginBottom="$2"
-          marginTop="$2"
-          marginLeft="$4"
-          letterSpacing={0.5}
-          textTransform="uppercase"
-        >
-          Navigation
-        </Text>
-
-        {routes.map((route) => (
-          <NavLink
-            key={route.path}
-            to={route.path}
-            style={{ textDecoration: 'none' }}
-            onClick={onClose}
+        <DrawerTopBar>
+          <Text
+            fontSize={22}
+            fontWeight="600"
+            color="$onSurfaceVariant"
           >
-            {({ isActive }) => (
-              <XStack
-                paddingVertical="$3"
-                paddingHorizontal="$4"
-                borderRadius="$6"
-                backgroundColor={isActive ? '$secondaryContainer' : 'transparent'}
-                cursor="pointer"
-                hoverStyle={{
-                  backgroundColor: isActive ? '$secondaryContainer' : '$surfaceContainerHighest',
-                }}
-                pressStyle={{
-                  opacity: 0.8,
-                }}
-              >
-                <Text
-                  fontSize={16}
-                  fontWeight={isActive ? "600" : "400"}
-                  color={isActive ? "$onSecondaryContainer" : "$onSurface"}
-                  letterSpacing={0.25}
+            Navigation
+          </Text>
+        </DrawerTopBar>
+
+        <DrawerContent>
+          {routes.map((route) => (
+            <NavLink
+              key={route.path}
+              to={route.path}
+              style={{ textDecoration: 'none' }}
+              onClick={onClose}
+            >
+              {({ isActive }) => (
+                <XStack
+                  paddingVertical="$3"
+                  paddingHorizontal="$4"
+                  borderRadius="$6"
+                  backgroundColor={isActive ? '$secondaryContainer' : 'transparent'}
+                  cursor="pointer"
+                  hoverStyle={{
+                    backgroundColor: isActive ? '$secondaryContainer' : '$surfaceContainerHighest',
+                  }}
+                  pressStyle={{
+                    opacity: 0.8,
+                  }}
                 >
-                  {route.label}
-                </Text>
-              </XStack>
-            )}
-          </NavLink>
-        ))}
+                  <Text
+                    fontSize={16}
+                    fontWeight={isActive ? "600" : "400"}
+                    color={isActive ? "$onSecondaryContainer" : "$onSurface"}
+                    letterSpacing={0.25}
+                  >
+                    {route.label}
+                  </Text>
+                </XStack>
+              )}
+            </NavLink>
+          ))}
+        </DrawerContent>
       </DrawerContainer>
     </>
   )
