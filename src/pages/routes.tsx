@@ -20,7 +20,7 @@ export const routes: RouteConfig[] = [
   {
     path: '/',
     element: <Profile />,
-    label: 'Profile',
+    label: '简介',
     icon: <User size={20} />,
   },
   {

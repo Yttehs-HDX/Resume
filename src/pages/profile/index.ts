@@ -1,3 +1,3 @@
 export { ProfilePage as Profile } from './ProfilePage'
-export { ProfileHeader } from './ProfileHeader'
+export { Avatar } from './Avatar'
 export { SocialLinks } from './SocialLinks'

@@ -71,10 +71,6 @@ const ProfileContainer = styled(YStack, {
   shadowOffset: { width: 0, height: 2 },
   shadowOpacity: 0.1,
   shadowRadius: 4,
-  
-  hoverStyle: {
-    backgroundColor: '$surfaceContainerHighest',
-  },
 })
 
 /**
@@ -111,9 +107,9 @@ const NameText = styled(BodyText, {
 })
 
 /**
- * ProfileHeader component props
+ * Avatar component props
  */
-export interface ProfileHeaderProps {
+export interface AvatarProps {
   /**
    * Full name (primary display)
    */
@@ -138,7 +134,7 @@ export interface ProfileHeaderProps {
 }
 
 /**
- * ProfileHeader - Material You compliant profile display component
+ * Avatar - Material You compliant profile display component
  * 
  * Features:
  * - Circular avatar with elevation and border
@@ -148,12 +144,12 @@ export interface ProfileHeaderProps {
  * - Proper typography hierarchy
  * 
  */
-export function ProfileHeader({
+export function Avatar({
   fullName,
   avatarUrl,
   size = 'medium',
   nameVariant = 'display',
-}: ProfileHeaderProps) {
+}: AvatarProps) {
   return (
     <ProfileContainer>
       <AvatarContainer size={size}>
