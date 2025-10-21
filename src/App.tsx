@@ -12,9 +12,18 @@ import { routes } from './pages/routes'
  */
 export function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   const toggleTheme = () => {
     setTheme(prev => prev === 'light' ? 'dark' : 'light')
+  }
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(prev => !prev)
+  }
+
+  const closeDrawer = () => {
+    setIsDrawerOpen(false)
   }
 
   return (
@@ -22,9 +31,9 @@ export function App() {
       <Theme name={theme}>
         <BrowserRouter>
           <XStack fullscreen>
-            <Drawer />
+            <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} />
             
-            <MainContent theme={theme} onToggleTheme={toggleTheme}>
+            <MainContent theme={theme} onToggleTheme={toggleTheme} onToggleDrawer={toggleDrawer}>
               <Routes>
                 {routes.map((route) => (
                   <Route
