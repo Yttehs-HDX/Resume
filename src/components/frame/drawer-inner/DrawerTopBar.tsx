@@ -5,7 +5,7 @@ const StyledDrawerTopBar = styled(XStack, {
   paddingHorizontal: '$8',
   paddingVertical: '$4',
   alignItems: 'center',
-  justifyContent: 'flex-start',
+  justifyContent: 'center',
 })
 
 interface DrawerTopBarProps {
