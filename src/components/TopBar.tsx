@@ -35,20 +35,20 @@ export function TopBar({ theme, onToggleTheme }: TopBarProps) {
       </Text>
       
       <Button
-        size="$3"
+        size="$8"
         circular
         backgroundColor="$surfaceContainerHighest"
-        borderColor="$outline"
-        borderWidth={1}
+        width={48}
+        height={48}
         hoverStyle={{
           backgroundColor: '$surfaceContainerHigh',
-          borderColor: '$primary',
         }}
         pressStyle={{
           backgroundColor: '$surfaceContainer',
         }}
         onPress={onToggleTheme}
         icon={theme === 'light' ? Moon : Sun}
+        scaleIcon={1.4}
         aria-label="Toggle dark mode"
       />
     </XStack>
