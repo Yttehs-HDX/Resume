@@ -5,7 +5,8 @@ import { Intership } from './intership'
 import { Certificate } from './certificate'
 import { Github } from './github'
 import { Blog } from './blog'
-import { User, GraduationCap, Briefcase, Award, Github as GithubIcon, BookOpen } from '@tamagui/lucide-icons'
+import { Skill } from './skill'
+import { User, GraduationCap, Briefcase, Award, Github as GithubIcon, BookOpen, Code2 } from '@tamagui/lucide-icons'
 
 /**
  * Route configuration interface
@@ -32,6 +33,12 @@ export const routes: RouteConfig[] = [
     element: <Education />,
     label: '教育经历',
     icon: <GraduationCap size={20} />,
+  },
+  {
+    path: '/skill',
+    element: <Skill />,
+    label: '专业技能',
+    icon: <Code2 size={20} />,
   },
   {
     path: '/intership',
