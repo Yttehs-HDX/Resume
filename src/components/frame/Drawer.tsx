@@ -31,6 +31,7 @@ export function Drawer({ isOpen, onClose }: DrawerProps) {
               key={route.path}
               path={route.path}
               label={route.label}
+              icon={route.icon}
               onClose={onClose}
             />
           ))}
