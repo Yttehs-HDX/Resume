@@ -18,13 +18,13 @@ export function TopBar({ theme, onToggleTheme, onToggleDrawer }: TopBarProps) {
     <XStack
       backgroundColor="$surfaceContainerHigh"
       paddingHorizontal="$4"
-      paddingVertical="$4"
+      paddingVertical="$1"
       alignItems="center"
       justifyContent="space-between"
     >
       <XStack alignItems="center" gap="$3">
         <Button
-          size="$6"
+          size="$9"
           circular
           backgroundColor="$surfaceContainerHighest"
           width={48}
@@ -50,13 +50,14 @@ export function TopBar({ theme, onToggleTheme, onToggleDrawer }: TopBarProps) {
           fontWeight="600"
           color="$onSurface"
           letterSpacing={0.5}
+          padding="$3"
         >
           My Application
         </Text>
       </XStack>
       
       <Button
-        size="$6"
+        size="$9"
         circular
         backgroundColor="$surfaceContainerHighest"
         width={48}
