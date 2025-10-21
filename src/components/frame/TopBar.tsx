@@ -5,15 +5,16 @@ interface TopBarProps {
   theme: 'light' | 'dark'
   onToggleTheme: () => void
   onToggleDrawer: () => void
+  title: string
 }
 
 /**
  * Top navigation bar component
- * Displays app title and theme toggle button
+ * Displays current page title and theme toggle button
  * On mobile: shows menu button to toggle drawer
  * On desktop: hides menu button (drawer is always visible)
  */
-export function TopBar({ theme, onToggleTheme, onToggleDrawer }: TopBarProps) {
+export function TopBar({ theme, onToggleTheme, onToggleDrawer, title }: TopBarProps) {
   return (
     <XStack
       backgroundColor="$surfaceContainerHigh"
@@ -24,7 +25,7 @@ export function TopBar({ theme, onToggleTheme, onToggleDrawer }: TopBarProps) {
     >
       <XStack alignItems="center" gap="$3">
         <MenuButton onPress={onToggleDrawer} />
-        <AppTitle title="My Application" />
+        <AppTitle title={title} />
       </XStack>
 
       <ThemeToggleButton theme={theme} onToggle={onToggleTheme} />

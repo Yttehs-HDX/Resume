@@ -1,4 +1,3 @@
-import { H2 } from 'tamagui'
 import { Card, BodyText, SecondaryText } from '../components/common'
 import { PageLayout } from '../components/frame/layout'
 
@@ -8,15 +7,6 @@ import { PageLayout } from '../components/frame/layout'
 export function Page1() {
   return (
     <PageLayout>
-      <H2
-        color="$onBackground"
-        fontSize={32}
-        fontWeight="600"
-        letterSpacing={-0.5}
-      >
-        Page 1
-      </H2>
-
       <Card>
         <BodyText>
           This is the content of the first page. You can add any content you

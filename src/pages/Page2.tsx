@@ -1,4 +1,3 @@
-import { H2 } from 'tamagui'
 import {
   Card,
   PrimaryCard,
@@ -14,15 +13,6 @@ import { PageLayout } from '../components/frame/layout'
 export function Page2() {
   return (
     <PageLayout borderTopLeftRadius="$6">
-      <H2
-        color="$onBackground"
-        fontSize={32}
-        fontWeight="600"
-        letterSpacing={-0.5}
-      >
-        Page 2
-      </H2>
-
       <PrimaryCard>
         <PrimaryContainerText marginBottom="$3">
           This is the content of the second page. This card uses Material You

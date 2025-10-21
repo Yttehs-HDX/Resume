@@ -1,5 +1,7 @@
 import { YStack } from 'tamagui'
+import { useLocation } from 'react-router-dom'
 import { TopBar } from './TopBar'
+import { routes } from '../../pages/routes'
 
 interface MainContentProps {
   theme: 'light' | 'dark'
@@ -18,12 +20,19 @@ export function MainContent({
   onToggleDrawer,
   children,
 }: MainContentProps) {
+  const location = useLocation()
+  
+  // Find the current route label based on the current path
+  const currentRoute = routes.find((route) => route.path === location.pathname)
+  const currentTitle = currentRoute?.label || 'My Application'
+
   return (
     <YStack flex={1} backgroundColor="$surfaceContainerHigh">
       <TopBar
         theme={theme}
         onToggleTheme={onToggleTheme}
         onToggleDrawer={onToggleDrawer}
+        title={currentTitle}
       />
 
       <YStack
