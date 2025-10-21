@@ -39,6 +39,7 @@ export function MainContent({
         flex={1}
         borderTopLeftRadius="$6"
         borderTopRightRadius="$6"
+        backgroundColor="$background"
         style={{ overflowX: 'hidden', overflowY: 'auto' }}
       >
         {children}
