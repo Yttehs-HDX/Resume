@@ -10,6 +10,7 @@ export function Page2() {
       padding="$6"
       gap="$5"
       backgroundColor="$background"
+      borderTopLeftRadius="$6"
     >
       <H2 
         color="$onBackground"

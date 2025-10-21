@@ -13,17 +13,11 @@ interface TopBarProps {
 export function TopBar({ theme, onToggleTheme }: TopBarProps) {
   return (
     <XStack
-      backgroundColor="$surfaceContainer"
+      backgroundColor="$surfaceContainerHigh"
       paddingHorizontal="$4"
       paddingVertical="$4"
       alignItems="center"
       justifyContent="space-between"
-      elevation="$2"
-      zIndex={1000}
-      shadowColor="$shadowColor"
-      shadowOffset={{ width: 0, height: 2 }}
-      shadowOpacity={0.15}
-      shadowRadius={3}
     >
       <Text
         fontSize={22}

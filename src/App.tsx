@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { TamaguiProvider, YStack, XStack, Theme } from 'tamagui'
+import { TamaguiProvider, XStack, Theme } from 'tamagui'
 import tamaguiConfig from './tamagui.config'
-import { TopBar } from './components/TopBar'
+import { MainContent } from './components/MainContent'
 import { Drawer } from './components/Drawer'
 import { routes } from './pages/routes'
 
@@ -21,29 +21,21 @@ export function App() {
     <TamaguiProvider config={tamaguiConfig} defaultTheme="light">
       <Theme name={theme}>
         <BrowserRouter>
-          <YStack fullscreen backgroundColor="$background">
-            <TopBar theme={theme} onToggleTheme={toggleTheme} />
-          
-            <XStack flex={1}>
-              <Drawer />
+          <XStack fullscreen>
+            <Drawer />
             
-              <YStack 
-                flex={1} 
-                overflow="scroll"
-                backgroundColor="$surface"
-              >
-                <Routes>
-                  {routes.map((route) => (
-                    <Route
-                      key={route.path}
-                      path={route.path}
-                      element={route.element}
-                    />
-                  ))}
-                </Routes>
-              </YStack>
-            </XStack>
-          </YStack>
+            <MainContent theme={theme} onToggleTheme={toggleTheme}>
+              <Routes>
+                {routes.map((route) => (
+                  <Route
+                    key={route.path}
+                    path={route.path}
+                    element={route.element}
+                  />
+                ))}
+              </Routes>
+            </MainContent>
+          </XStack>
         </BrowserRouter>
       </Theme>
     </TamaguiProvider>
