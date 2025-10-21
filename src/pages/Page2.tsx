@@ -6,7 +6,7 @@ import {
   SecondaryText,
   PrimaryButton,
 } from '../components/common'
-import { PageLayout } from '../components/layout'
+import { PageLayout } from '../components/frame/layout'
 
 /**
  * Page 2 - Demo page with primary color container

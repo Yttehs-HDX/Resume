@@ -1,6 +1,6 @@
 import { H2 } from 'tamagui'
 import { Card, BodyText, SecondaryText } from '../components/common'
-import { PageLayout } from '../components/layout'
+import { PageLayout } from '../components/frame/layout'
 
 /**
  * Page 1 - Demo page with cards

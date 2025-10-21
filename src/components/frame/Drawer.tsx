@@ -1,4 +1,4 @@
-import { routes } from '../pages/routes'
+import { routes } from '../../pages/routes'
 import {
   DrawerBackdrop,
   DrawerContainer,
