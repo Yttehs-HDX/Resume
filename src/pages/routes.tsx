@@ -5,7 +5,8 @@ import { Education } from './education'
 import { Intership } from './intership'
 import { Certificate } from './certificate'
 import { Github } from './github'
-import { User, FileText, GraduationCap, Briefcase, Award, Github as GithubIcon } from '@tamagui/lucide-icons'
+import { Blog } from './blog'
+import { User, FileText, GraduationCap, Briefcase, Award, Github as GithubIcon, BookOpen } from '@tamagui/lucide-icons'
 
 /**
  * Route configuration interface
@@ -50,6 +51,12 @@ export const routes: RouteConfig[] = [
     element: <Github />,
     label: '作品展示',
     icon: <GithubIcon size={20} />,
+  },
+  {
+    path: '/blog',
+    element: <Blog />,
+    label: '博客推荐',
+    icon: <BookOpen size={20} />,
   },
   {
     path: '/page2',
