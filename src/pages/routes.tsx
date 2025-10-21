@@ -1,12 +1,11 @@
 import { ReactNode } from 'react'
 import { Profile } from './profile'
-import { Page2 } from './Page2'
 import { Education } from './education'
 import { Intership } from './intership'
 import { Certificate } from './certificate'
 import { Github } from './github'
 import { Blog } from './blog'
-import { User, FileText, GraduationCap, Briefcase, Award, Github as GithubIcon, BookOpen } from '@tamagui/lucide-icons'
+import { User, GraduationCap, Briefcase, Award, Github as GithubIcon, BookOpen } from '@tamagui/lucide-icons'
 
 /**
  * Route configuration interface
@@ -57,11 +56,5 @@ export const routes: RouteConfig[] = [
     element: <Blog />,
     label: '博客推荐',
     icon: <BookOpen size={20} />,
-  },
-  {
-    path: '/page2',
-    element: <Page2 />,
-    label: 'Page 2',
-    icon: <FileText size={20} />,
   },
 ]
