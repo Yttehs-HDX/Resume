@@ -8,6 +8,7 @@ import {
 } from './drawer-inner'
 
 interface DrawerProps {
+  name: string
   isOpen: boolean
   onClose: () => void
 }
@@ -18,12 +19,12 @@ interface DrawerProps {
  * On mobile: collapsible overlay with backdrop
  * On desktop: always visible sidebar
  */
-export function Drawer({ isOpen, onClose }: DrawerProps) {
+export function Drawer({ name, isOpen, onClose }: DrawerProps) {
   return (
     <>
       <DrawerBackdrop visible={isOpen} onPress={onClose} />
       <DrawerContainer open={isOpen}>
-        <DrawerTopBar title="Navigation" />
+        <DrawerTopBar title={`${name}'s Resume`} />
 
         <DrawerContent>
           {routes.map((route) => (

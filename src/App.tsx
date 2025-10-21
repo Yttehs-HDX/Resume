@@ -6,6 +6,7 @@ import { Drawer } from './components/frame/Drawer'
 import { routes } from './pages/routes'
 import { useTheme, useDrawer } from './hooks'
 import { getSystemTheme } from './utils'
+import profileData from './data/profile.json'
 
 /**
  * Main application component
@@ -20,7 +21,7 @@ export function App() {
       <Theme name={theme}>
         <BrowserRouter>
           <XStack fullscreen>
-            <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} />
+            <Drawer name={profileData.name} isOpen={isDrawerOpen} onClose={closeDrawer} />
 
             <MainContent
               theme={theme}
