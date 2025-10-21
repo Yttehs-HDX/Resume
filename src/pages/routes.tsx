@@ -2,7 +2,8 @@ import { ReactNode } from 'react'
 import { Profile } from './profile'
 import { Page2 } from './Page2'
 import { Education } from './education'
-import { User, FileText, GraduationCap } from '@tamagui/lucide-icons'
+import { Intership } from './intership'
+import { User, FileText, GraduationCap, Briefcase } from '@tamagui/lucide-icons'
 
 /**
  * Route configuration interface
@@ -29,6 +30,12 @@ export const routes: RouteConfig[] = [
     element: <Education />,
     label: '教育经历',
     icon: <GraduationCap size={20} />,
+  },
+  {
+    path: '/intership',
+    element: <Intership />,
+    label: '实习经历',
+    icon: <Briefcase size={20} />,
   },
   {
     path: '/page2',
