@@ -1,5 +1,5 @@
-import { XStack, Text, Button } from 'tamagui'
-import { Moon, Sun, Menu } from '@tamagui/lucide-icons'
+import { XStack } from 'tamagui'
+import { MenuButton, ThemeToggleButton, AppTitle } from './topbar-inner'
 
 interface TopBarProps {
   theme: 'light' | 'dark'
@@ -23,56 +23,11 @@ export function TopBar({ theme, onToggleTheme, onToggleDrawer }: TopBarProps) {
       justifyContent="space-between"
     >
       <XStack alignItems="center" gap="$3">
-        <Button
-          size="$9"
-          circular
-          backgroundColor="$surfaceContainerHighest"
-          width={48}
-          height={48}
-          display="flex"
-          $gtSm={{
-            display: 'none',
-          }}
-          hoverStyle={{
-            backgroundColor: '$surfaceContainerHigh',
-          }}
-          pressStyle={{
-            backgroundColor: '$surfaceContainer',
-          }}
-          onPress={onToggleDrawer}
-          icon={Menu}
-          scaleIcon={1.4}
-          aria-label="Toggle menu"
-        />
-        
-        <Text
-          fontSize={22}
-          fontWeight="600"
-          color="$onSurface"
-          letterSpacing={0.5}
-          padding="$3"
-        >
-          My Application
-        </Text>
+        <MenuButton onPress={onToggleDrawer} />
+        <AppTitle title="My Application" />
       </XStack>
-      
-      <Button
-        size="$9"
-        circular
-        backgroundColor="$surfaceContainerHighest"
-        width={48}
-        height={48}
-        hoverStyle={{
-          backgroundColor: '$surfaceContainerHigh',
-        }}
-        pressStyle={{
-          backgroundColor: '$surfaceContainer',
-        }}
-        onPress={onToggleTheme}
-        icon={theme === 'light' ? Moon : Sun}
-        scaleIcon={1.4}
-        aria-label="Toggle dark mode"
-      />
+
+      <ThemeToggleButton theme={theme} onToggle={onToggleTheme} />
     </XStack>
   )
 }
