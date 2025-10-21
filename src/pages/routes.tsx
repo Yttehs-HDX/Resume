@@ -3,7 +3,8 @@ import { Profile } from './profile'
 import { Page2 } from './Page2'
 import { Education } from './education'
 import { Intership } from './intership'
-import { User, FileText, GraduationCap, Briefcase } from '@tamagui/lucide-icons'
+import { Certificate } from './certificate'
+import { User, FileText, GraduationCap, Briefcase, Award } from '@tamagui/lucide-icons'
 
 /**
  * Route configuration interface
@@ -36,6 +37,12 @@ export const routes: RouteConfig[] = [
     element: <Intership />,
     label: '实习经历',
     icon: <Briefcase size={20} />,
+  },
+  {
+    path: '/certificate',
+    element: <Certificate />,
+    label: '资格证书',
+    icon: <Award size={20} />,
   },
   {
     path: '/page2',
