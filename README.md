@@ -1,6 +1,10 @@
 # Resume
 
-- [https://resume.shettydev.com](https://resume.shettydev.com)
+[resume.shettydev.com](https://resume.shettydev.com/)
+
+## Special Thanks
+
+- UI components from [**Tamagui**](https://tamagui.dev/)
 
 ## License
 
