@@ -2,6 +2,7 @@ import { YStack } from 'tamagui'
 import { useLocation } from 'react-router-dom'
 import { TopBar } from './TopBar'
 import { routes } from '../../pages/routes'
+import { useScrollReset } from '../../hooks'
 
 interface MainContentProps {
   theme: 'light' | 'dark'
@@ -21,6 +22,7 @@ export function MainContent({
   children,
 }: MainContentProps) {
   const location = useLocation()
+  const scrollRef = useScrollReset<HTMLDivElement>()
   
   // Find the current route label based on the current path
   const currentRoute = routes.find((route) => route.path === location.pathname)
@@ -36,6 +38,7 @@ export function MainContent({
       />
 
       <YStack
+        ref={scrollRef}
         flex={1}
         borderTopLeftRadius="$6"
         borderTopRightRadius="$6"
