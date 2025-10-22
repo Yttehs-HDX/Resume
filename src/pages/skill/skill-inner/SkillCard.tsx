@@ -19,7 +19,7 @@ const DescriptionText = styled(Text, {
 
 const LevelBadge = styled(XStack, {
   backgroundColor: '$tertiary',
-  paddingHorizontal: '$4',
+  paddingHorizontal: '$2',
   paddingVertical: '$2.5',
   borderRadius: '$3',
   alignSelf: 'flex-start',
@@ -48,7 +48,7 @@ const TagText = styled(Text, {
 })
 
 interface Skill {
-  language: string
+  languages: string[]
   level: string
   description: string
   tags: string[]
@@ -67,24 +67,24 @@ export function SkillCard({ skill }: SkillCardProps) {
     <Card>
       <YStack gap="$4">
         {/* Header with Icon and Language Name */}
-        <XStack gap="$3" alignItems="center" justifyContent="space-between">
-          <XStack gap="$3" alignItems="center" flex={1}>
-            <XStack
-              width={40}
-              height={40}
-              backgroundColor="$primaryContainer"
-              borderRadius={20}
-              alignItems="center"
-              justifyContent="center"
-            >
-              <Code2 size={20} color="$onPrimaryContainer" />
-            </XStack>
-            <TitleText flex={1}>{skill.language}</TitleText>
+        <XStack gap="$3" alignItems="center">
+          <XStack
+            width={40}
+            height={40}
+            backgroundColor="$primaryContainer"
+            borderRadius={20}
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Code2 size={20} color="$onPrimaryContainer" />
           </XStack>
-          <LevelBadge>
-            <LevelText>{skill.level}</LevelText>
-          </LevelBadge>
+          <TitleText flex={1}>{skill.languages.join(' / ')}</TitleText>
         </XStack>
+
+        {/* Level Badge */}
+        <LevelBadge>
+          <LevelText>{skill.level}</LevelText>
+        </LevelBadge>
 
         {/* Description */}
         <DescriptionText>{skill.description}</DescriptionText>

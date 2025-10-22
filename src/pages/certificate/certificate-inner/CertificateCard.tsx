@@ -21,7 +21,7 @@ const DateText = styled(Text, {
 
 const LevelBadge = styled(XStack, {
   backgroundColor: '$tertiary',
-  paddingHorizontal: '$4',
+  paddingHorizontal: '$2',
   paddingVertical: '$2.5',
   borderRadius: '$3',
   alignSelf: 'flex-start',

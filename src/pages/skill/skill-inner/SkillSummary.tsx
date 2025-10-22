@@ -1,5 +1,5 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
-import { Lightbulb, Layers, Monitor } from '@tamagui/lucide-icons'
+import { Lightbulb, Layers, Monitor, Search } from '@tamagui/lucide-icons'
 import { PrimaryCard } from '../../../components/common'
 
 const SectionTitle = styled(Text, {
@@ -11,11 +11,18 @@ const SectionTitle = styled(Text, {
   textTransform: 'uppercase',
 })
 
-const ItemText = styled(Text, {
-  color: '$onPrimaryContainer',
-  fontSize: 15,
-  lineHeight: 22,
-  letterSpacing: 0.15,
+const TagChip = styled(XStack, {
+  backgroundColor: '$secondaryContainer',
+  paddingHorizontal: '$3',
+  paddingVertical: '$2',
+  borderRadius: '$2',
+})
+
+const TagText = styled(Text, {
+  color: '$onSecondaryContainer',
+  fontSize: 13,
+  lineHeight: 18,
+  letterSpacing: 0.25,
 })
 
 const DividerLine = styled(XStack, {
@@ -29,6 +36,7 @@ interface SkillSummary {
   core: string[]
   architecture: string[]
   platforms: string[]
+  research: string[]
 }
 
 interface SkillSummaryProps {
@@ -44,46 +52,69 @@ export function SkillSummary({ summary }: SkillSummaryProps) {
     <PrimaryCard>
       <YStack gap="$4">
         {/* Core Competencies */}
-        <YStack gap="$2.5">
+        <YStack gap="$3">
           <XStack gap="$2" alignItems="center">
             <Lightbulb size={16} color="$onPrimaryContainer" />
             <SectionTitle>核心能力</SectionTitle>
           </XStack>
-          <YStack gap="$1.5" paddingLeft="$6">
+          <XStack gap="$2" flexWrap="wrap">
             {summary.core.map((item, index) => (
-              <ItemText key={index}>• {item}</ItemText>
+              <TagChip key={index}>
+                <TagText>{item}</TagText>
+              </TagChip>
             ))}
-          </YStack>
+          </XStack>
         </YStack>
 
         <DividerLine />
 
         {/* Architecture Patterns */}
-        <YStack gap="$2.5">
+        <YStack gap="$3">
           <XStack gap="$2" alignItems="center">
             <Layers size={16} color="$onPrimaryContainer" />
             <SectionTitle>架构模式</SectionTitle>
           </XStack>
-          <YStack gap="$1.5" paddingLeft="$6">
+          <XStack gap="$2" flexWrap="wrap">
             {summary.architecture.map((item, index) => (
-              <ItemText key={index}>• {item}</ItemText>
+              <TagChip key={index}>
+                <TagText>{item}</TagText>
+              </TagChip>
             ))}
-          </YStack>
+          </XStack>
         </YStack>
 
         <DividerLine />
 
         {/* Platforms */}
-        <YStack gap="$2.5">
+        <YStack gap="$3">
           <XStack gap="$2" alignItems="center">
             <Monitor size={16} color="$onPrimaryContainer" />
             <SectionTitle>技术平台</SectionTitle>
           </XStack>
-          <YStack gap="$1.5" paddingLeft="$6">
+          <XStack gap="$2" flexWrap="wrap">
             {summary.platforms.map((item, index) => (
-              <ItemText key={index}>• {item}</ItemText>
+              <TagChip key={index}>
+                <TagText>{item}</TagText>
+              </TagChip>
             ))}
-          </YStack>
+          </XStack>
+        </YStack>
+
+        <DividerLine />
+
+        {/* Research Areas */}
+        <YStack gap="$3">
+          <XStack gap="$2" alignItems="center">
+            <Search size={16} color="$onPrimaryContainer" />
+            <SectionTitle>研究方向</SectionTitle>
+          </XStack>
+          <XStack gap="$2" flexWrap="wrap">
+            {summary.research.map((item, index) => (
+              <TagChip key={index}>
+                <TagText>{item}</TagText>
+              </TagChip>
+            ))}
+          </XStack>
         </YStack>
       </YStack>
     </PrimaryCard>

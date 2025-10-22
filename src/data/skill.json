@@ -1,40 +1,42 @@
 {
+  "summary": {
+    "core": [ "系统底层开发", "跨平台前端与移动开发", "Linux / NixOS 环境与后端服务" ],
+    "architecture": [ "MVVM", "组件化", "RESTful", "跨平台 UI 架构" ],
+    "platforms": [ "Android", "RISC-V64", "Linux", "NixOS", "Web" ],
+    "research": [ "操作系统内核", "编译器设计", "Nix 环境管理", "前后端一体化架构" ]
+  },
+  "tools": {
+    "os": [ "NixOS", "Arch Linux" ],
+    "editors": [ "Vim", "VS Code", "JetBrains IDEs" ],
+    "mobile": [ "Android Studio", "ADB" ],
+    "frontend": [ "React", "Tamagui" ],
+    "backend": [ "FastAPI", "PostgreSQL" ],
+    "devops": [ "Nix", "Git", "Shell", "GitHub Action" ]
+  },
   "skills": [
     {
-      "language": "Kotlin",
-      "level": "熟练",
-      "description": "Android 开发与 Kotlin Multiplatform，MVVM 架构",
-      "tags": [ "Android", "Jetpack", "Kotlin Multiplatform", "MVVM" ]
-    },
-    {
-      "language": "TypeScript",
-      "level": "熟练",
-      "description": "React Native 跨平台开发，MVVM 架构",
-      "tags": [ "React Native", "JavaScript", "MVVM" ]
-    },
-    {
-      "language": "Rust",
+      "languages": [ "Rust" ],
       "level": "掌握",
-      "description": "底层操作系统开发，已实现 RISC-V64 操作系统",
-      "tags": [ "系统编程", "RISC-V64", "no_std" ]
+      "description": "从零实现 RISC-V64 操作系统内核，包括任务切换、页表、陷入处理、FrameAllocator 等；熟悉 no_std 与底层开发",
+      "tags": [ "系统编程", "RISC-V64", "内核", "虚拟内存", "no_std" ]
     },
     {
-      "language": "Python / Shell",
+      "languages": [ "Python", "Nix", "Shell" ],
       "level": "熟练",
-      "description": "GNU/Linux 环境脚本开发",
-      "tags": [ "Linux", "Vim", "Git", "Makefile" ]
+      "description": "在 Linux / NixOS 环境下进行自动化与运维脚本开发，使用 FastAPI 与 PostgreSQL 构建后端服务；熟悉 flake、devShell、home-manager、direnv 等生态，具备环境可复现与构建自动化经验",
+      "tags": [ "FastAPI", "PostgreSQL", "NixOS", "DevOps", "自动化", "flake", "Linux" ]
     },
     {
-      "language": "C / C++ / Java",
-      "level": "熟悉",
-      "description": "跨平台系统级开发",
-      "tags": [ "多语言", "跨平台" ]
+      "languages": [ "Kotlin" ],
+      "level": "熟练",
+      "description": "Android 系统与应用层开发，熟悉 Jetpack Compose 与 Kotlin Multiplatform，掌握 MVVM 架构设计",
+      "tags": [ "Android", "Jetpack", "Kotlin Multiplatform", "MVVM", "Compose" ]
+    },
+    {
+      "languages": [ "TypeScript" ],
+      "level": "熟练",
+      "description": "前端与跨平台开发，熟悉 React Native、Tamagui 等框架，擅长 Material You 风格与组件化 UI 架构",
+      "tags": [ "React", "Vite", "Tamagui", "Material You", "MVVM" ]
     }
-  ],
-
-  "summary": {
-    "core": [ "移动应用开发", "系统底层编程", "Linux 开发" ],
-    "architecture": [ "MVVM" ],
-    "platforms": [ "Android", "RISC-V64", "Linux" ]
-  }
+  ]
 }
