@@ -1,6 +1,6 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
 import { Lightbulb, Layers, Monitor } from '@tamagui/lucide-icons'
-import { PrimaryCard } from '../../components/common'
+import { PrimaryCard } from '../../../components/common'
 
 const SectionTitle = styled(Text, {
   color: '$onPrimaryContainer',

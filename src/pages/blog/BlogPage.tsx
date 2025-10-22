@@ -1,6 +1,6 @@
 import { PageLayout } from '../../components/frame/layout'
 import { MasonryLayout } from '../../components/common'
-import { BlogCard } from './BlogCard'
+import { BlogCard } from './blog-inner'
 import blogData from '../../data/blog.json'
 
 /**

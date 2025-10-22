@@ -1,6 +1,6 @@
 import { XStack, YStack, Text } from 'tamagui'
 import { Mail, Github, MessageSquare, Globe } from '@tamagui/lucide-icons'
-import { Card } from '../../components/common/Card'
+import { Card } from '../../../components/common/Card'
 
 interface SocialLinksProps {
   social: {
