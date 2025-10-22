@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { YStack, XStack, styled, Text, Circle } from 'tamagui'
 import { Star, GitFork, Eye, ExternalLink } from '@tamagui/lucide-icons'
-import { Card } from '../../components/common'
+import { Card } from '../../../components/common'
 import languageColors from './program_language_color.json'
 
 const TitleText = styled(Text, {

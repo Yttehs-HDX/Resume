@@ -1,5 +1,5 @@
 import { YStack, Image, styled } from 'tamagui'
-import { BodyText } from '../../components/common/Text'
+import { BodyText } from '../../../components/common/Text'
 
 /**
  * Circular avatar container

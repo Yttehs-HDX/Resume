@@ -1,6 +1,6 @@
 import { YStack } from 'tamagui'
 import { PageLayout } from '../../components/frame/layout'
-import { IntershipCard } from './IntershipCard'
+import { IntershipCard } from './intership-inner'
 import intershipData from '../../data/intership.json'
 
 /**

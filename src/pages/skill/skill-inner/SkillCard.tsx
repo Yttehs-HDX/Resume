@@ -1,6 +1,6 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
 import { Code2 } from '@tamagui/lucide-icons'
-import { Card } from '../../components/common'
+import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
   color: '$onSurface',

@@ -1,6 +1,6 @@
 import { PageLayout } from '../../components/frame/layout'
 import { MasonryLayout } from '../../components/common'
-import { GithubCard } from './GithubCard'
+import { GithubCard } from './github-inner'
 import githubData from '../../data/github.json'
 
 /**

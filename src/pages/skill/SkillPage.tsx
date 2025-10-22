@@ -1,7 +1,6 @@
 import { YStack } from 'tamagui'
 import { PageLayout } from '../../components/frame/layout'
-import { SkillCard } from './SkillCard'
-import { SkillSummary } from './SkillSummary'
+import { SkillCard, SkillSummary } from './skill-inner'
 import skillData from '../../data/skill.json'
 
 /**

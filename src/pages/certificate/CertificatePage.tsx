@@ -1,6 +1,6 @@
 import { YStack } from 'tamagui'
 import { PageLayout } from '../../components/frame/layout'
-import { CertificateCard } from './CertificateCard'
+import { CertificateCard } from './certificate-inner'
 import certificateData from '../../data/certificate.json'
 
 /**

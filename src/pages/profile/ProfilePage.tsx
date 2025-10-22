@@ -1,7 +1,6 @@
 import { YStack } from 'tamagui'
 import { PageLayout } from '../../components/frame/layout'
-import { Avatar } from './Avatar'
-import { SocialLinks } from './SocialLinks'
+import { Avatar, SocialLinks } from './profile-inner'
 import profileData from '../../data/profile.json'
 
 /**

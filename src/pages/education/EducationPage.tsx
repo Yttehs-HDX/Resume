@@ -1,7 +1,6 @@
 import { YStack } from 'tamagui'
 import { PageLayout } from '../../components/frame/layout'
-import { UniversityCard } from './UniversityCard'
-import { ExtracurricularCard } from './ExtracurricularCard'
+import { UniversityCard, ExtracurricularCard } from './education-inner'
 import educationData from '../../data/education.json'
 
 /**
