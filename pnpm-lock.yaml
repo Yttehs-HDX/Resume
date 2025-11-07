@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@tamagui/config':
-        specifier: ^1.110.5
-        version: 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native-reanimated@4.1.3(@babel/core@7.28.5)(react-native-worklets@0.6.1(@babel/core@7.28.5)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+        specifier: ^1.136.1
+        version: 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native-reanimated@4.1.3(@babel/core@7.28.5)(react-native-worklets@0.6.1(@babel/core@7.28.5)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       '@tamagui/lucide-icons':
         specifier: ^1.135.4
         version: 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native-svg@15.14.0(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
@@ -807,14 +807,26 @@ packages:
       react: '*'
       react-dom: '*'
 
-  '@tamagui/animations-moti@1.135.4':
-    resolution: {integrity: sha512-pPgQSZw6nXGfA0t46djvvBys3dO6kOlDMC5avwj2LAAykE98dy9mYTiz29l5mIFa6aud5bpo1iBLI1Ihr489sw==}
+  '@tamagui/animations-css@1.136.1':
+    resolution: {integrity: sha512-LHuIYL0Q5etRMRsu516IBugaS9xm4J4u07W8PZF7m83Y2TwLOGa8OYhA+RuT/SfFD/izokmFakZW0Mey4BHbnA==}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+
+  '@tamagui/animations-moti@1.136.1':
+    resolution: {integrity: sha512-97FA23r4Ir3mOhoRRzURx7JCxNMcy6q1lAtcJBpUNqA77k6hiY5TpqT3r1/KsljivjJCwAt2PzVo3nkm+nXD/A==}
     peerDependencies:
       react: '*'
       react-native: '*'
 
   '@tamagui/animations-react-native@1.135.4':
     resolution: {integrity: sha512-pTtVEfo/dgrcCKItl4OT0yr2TdKw8CulOpcHQ9P0eWJ4UYPlWpPz+JXOwYEINNSEgIYycVLjXeTK+inqY7nT7g==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+
+  '@tamagui/animations-react-native@1.136.1':
+    resolution: {integrity: sha512-8t5sczmnsi3NlMtkPijKQp3oZtzVww2y+VoqB9C83xAR9/zV8ORqO8AsXnjqQeXf7qzSuypVpTY4eXP3Kuc7Ig==}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -857,22 +869,33 @@ packages:
     peerDependencies:
       react: '*'
 
-  '@tamagui/colors@1.135.4':
-    resolution: {integrity: sha512-XPRhBK9ybI5nBcNqNBL/tpFrSyubXldRGbsR7sVaKT4/KXT/tpcA1+4dE/0ycI1kUcH6ra79yV0HC2u+8eWyjQ==}
+  '@tamagui/colors@1.136.1':
+    resolution: {integrity: sha512-VVVEuMh0Hvig1xQPuCvZPPzyYyPiijW123+joHa2j9xwh4+WHpJ2xx84bcYRxluZVpXzI9YliCraY7isOrkvmQ==}
 
   '@tamagui/compose-refs@1.135.4':
     resolution: {integrity: sha512-h3a4Pw4rsQqrzrEnuuW/LU5rM6wiCj+sGF191kZErNjNPAK/9zqGzYcHDTmoWwLUwT9E8BovzlkkVZrDusuNbQ==}
     peerDependencies:
       react: '*'
 
+  '@tamagui/compose-refs@1.136.1':
+    resolution: {integrity: sha512-KfEisnrfh0g3eevqzA7GtyLhzBsj4am9/AE47gvSr84EiCWBd80gFcp5kAnjccTpLy+FxUUL9hbx4/rB8OVlsw==}
+    peerDependencies:
+      react: '*'
+
   '@tamagui/config-default@1.135.4':
     resolution: {integrity: sha512-vH7y8yQDPr30zCBgObSw8NvqwX/Td3QnOitnSgYtNg1pUcBHd2oX/gzSrL4FB0s/v1R8PKl6awttLOI+aYhn0g==}
 
-  '@tamagui/config@1.135.4':
-    resolution: {integrity: sha512-97vTeeR6kfBWmda6fFvXiQzmuQE/P42/tkwejUAoDPHLHvUcaH/6cKP+CE4YT2l/VMvZyYht6qDbtRvcya8JDw==}
+  '@tamagui/config@1.136.1':
+    resolution: {integrity: sha512-D9YNRsfRTUkSISFZF1Hk1vHB/BZwHdLQFyv3k7fJe1udAu/xd2vzF6iRiv6E5SV7QFYIuaNiaMXUCA6neyHToA==}
 
   '@tamagui/constants@1.135.4':
     resolution: {integrity: sha512-RvOCUmlwOnDRhfV9yYYNzQW2+gllydkWST2P6dyK9x6xa0//HKV4CYJqmwbnLaU6aROjLzpY7KDTNqtZT7MoBQ==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+
+  '@tamagui/constants@1.136.1':
+    resolution: {integrity: sha512-3byJoG+74UBwHd4dVDb9rfetE3rdeReDf1Vg0IAemTZvfiGptW2DjwxX0Xx63pgOY1MANlar1u1v5BvdMsQJrg==}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -883,16 +906,25 @@ packages:
       react: '*'
       react-native: '*'
 
+  '@tamagui/core@1.136.1':
+    resolution: {integrity: sha512-DGXUx72rgYDIObT01yAVz8rIOooyU14Dg3e67lNb68ECqNZsIGkv0cfhJQytIk9kobMrsTUG7p/k26vt/SBymQ==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+
   '@tamagui/create-context@1.135.4':
     resolution: {integrity: sha512-W95H+PpgVL3uHKCQTLaj6pqRpAm8oK/NG7HAc4ODII409P6Ka1DdrD9sA5KH7io5VHuxiTp08EMcVjExCFjWJA==}
     peerDependencies:
       react: '*'
 
-  '@tamagui/create-theme@1.135.4':
-    resolution: {integrity: sha512-HNYEFhUT/1q+TgVOf0qded9F1mVz0+vmfVL4QXKIRzsSWQ2PVHg6O1KFVxr3v04iV4H1+faXXFwUW1BMm5xUfw==}
+  '@tamagui/create-theme@1.136.1':
+    resolution: {integrity: sha512-JIPyifSLjdussXgF4gfL1yfdyqe5ReidxQ1zQUrVsqzCAU2hhRCW5jY+F8F+Y15zOzcY6OplrS3Hoxg5GiffoQ==}
 
   '@tamagui/cubic-bezier-animator@1.135.4':
     resolution: {integrity: sha512-R1CcdakVFBs9okym8mpNgpJSo1zLBI9/EQuoPNquhVcqsfeT8fWP3w3v6doPs5UrgI0ePC3YgadY11MxwtTGFQ==}
+
+  '@tamagui/cubic-bezier-animator@1.136.1':
+    resolution: {integrity: sha512-ERtcFAciLG9n1x4msCH+q/wfbRexCuv9lpk7sHQ7r2wpyoR+DDq+a+PR4h3EnunBCpNMSZAKdfmlxdaMIWdT6g==}
 
   '@tamagui/dialog@1.135.4':
     resolution: {integrity: sha512-6WiblFgRqMrBZhbU6IjosN9U2bd0fZcxbACQ4WP0ua9gh0eSjdCbWkgPIOh4+BhVgZoreCIvL+0Lzyerv1ygOQ==}
@@ -930,11 +962,11 @@ packages:
     peerDependencies:
       react: '*'
 
-  '@tamagui/font-inter@1.135.4':
-    resolution: {integrity: sha512-HSFbTBzQckplt+yPqEtlggvKqYyStnv29k4R2HuCeL3qawE+pwcEfR6NRt7S4tyr5HjnpPuuqrDk8lnrWxccBA==}
+  '@tamagui/font-inter@1.136.1':
+    resolution: {integrity: sha512-Dw4WfzJkQSU5egbOp4x9Eb2HDqQkEU/vhfIZrQmG0sivVo1yV6KWFhuQ6WVeptptebD+ZWyWMMbwF4lJpX3zZA==}
 
-  '@tamagui/font-silkscreen@1.135.4':
-    resolution: {integrity: sha512-nMn+9almBUNai0nDBANIqzIvP6nBsD029YOfB82MaHhZNLqIIGmFGMEy0k8vUzj4hNN8+wDgqfFb2pM2p6rQxQ==}
+  '@tamagui/font-silkscreen@1.136.1':
+    resolution: {integrity: sha512-tVr+9J2JAw3y2tlgtjo2CuNzWtG0blqUdPPQy4j5hyVFR0vw/DmJo+ajxpgItmBxniuhEv9+5W9zkCpV8g3dZQ==}
 
   '@tamagui/font-size@1.135.4':
     resolution: {integrity: sha512-jV+CQbRRM0H9C6G188rH+DtHEuMBXA3YN1og347eQbKv4a+yDtopXhQccq/oHpQr+rit/HV7qywfgvwZByqcAw==}
@@ -984,6 +1016,11 @@ packages:
     peerDependencies:
       react: '*'
 
+  '@tamagui/helpers@1.136.1':
+    resolution: {integrity: sha512-v/j7iZDW7Wk13EAjNSJF1SKo8S19Kp/fIZ3TSyDUcnUpgwsc6iOaet2m0LuRYtwWVZAXkRYnjPegmBwDJAoNFQ==}
+    peerDependencies:
+      react: '*'
+
   '@tamagui/image@1.135.4':
     resolution: {integrity: sha512-4xUDTCGQgmsIgvwsu7vli0mt2r5+BQFmwcvNPkNsc2Gs6RabuAuLHn7Alc7IfNGttyvzHKvoP3zEJdnZdAl3Lg==}
     peerDependencies:
@@ -992,6 +1029,11 @@ packages:
 
   '@tamagui/is-equal-shallow@1.135.4':
     resolution: {integrity: sha512-LVznItGVJ3iHkYae7LoFuEobk3v8uHZrc89jBDqQr29XsEVmLVVh6ZcLgpuP1c1AnA+E3qyg391FXW/guseuPg==}
+    peerDependencies:
+      react: '*'
+
+  '@tamagui/is-equal-shallow@1.136.1':
+    resolution: {integrity: sha512-ao7vRpc8OSBKjSorz5D8HOfBxl0i9Rb6ILDtTH5GTCozdDUAE4dqBh+8WhYhlssbTFDXmAt5TsAIQLMvNhibRQ==}
     peerDependencies:
       react: '*'
 
@@ -1020,6 +1062,9 @@ packages:
 
   '@tamagui/normalize-css-color@1.135.4':
     resolution: {integrity: sha512-/mseP2gS9945nvBxy7mOZ6eBMhMcSQd7dpfYXjB2FT7n0kom4+MuXRRpUW9mKGTeVjTSDHcMjfw+uH+EJe9dHQ==}
+
+  '@tamagui/normalize-css-color@1.136.1':
+    resolution: {integrity: sha512-6zNSWj2f6uCyvYypkBgEFEYTSzsnu5wrjLT/X+eNtLYic7HCTBheIitJjH7u0lZTzzGigkAjUCu60dIIkqJtFw==}
 
   '@tamagui/polyfill-dev@1.135.4':
     resolution: {integrity: sha512-JP3P0CF9J8/WsrKFhVzNEb3EPio39/8iwJEgkQnCzRdJLx5xNUTZ9no/5WzmlPNR0ZGdw4oHGztaPFX5sC/lGA==}
@@ -1065,13 +1110,28 @@ packages:
     peerDependencies:
       react-native: '*'
 
+  '@tamagui/react-native-media-driver@1.136.1':
+    resolution: {integrity: sha512-PV6hJNG9iPbK77Tq6nQZSr6ErSJYmJL7C8YGZ70GBOWojUzJ6dQAQHKqTzHARnNCgCKHjJeYiFSplIx25bC//g==}
+    peerDependencies:
+      react-native: '*'
+
   '@tamagui/react-native-use-pressable@1.135.4':
     resolution: {integrity: sha512-PrBMtn2CusFHYPkoamoHzL/g/RkJiMGKZQEdLkEeMQ73NOxtG+WY/8RejheBzTDleQO95PqsLYSG3ob5Ok6cRg==}
     peerDependencies:
       react: '*'
 
+  '@tamagui/react-native-use-pressable@1.136.1':
+    resolution: {integrity: sha512-Qyr0uOrrQY5FX2Qubp038b++X7n5MM3w/Esx2laVLsTyJxWkLkby3JgKZHU3GeoC7cwQlt9GW0tADpI0OEC+7w==}
+    peerDependencies:
+      react: '*'
+
   '@tamagui/react-native-use-responder-events@1.135.4':
     resolution: {integrity: sha512-4w5svmMbm6ceqn9Af9aMFoyPk4WLQQmODxj/33mKC7pwLvUfLFswIgHdZMcKEK7Kv19+7FMiGwdBgg+DX4+70Q==}
+    peerDependencies:
+      react: '*'
+
+  '@tamagui/react-native-use-responder-events@1.136.1':
+    resolution: {integrity: sha512-q1GnBJBUIwBXKSUhTx21fKvN+JH/fn5sIWw0IpvAmk3MwuLdq/DSoPNfWn6WpyVfp8tgH9MYVZjh69DD/ksdbA==}
     peerDependencies:
       react: '*'
 
@@ -1117,8 +1177,14 @@ packages:
   '@tamagui/shorthands@1.135.4':
     resolution: {integrity: sha512-Vd8diKhscBoRmL3GXYdCMvosTTsUUs2yN9TmwIRu71i4N47m2CItTD5WpA0dpV/WWTL5ybbDoP5X5EJIZbEC6g==}
 
+  '@tamagui/shorthands@1.136.1':
+    resolution: {integrity: sha512-7HqnSysTIgKdbkCnUVwlNntynegw/t85aCtrW/mnP1FQ7OwGa6BXwkA0nXJLjcD4SVxvajlsmHfW3wYpoz5VyQ==}
+
   '@tamagui/simple-hash@1.135.4':
     resolution: {integrity: sha512-/yBR0JrvWtZIU12xY0zETl/op0E35b8Q4gKrJAmDumEnrkGH82T+OV76m0z0Nsfwp/ThMliDkFdLv9uSvlRhkQ==}
+
+  '@tamagui/simple-hash@1.136.1':
+    resolution: {integrity: sha512-364336DljBGL4ofrw7xPXpONLXjJ2VcPNPeXcD74DFReSzAGxAXUfg7E8Eba0jluYEhaDY0H0g6CKr4Ibn2jRw==}
 
   '@tamagui/slider@1.135.4':
     resolution: {integrity: sha512-L36NwBvDN3BvZsHLCKn+fvl25h+WbmLU5j2E3M8RNRcDe9Fnyj8SZNNwVYso6OuBgM3hOyRZKoJvJgfoVkpg2A==}
@@ -1159,19 +1225,22 @@ packages:
     peerDependencies:
       react: '*'
 
-  '@tamagui/theme-builder@1.135.4':
-    resolution: {integrity: sha512-d2+POffE/0nHUq/eunK/GLP8RbgnmuZgcI0HQjqWDj8IK5Wh8dQoC80HEKwWuAy2OsLsTUpBQjDuU4vA4Hy8bw==}
+  '@tamagui/theme-builder@1.136.1':
+    resolution: {integrity: sha512-JhhMjrPbRwkXUOIxs+yH09nsulzpMkfW+yRj/zFdQ9dK2Fys8DNOxzPyHVrqE7DZXygTzdZHhUAOZd1MLTr7yA==}
 
   '@tamagui/theme@1.135.4':
     resolution: {integrity: sha512-99KUuG0e5vBMrC/6r/H7KKV7U62i+GCsAHh8FaDJ1xlLsQraQMjhXixpwIsvmRd+M+xHXY8D69Qw20IEN9vBOw==}
     peerDependencies:
       react: '*'
 
-  '@tamagui/themes@1.135.4':
-    resolution: {integrity: sha512-0N1PeS5v+Gs3+PB8VUsXaXB91Jy64ypwDgT6DdC/CIzIkUzEWch6uq2F7wPx63NmxAS9XvBTeq4TX24bTaGXjw==}
+  '@tamagui/themes@1.136.1':
+    resolution: {integrity: sha512-hu/UXgHQ5SDepzdL5WBfxvLIIhZZR0fedHrjDE2kUOcCUeFhul7upWED2ZRak6vCJqNwRqw2DylGmatPnm6Lpw==}
 
   '@tamagui/timer@1.135.4':
     resolution: {integrity: sha512-n6jylpm4rgG9E4wVH7cim3+jey8SQ+h/oAPskYw1IVXDA5kXhPsav6jXbVOiLgADRcb+do6S0tO9Yvf5bpWLMA==}
+
+  '@tamagui/timer@1.136.1':
+    resolution: {integrity: sha512-eTn6cMn7bCkK1p6ledP/+7YLYOHf0taHoqERKYaL165Z5nbpec/ix1p327bsw5WkDuU2beLrd3+Hf8PsTGIPDQ==}
 
   '@tamagui/toggle-group@1.135.4':
     resolution: {integrity: sha512-P3+yk0MKdxUTP53aKZZhyq+a66Fia85Rq91UtiYOR0mGUl4zDqc/aSVXOM5fsq9IHzx6AzhhzMx1wpovQi/z2g==}
@@ -1186,6 +1255,9 @@ packages:
 
   '@tamagui/types@1.135.4':
     resolution: {integrity: sha512-tulfThdDYCdX+dFcDyF6ANkAh830aBmBa9NX0vFIQyRKUS8HxlHkAmwB24vimezA+m8Wm5E5ttt+50SZdp7Bjw==}
+
+  '@tamagui/types@1.136.1':
+    resolution: {integrity: sha512-H90XNSbdSOjxx+ufpSv3g9TXFM2fiOaRJlxe44Eej/91c71NwR2f/PGFmaRvvT3z9b0JC3m5cAxMbQLx7yEXGA==}
 
   '@tamagui/use-async@1.135.4':
     resolution: {integrity: sha512-3Uf1ygADxf5BoS+QGMspr7DtY9lbhJhNSxfl58yr+GOdILnbnj/X7x6WisdXhTFfJs73SE5NSmmNtLeOM14O8A==}
@@ -1217,6 +1289,11 @@ packages:
     peerDependencies:
       react: '*'
 
+  '@tamagui/use-did-finish-ssr@1.136.1':
+    resolution: {integrity: sha512-MXHjdvvQvwKmPuZTEMU58X34T8aX2W7l6Q+7yYmgL8qpC1cQKS0u8adXImAjY6Gy1mbAEhYrBOLJIxbjLirTEg==}
+    peerDependencies:
+      react: '*'
+
   '@tamagui/use-direction@1.135.4':
     resolution: {integrity: sha512-CHB4csoQSPt7m53NYXrdd/vy6DnN39i+hkVGiGSaNFYU0aMgG55FV4m0hamLh2CGL6AgzDT9lNWQt4Ui+JxUyQ==}
     peerDependencies:
@@ -1224,6 +1301,11 @@ packages:
 
   '@tamagui/use-element-layout@1.135.4':
     resolution: {integrity: sha512-EJAk9tO4mk7/kIa0qzUtIOZxOw9S25r1cGJRb/M1ldIfhj4Wqy7ho1HMzP+kjCs2VpP1UHRR9MORgjYbRwYORA==}
+    peerDependencies:
+      react: '*'
+
+  '@tamagui/use-element-layout@1.136.1':
+    resolution: {integrity: sha512-bOcsAtFbSmIvIW+wjcbdE729R3zN63g0BIO8jLhoEl//0QDANn6iJsLUrbLLNCTmvDHaZcwDwZl1NULN1Hip2Q==}
     peerDependencies:
       react: '*'
 
@@ -1237,8 +1319,18 @@ packages:
     peerDependencies:
       react: '*'
 
+  '@tamagui/use-event@1.136.1':
+    resolution: {integrity: sha512-43VaBv+fOQC3uKbQQ59UTrlZI+wbEfqZu4y97jPyNB2UomNw3n5XnLqdXhE02CgLYxGdPS3Sa8yQ4EhdzCd/gA==}
+    peerDependencies:
+      react: '*'
+
   '@tamagui/use-force-update@1.135.4':
     resolution: {integrity: sha512-zdZAJAlUyJqmdDqdfvviP6VR05MeiOR+Sv5iW4bi7nqYEiq2rvw09V/CYE2BIUVnYGKMHs8aMg30Ye5MNRh2Wg==}
+    peerDependencies:
+      react: '*'
+
+  '@tamagui/use-force-update@1.136.1':
+    resolution: {integrity: sha512-OWaw7D5/14WRPL2+/QqwfbkaXtKxgwJl99C9GsMAPvKXNKAIPMknETGevHKNOLE78eTyF0P9CWNQR+LIgfncJw==}
     peerDependencies:
       react: '*'
 
@@ -1250,6 +1342,11 @@ packages:
 
   '@tamagui/use-presence@1.135.4':
     resolution: {integrity: sha512-svybxS6TV/jq/lm9+l9kX1lrIwtngBsWckAqQ+4e5x8GF06tSMIjFaS74wHaA9D9M+MMo9zvZSWPaNZuPS4FXw==}
+    peerDependencies:
+      react: '*'
+
+  '@tamagui/use-presence@1.136.1':
+    resolution: {integrity: sha512-CyfgN2UjIM+BGErmME4uzQEkPX0t0HKcGyyM3LAJEvTb7OVg7zdvsvFwWi2/Zth9cpnePI4EpiYB40adVlWVfA==}
     peerDependencies:
       react: '*'
 
@@ -1271,6 +1368,13 @@ packages:
 
   '@tamagui/web@1.135.4':
     resolution: {integrity: sha512-Af1zwQQL7zGoXPYKtN/9rFdj6MB9YY8IafjJwD1kdV+RlsN1XoZjJgSZ6pyiw3DBokQmY06UugXqNqMZu3aeDg==}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+      react-native: '*'
+
+  '@tamagui/web@1.136.1':
+    resolution: {integrity: sha512-cGH6MBkRUsUPunqW5x2aBEbhPFZ9Qg+cCMlnugcsO9oS02Et0/LEFpUKv9tEn5XstPNqeiJKTGaOE66/xML81A==}
     peerDependencies:
       react: '*'
       react-dom: '*'
@@ -3381,10 +3485,21 @@ snapshots:
     transitivePeerDependencies:
       - react-native
 
-  '@tamagui/animations-moti@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native-reanimated@4.1.3(@babel/core@7.28.5)(react-native-worklets@0.6.1(@babel/core@7.28.5)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+  '@tamagui/animations-css@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@tamagui/core': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/use-presence': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/constants': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/cubic-bezier-animator': 1.136.1
+      '@tamagui/use-presence': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+    transitivePeerDependencies:
+      - react-native
+
+  '@tamagui/animations-moti@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native-reanimated@4.1.3(@babel/core@7.28.5)(react-native-worklets@0.6.1(@babel/core@7.28.5)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/core': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/use-presence': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       moti: 0.30.0(react-dom@19.2.0(react@19.2.0))(react-native-reanimated@4.1.3(@babel/core@7.28.5)(react-native-worklets@0.6.1(@babel/core@7.28.5)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react@19.2.0)
       react: 19.2.0
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0)
@@ -3397,6 +3512,16 @@ snapshots:
       '@tamagui/constants': 1.135.4(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       '@tamagui/use-presence': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       '@tamagui/web': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
+      react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0)
+    transitivePeerDependencies:
+      - react-dom
+
+  '@tamagui/animations-react-native@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/constants': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/use-presence': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       react: 19.2.0
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0)
     transitivePeerDependencies:
@@ -3510,9 +3635,13 @@ snapshots:
       - react-dom
       - react-native
 
-  '@tamagui/colors@1.135.4': {}
+  '@tamagui/colors@1.136.1': {}
 
   '@tamagui/compose-refs@1.135.4(react@19.2.0)':
+    dependencies:
+      react: 19.2.0
+
+  '@tamagui/compose-refs@1.136.1(react@19.2.0)':
     dependencies:
       react: 19.2.0
 
@@ -3528,20 +3657,20 @@ snapshots:
       - react-dom
       - react-native
 
-  '@tamagui/config@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native-reanimated@4.1.3(@babel/core@7.28.5)(react-native-worklets@0.6.1(@babel/core@7.28.5)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+  '@tamagui/config@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native-reanimated@4.1.3(@babel/core@7.28.5)(react-native-worklets@0.6.1(@babel/core@7.28.5)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@tamagui/animations-css': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/animations-moti': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native-reanimated@4.1.3(@babel/core@7.28.5)(react-native-worklets@0.6.1(@babel/core@7.28.5)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/animations-react-native': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/colors': 1.135.4
-      '@tamagui/core': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/font-inter': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/font-silkscreen': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/react-native-media-driver': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/shorthands': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/theme-builder': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/themes': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/web': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/animations-css': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/animations-moti': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native-reanimated@4.1.3(@babel/core@7.28.5)(react-native-worklets@0.6.1(@babel/core@7.28.5)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/animations-react-native': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/colors': 1.136.1
+      '@tamagui/core': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/font-inter': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/font-silkscreen': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/react-native-media-driver': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/shorthands': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/theme-builder': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/themes': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
     transitivePeerDependencies:
       - react
       - react-dom
@@ -3549,6 +3678,11 @@ snapshots:
       - react-native-reanimated
 
   '@tamagui/constants@1.135.4(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      react: 19.2.0
+      react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0)
+
+  '@tamagui/constants@1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
       react: 19.2.0
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0)
@@ -3567,19 +3701,35 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
+  '@tamagui/core@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/helpers': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/react-native-media-driver': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/react-native-use-pressable': 1.136.1(react@19.2.0)
+      '@tamagui/react-native-use-responder-events': 1.136.1(react@19.2.0)
+      '@tamagui/use-element-layout': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/use-event': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
+      react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0)
+    transitivePeerDependencies:
+      - react-dom
+
   '@tamagui/create-context@1.135.4(react@19.2.0)':
     dependencies:
       react: 19.2.0
 
-  '@tamagui/create-theme@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+  '@tamagui/create-theme@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@tamagui/web': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
     transitivePeerDependencies:
       - react
       - react-dom
       - react-native
 
   '@tamagui/cubic-bezier-animator@1.135.4': {}
+
+  '@tamagui/cubic-bezier-animator@1.136.1': {}
 
   '@tamagui/dialog@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
@@ -3657,17 +3807,17 @@ snapshots:
       - react-dom
       - react-native
 
-  '@tamagui/font-inter@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+  '@tamagui/font-inter@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@tamagui/core': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/core': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
     transitivePeerDependencies:
       - react
       - react-dom
       - react-native
 
-  '@tamagui/font-silkscreen@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+  '@tamagui/font-silkscreen@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@tamagui/core': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/core': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
     transitivePeerDependencies:
       - react
       - react-dom
@@ -3760,6 +3910,14 @@ snapshots:
     transitivePeerDependencies:
       - react-native
 
+  '@tamagui/helpers@1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/constants': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/simple-hash': 1.136.1
+      react: 19.2.0
+    transitivePeerDependencies:
+      - react-native
+
   '@tamagui/image@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@tamagui/constants': 1.135.4(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
@@ -3770,6 +3928,10 @@ snapshots:
       - react-dom
 
   '@tamagui/is-equal-shallow@1.135.4(react@19.2.0)':
+    dependencies:
+      react: 19.2.0
+
+  '@tamagui/is-equal-shallow@1.136.1(react@19.2.0)':
     dependencies:
       react: 19.2.0
 
@@ -3823,6 +3985,10 @@ snapshots:
       - react-native
 
   '@tamagui/normalize-css-color@1.135.4':
+    dependencies:
+      '@react-native/normalize-color': 2.1.0
+
+  '@tamagui/normalize-css-color@1.136.1':
     dependencies:
       '@react-native/normalize-color': 2.1.0
 
@@ -3940,11 +4106,27 @@ snapshots:
       - react
       - react-dom
 
+  '@tamagui/react-native-media-driver@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@tamagui/react-native-use-pressable@1.135.4(react@19.2.0)':
     dependencies:
       react: 19.2.0
 
+  '@tamagui/react-native-use-pressable@1.136.1(react@19.2.0)':
+    dependencies:
+      react: 19.2.0
+
   '@tamagui/react-native-use-responder-events@1.135.4(react@19.2.0)':
+    dependencies:
+      react: 19.2.0
+
+  '@tamagui/react-native-use-responder-events@1.136.1(react@19.2.0)':
     dependencies:
       react: 19.2.0
 
@@ -4058,7 +4240,17 @@ snapshots:
       - react-dom
       - react-native
 
+  '@tamagui/shorthands@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+      - react-native
+
   '@tamagui/simple-hash@1.135.4': {}
+
+  '@tamagui/simple-hash@1.136.1': {}
 
   '@tamagui/slider@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
@@ -4149,10 +4341,10 @@ snapshots:
       - react-dom
       - react-native
 
-  '@tamagui/theme-builder@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+  '@tamagui/theme-builder@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@tamagui/create-theme': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/web': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/create-theme': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       color2k: 2.0.3
     transitivePeerDependencies:
       - react
@@ -4169,12 +4361,12 @@ snapshots:
       - react-dom
       - react-native
 
-  '@tamagui/themes@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+  '@tamagui/themes@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@tamagui/colors': 1.135.4
-      '@tamagui/create-theme': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/theme-builder': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
-      '@tamagui/web': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/colors': 1.136.1
+      '@tamagui/create-theme': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/theme-builder': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       color2k: 2.0.3
     transitivePeerDependencies:
       - react
@@ -4182,6 +4374,8 @@ snapshots:
       - react-native
 
   '@tamagui/timer@1.135.4': {}
+
+  '@tamagui/timer@1.136.1': {}
 
   '@tamagui/toggle-group@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
@@ -4225,6 +4419,8 @@ snapshots:
 
   '@tamagui/types@1.135.4': {}
 
+  '@tamagui/types@1.136.1': {}
+
   '@tamagui/use-async@1.135.4(react@19.2.0)':
     dependencies:
       react: 19.2.0
@@ -4253,6 +4449,10 @@ snapshots:
     dependencies:
       react: 19.2.0
 
+  '@tamagui/use-did-finish-ssr@1.136.1(react@19.2.0)':
+    dependencies:
+      react: 19.2.0
+
   '@tamagui/use-direction@1.135.4(react@19.2.0)':
     dependencies:
       react: 19.2.0
@@ -4261,6 +4461,14 @@ snapshots:
     dependencies:
       '@tamagui/constants': 1.135.4(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       '@tamagui/is-equal-shallow': 1.135.4(react@19.2.0)
+      react: 19.2.0
+    transitivePeerDependencies:
+      - react-native
+
+  '@tamagui/use-element-layout@1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/constants': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/is-equal-shallow': 1.136.1(react@19.2.0)
       react: 19.2.0
     transitivePeerDependencies:
       - react-native
@@ -4277,7 +4485,18 @@ snapshots:
     transitivePeerDependencies:
       - react-native
 
+  '@tamagui/use-event@1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/constants': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
+    transitivePeerDependencies:
+      - react-native
+
   '@tamagui/use-force-update@1.135.4(react@19.2.0)':
+    dependencies:
+      react: 19.2.0
+
+  '@tamagui/use-force-update@1.136.1(react@19.2.0)':
     dependencies:
       react: 19.2.0
 
@@ -4289,6 +4508,14 @@ snapshots:
   '@tamagui/use-presence@1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@tamagui/web': 1.135.4(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
+    transitivePeerDependencies:
+      - react-dom
+      - react-native
+
+  '@tamagui/use-presence@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/web': 1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       react: 19.2.0
     transitivePeerDependencies:
       - react-dom
@@ -4324,6 +4551,22 @@ snapshots:
       '@tamagui/use-did-finish-ssr': 1.135.4(react@19.2.0)
       '@tamagui/use-event': 1.135.4(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       '@tamagui/use-force-update': 1.135.4(react@19.2.0)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+      react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0)
+
+  '@tamagui/web@1.136.1(react-dom@19.2.0(react@19.2.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@tamagui/compose-refs': 1.136.1(react@19.2.0)
+      '@tamagui/constants': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/helpers': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/is-equal-shallow': 1.136.1(react@19.2.0)
+      '@tamagui/normalize-css-color': 1.136.1
+      '@tamagui/timer': 1.136.1
+      '@tamagui/types': 1.136.1
+      '@tamagui/use-did-finish-ssr': 1.136.1(react@19.2.0)
+      '@tamagui/use-event': 1.136.1(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
+      '@tamagui/use-force-update': 1.136.1(react@19.2.0)
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.2.2)(react@19.2.0)
