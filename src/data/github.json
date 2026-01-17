@@ -55,11 +55,12 @@
   },
   {
     "owner": "Yttehs-HDX",
-    "repo": "NixOS-flake-config",
+    "repo": "Nix-flake-config",
     "lang": "Nix",
     "url": "https://github.com/Yttehs-HDX/NixOS-flake-config",
     "description": [
-      "NixOS 配置文件，采用 Flake 进行管理。"
+      "构建可复现的 Nix 配置体系，采用 profile 机制隔离多主机/用户环境。",
+      "通过模块化设计实现配置复用，集成 NixVim、Home Manager 等工具链。"
     ]
   },
   {
