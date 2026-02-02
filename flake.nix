@@ -9,7 +9,7 @@
       pkgs = import nixpkgs { inherit system; };
     in {
       devShells.${system}.default = pkgs.mkShell {
-        buildInputs = with pkgs; [ nodejs pnpm ];
+        buildInputs = with pkgs; [ nodejs pnpm gnumake ];
 
         shellHook = ''
           echo "Nix dev shell"
@@ -17,4 +17,3 @@
       };
     };
 }
-
