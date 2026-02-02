@@ -1,5 +1,5 @@
 import { YStack, Image, styled } from 'tamagui'
-import { BodyText } from '../../../components/common/Text'
+import { BodyText, SecondaryText } from '../../../components/common/Text'
 
 /**
  * Circular avatar container
@@ -107,6 +107,18 @@ const NameText = styled(BodyText, {
 })
 
 /**
+ * Tagline text
+ * Subtle positioning statement below the name
+ */
+const TaglineText = styled(SecondaryText, {
+  fontSize: 15,
+  lineHeight: 22,
+  textAlign: 'center',
+  maxWidth: 520,
+  paddingHorizontal: '$4',
+})
+
+/**
  * Avatar component props
  */
 export interface AvatarProps {
@@ -125,6 +137,11 @@ export interface AvatarProps {
    * @default 'medium'
    */
   size?: 'small' | 'medium' | 'large'
+
+  /**
+   * One-line positioning statement
+   */
+  tagline?: string
   
   /**
    * Name display variant
@@ -148,6 +165,7 @@ export function Avatar({
   fullName,
   avatarUrl,
   size = 'medium',
+  tagline,
   nameVariant = 'display',
 }: AvatarProps) {
   return (
@@ -163,6 +181,12 @@ export function Avatar({
       <NameText variant={nameVariant}>
         {fullName}
       </NameText>
+
+      {tagline ? (
+        <TaglineText>
+          {tagline}
+        </TaglineText>
+      ) : null}
     </ProfileContainer>
   )
 }
