@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { TamaguiProvider, XStack, Theme } from 'tamagui'
 import tamaguiConfig from './tamagui.config'
@@ -15,6 +16,17 @@ import profileData from './data/profile.json'
 export function App() {
   const { theme, toggleTheme } = useTheme()
   const { isOpen: isDrawerOpen, close: closeDrawer, toggle: toggleDrawer } = useDrawer()
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return
+
+    document.documentElement.dataset.theme = theme
+
+    const themeColor = theme === 'dark' ? '#1C1B1F' : '#FFFBFE'
+    document
+      .querySelectorAll('meta[name="theme-color"]')
+      .forEach((meta) => meta.setAttribute('content', themeColor))
+  }, [theme])
 
   return (
     <TamaguiProvider config={tamaguiConfig} defaultTheme={getSystemTheme()}>

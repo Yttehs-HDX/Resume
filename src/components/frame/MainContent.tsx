@@ -43,7 +43,13 @@ export function MainContent({
         borderTopLeftRadius="$6"
         borderTopRightRadius="$6"
         backgroundColor="$background"
-        style={{ overflowX: 'hidden', overflowY: 'auto' }}
+        style={{
+          overflowX: 'hidden',
+          overflowY: 'auto',
+          paddingBottom: 'var(--app-safe-bottom)',
+          paddingLeft: 'var(--app-safe-left)',
+          paddingRight: 'var(--app-safe-right)',
+        }}
       >
         {children}
       </YStack>
