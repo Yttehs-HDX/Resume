@@ -80,7 +80,9 @@
     "lang": "C",
     "url": "https://github.com/Yttehs-HDX/android_kernel_xiaomi_ucmi_nethunter",
     "description": [
-      "基于第三方开源内核修改，添加了 NetHunter 支持，适用于小米 10/Pro。"
+      "基于第三方开源内核修改，添加了 NetHunter 支持，适用于小米 10/Pro。",
+      "- 能够进行 Wi-Fi 渗透测试，支持 monitor 模式和注入功能",
+      "- 能够进行 HID 攻击，支持 USB OTG 功能"
     ]
   },
   {
@@ -89,7 +91,8 @@
     "lang": "C",
     "url": "https://github.com/kokuu-wakayuki/android_kernel_xiaomi_umi_v4l2loopback",
     "description": [
-      "面向小米 10 机型的 Android 内核项目，集成 v4l2loopback 驱动。"
+      "基于第三方开源内核修改，添加了 v4l2loopback 驱动支持，适用于小米 10/Pro。",
+      "- 测试了 v4l2loopback 驱动的基本功能，能够创建虚拟视频设备并进行视频流传输"
     ]
   }
 ]
