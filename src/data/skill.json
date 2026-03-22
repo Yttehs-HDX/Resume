@@ -1,42 +1,121 @@
 {
   "summary": {
-    "core": [ "系统底层开发", "跨平台前端与移动开发", "Linux / NixOS 环境与后端服务" ],
-    "architecture": [ "MVVM", "组件化", "RESTful", "跨平台 UI 架构" ],
-    "platforms": [ "Android", "RISC-V64", "Linux", "NixOS", "Web" ],
-    "research": [ "操作系统内核", "编译器设计", "Nix 环境管理", "前后端一体化架构" ]
+    "core": [
+      "Linux 用户态系统软件",
+      "自动化工具与工程效率",
+      "跨端应用与后端交付"
+    ],
+    "architecture": [
+      "分层架构",
+      "组件化",
+      "MVVM",
+      "RESTful API 设计"
+    ],
+    "platforms": [
+      "Linux",
+      "NixOS",
+      "Android",
+      "RISC-V64",
+      "Web"
+    ],
+    "research": [
+      "系统抽象边界",
+      "操作系统原型",
+      "Nix 环境工程",
+      "本地 / 边缘运行时方向探索"
+    ]
   },
   "tools": {
-    "os": [ "NixOS", "Arch Linux" ],
-    "editors": [ "Vim", "VS Code", "JetBrains IDEs" ],
-    "mobile": [ "Android Studio", "ADB" ],
-    "frontend": [ "React", "Tamagui" ],
-    "backend": [ "FastAPI", "PostgreSQL" ],
-    "devops": [ "Nix", "Git", "Shell", "GitHub Action", "Docker" ]
+    "os": [
+      "NixOS",
+      "Arch Linux"
+    ],
+    "editors": [
+      "Vim",
+      "VS Code",
+      "JetBrains IDEs"
+    ],
+    "mobile": [
+      "Android Studio",
+      "ADB"
+    ],
+    "frontend": [
+      "React Native",
+      "React",
+      "Tamagui"
+    ],
+    "backend": [
+      "FastAPI",
+      "PostgreSQL"
+    ],
+    "devops": [
+      "Nix",
+      "Git",
+      "Shell",
+      "GitHub Action",
+      "Docker"
+    ]
   },
   "skills": [
     {
-      "languages": [ "Rust" ],
+      "languages": [
+        "Rust"
+      ],
       "level": "掌握",
-      "description": "从零实现 RISC-V64 操作系统内核，包括任务切换、页表、陷入处理、FrameAllocator 等；熟悉 no_std 与底层开发",
-      "tags": [ "系统编程", "RISC-V64", "内核", "虚拟内存", "no_std" ]
+      "description": "围绕 RISC-V64 操作系统原型进行实践，覆盖任务切换、页表、陷入处理、FrameAllocator 等主题；熟悉 no_std 场景下的抽象设计与底层调试",
+      "tags": [
+        "系统编程",
+        "RISC-V64",
+        "内核",
+        "虚拟内存",
+        "no_std"
+      ]
     },
     {
-      "languages": [ "Python", "Nix", "Shell" ],
+      "languages": [
+        "Python",
+        "Nix",
+        "Shell"
+      ],
       "level": "熟练",
-      "description": "在 Linux / NixOS 环境下进行自动化与运维脚本开发，使用 FastAPI 与 PostgreSQL 构建后端服务；熟悉 flake、devShell、home-manager、direnv 等生态，具备环境可复现与构建自动化经验",
-      "tags": [ "FastAPI", "PostgreSQL", "NixOS", "DevOps", "自动化", "flake", "Linux" ]
+      "description": "在 Linux / NixOS 环境下进行自动化脚本、开发环境工程与后端服务实践；熟悉 flake、devShell、home-manager、direnv 等生态，并能使用 FastAPI 与 PostgreSQL 组织服务接口与数据层",
+      "tags": [
+        "FastAPI",
+        "PostgreSQL",
+        "NixOS",
+        "DevOps",
+        "自动化",
+        "flake",
+        "Linux"
+      ]
     },
     {
-      "languages": [ "Kotlin" ],
+      "languages": [
+        "Kotlin"
+      ],
       "level": "熟练",
-      "description": "Android 系统与应用层开发，熟悉 Jetpack Compose 与 Kotlin Multiplatform，掌握 MVVM 架构设计",
-      "tags": [ "Android", "Jetpack", "Kotlin Multiplatform", "MVVM", "Compose" ]
+      "description": "具备 Android 系统与应用层开发经验，熟悉 Jetpack Compose、Kotlin Multiplatform 与 MVVM 架构，能够围绕状态管理与 UI 抽象组织应用工程",
+      "tags": [
+        "Android",
+        "Jetpack Compose",
+        "Kotlin Multiplatform",
+        "MVVM",
+        "状态管理"
+      ]
     },
     {
-      "languages": [ "TypeScript" ],
+      "languages": [
+        "TypeScript"
+      ],
       "level": "熟练",
-      "description": "前端与跨平台开发，熟悉 React Native、Tamagui 等框架，擅长 Material You 风格与组件化 UI 架构",
-      "tags": [ "React", "Vite", "Tamagui", "Material You", "MVVM" ]
+      "description": "具备 React Native / React 工程实践，能围绕组件复用、界面状态与设计系统进行跨端开发，关注可维护性与统一交互体验",
+      "tags": [
+        "React Native",
+        "React",
+        "Vite",
+        "Tamagui",
+        "组件化"
+      ]
     }
   ]
 }
