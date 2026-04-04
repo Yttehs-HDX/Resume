@@ -6,9 +6,13 @@ all: help
 
 help:
 	@echo "Available targets:"
+	@echo "  dependencies - Install project dependencies"
 	@echo "  build   - Build the project"
 	@echo "  preview - Preview the built project"
 	@echo "  clean   - Clean the build artifacts"
+
+dependencies:
+	@$(PNPM) install
 
 OUT_DIR := dist
 
