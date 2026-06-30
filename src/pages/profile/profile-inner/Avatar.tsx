@@ -172,9 +172,10 @@ export function Avatar({
     <ProfileContainer>
       <AvatarContainer size={size}>
         <Image
-          source={{ uri: avatarUrl }}
+          src={avatarUrl}
           width="100%"
           height="100%"
+          objectFit="cover"
         />
       </AvatarContainer>
       
