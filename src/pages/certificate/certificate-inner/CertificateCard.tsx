@@ -1,5 +1,6 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
-import { Award, Trophy } from '@tamagui/lucide-icons'
+import { Award, Trophy } from 'lucide-react'
+import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
@@ -67,9 +68,9 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
           flexShrink={0}
         >
           {hasAward ? (
-            <Trophy size={24} color="$onTertiaryContainer" />
+            <ThemedIcon icon={Trophy} size={24} color="$onTertiaryContainer" />
           ) : (
-            <Award size={24} color="$onSecondaryContainer" />
+            <ThemedIcon icon={Award} size={24} color="$onSecondaryContainer" />
           )}
         </XStack>
 

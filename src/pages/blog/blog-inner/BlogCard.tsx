@@ -1,5 +1,6 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
-import { ExternalLink, Calendar } from '@tamagui/lucide-icons'
+import { ExternalLink, Calendar } from 'lucide-react'
+import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
@@ -57,7 +58,7 @@ export function BlogCard({ post }: BlogCardProps) {
           <TitleText flex={1} numberOfLines={2} ellipsizeMode="tail">
             {post.title}
           </TitleText>
-          <ExternalLink size={20} color="$onSurfaceVariant" flexShrink={0} />
+          <ThemedIcon icon={ExternalLink} size={20} color="$onSurfaceVariant" />
         </XStack>
 
         {/* Description */}
@@ -65,7 +66,7 @@ export function BlogCard({ post }: BlogCardProps) {
 
         {/* Date */}
         <XStack alignItems="center" gap="$2">
-          <Calendar size={16} color="$onSurfaceVariant" />
+          <ThemedIcon icon={Calendar} size={16} color="$onSurfaceVariant" />
           <DateText>{post.date}</DateText>
         </XStack>
       </YStack>

@@ -4,11 +4,11 @@ import {
   GraduationCap,
   Briefcase,
   Award,
-  Github as GithubIcon,
+  GitBranch as GithubIcon,
   BookOpen,
   Code2,
   GitPullRequest,
-} from '@tamagui/lucide-icons'
+} from 'lucide-react'
 import { Profile } from './profile'
 import { Education } from './education'
 import { Intership } from './intership'

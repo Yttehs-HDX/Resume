@@ -1,5 +1,6 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
-import { Briefcase } from '@tamagui/lucide-icons'
+import { Briefcase } from 'lucide-react'
+import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
@@ -82,7 +83,7 @@ export function IntershipCard({ internship }: IntershipCardProps) {
             alignItems="center"
             justifyContent="center"
           >
-            <Briefcase size={20} color="$onPrimaryContainer" />
+            <ThemedIcon icon={Briefcase} size={20} color="$onPrimaryContainer" />
           </XStack>
           <YStack flex={1}>
             <TitleText>{internship.company}</TitleText>

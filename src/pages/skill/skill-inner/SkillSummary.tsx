@@ -1,5 +1,6 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
-import { Lightbulb, Layers, Monitor, Search } from '@tamagui/lucide-icons'
+import { Lightbulb, Layers, Monitor, Search } from 'lucide-react'
+import { ThemedIcon } from '../../../components/common'
 import { PrimaryCard } from '../../../components/common'
 
 const SectionTitle = styled(Text, {
@@ -54,7 +55,7 @@ export function SkillSummary({ summary }: SkillSummaryProps) {
         {/* Core Competencies */}
         <YStack gap="$3">
           <XStack gap="$2" alignItems="center">
-            <Lightbulb size={16} color="$onPrimaryContainer" />
+            <ThemedIcon icon={Lightbulb} size={16} color="$onPrimaryContainer" />
             <SectionTitle>核心能力</SectionTitle>
           </XStack>
           <XStack gap="$2" flexWrap="wrap">
@@ -71,7 +72,7 @@ export function SkillSummary({ summary }: SkillSummaryProps) {
         {/* Architecture Patterns */}
         <YStack gap="$3">
           <XStack gap="$2" alignItems="center">
-            <Layers size={16} color="$onPrimaryContainer" />
+            <ThemedIcon icon={Layers} size={16} color="$onPrimaryContainer" />
             <SectionTitle>架构模式</SectionTitle>
           </XStack>
           <XStack gap="$2" flexWrap="wrap">
@@ -88,7 +89,7 @@ export function SkillSummary({ summary }: SkillSummaryProps) {
         {/* Platforms */}
         <YStack gap="$3">
           <XStack gap="$2" alignItems="center">
-            <Monitor size={16} color="$onPrimaryContainer" />
+            <ThemedIcon icon={Monitor} size={16} color="$onPrimaryContainer" />
             <SectionTitle>技术平台</SectionTitle>
           </XStack>
           <XStack gap="$2" flexWrap="wrap">
@@ -105,7 +106,7 @@ export function SkillSummary({ summary }: SkillSummaryProps) {
         {/* Research Areas */}
         <YStack gap="$3">
           <XStack gap="$2" alignItems="center">
-            <Search size={16} color="$onPrimaryContainer" />
+            <ThemedIcon icon={Search} size={16} color="$onPrimaryContainer" />
             <SectionTitle>研究方向</SectionTitle>
           </XStack>
           <XStack gap="$2" flexWrap="wrap">

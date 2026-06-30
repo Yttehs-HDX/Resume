@@ -1,5 +1,5 @@
 import { Button } from 'tamagui'
-import { Moon, Sun } from '@tamagui/lucide-icons'
+import { Moon, Sun } from 'lucide-react'
 
 interface ThemeToggleButtonProps {
   theme: 'light' | 'dark'

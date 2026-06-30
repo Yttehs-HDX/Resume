@@ -1,5 +1,5 @@
 import { Button } from 'tamagui'
-import { Menu } from '@tamagui/lucide-icons'
+import { Menu } from 'lucide-react'
 
 interface MenuButtonProps {
   onPress: () => void

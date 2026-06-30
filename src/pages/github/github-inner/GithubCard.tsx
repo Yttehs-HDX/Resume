@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { YStack, XStack, styled, Text, Circle } from 'tamagui'
-import { Star, GitFork, Eye, ExternalLink } from '@tamagui/lucide-icons'
+import { Star, GitFork, Eye, ExternalLink } from 'lucide-react'
+import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 import languageColors from './program_language_color.json'
 
@@ -124,7 +125,7 @@ export function GithubCard({ repo }: GithubCardProps) {
           <TitleText flex={1} numberOfLines={1} ellipsizeMode="tail">
             {repo.owner}/{repo.repo}
           </TitleText>
-          <ExternalLink size={20} color="$onSurfaceVariant" flexShrink={0} />
+          <ThemedIcon icon={ExternalLink} size={20} color="$onSurfaceVariant" />
         </XStack>
 
         {/* Description */}
@@ -146,19 +147,19 @@ export function GithubCard({ repo }: GithubCardProps) {
           <XStack alignItems="center" gap="$3" flexWrap="wrap">
             {/* Stars */}
             <XStack alignItems="center" gap="$2">
-              <Star size={16} color="$onSurfaceVariant" />
+              <ThemedIcon icon={Star} size={16} color="$onSurfaceVariant" />
               <StatText>{formatStat(stats.stars)}</StatText>
             </XStack>
 
             {/* Forks */}
             <XStack alignItems="center" gap="$2">
-              <GitFork size={16} color="$onSurfaceVariant" />
+              <ThemedIcon icon={GitFork} size={16} color="$onSurfaceVariant" />
               <StatText>{formatStat(stats.forks)}</StatText>
             </XStack>
 
             {/* Watchers */}
             <XStack alignItems="center" gap="$2">
-              <Eye size={16} color="$onSurfaceVariant" />
+              <ThemedIcon icon={Eye} size={16} color="$onSurfaceVariant" />
               <StatText>{formatStat(stats.watchers)}</StatText>
             </XStack>
           </XStack>
