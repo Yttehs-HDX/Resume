@@ -1,5 +1,6 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
-import { Users } from '@tamagui/lucide-icons'
+import { Users } from 'lucide-react'
+import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
@@ -65,7 +66,7 @@ export function ExtracurricularCard({ activity }: ExtracurricularCardProps) {
             alignItems="center"
             justifyContent="center"
           >
-            <Users size={20} color="$onTertiaryContainer" />
+            <ThemedIcon icon={Users} size={20} color="$onTertiaryContainer" />
           </XStack>
           <YStack flex={1}>
             <TitleText>{activity.organization}</TitleText>

@@ -1,5 +1,5 @@
 import { Button } from 'tamagui'
-import { GitBranch } from '@tamagui/lucide-icons'
+import { GitBranch } from 'lucide-react'
 import basicData from '../../../data/basic.json'
 
 /**

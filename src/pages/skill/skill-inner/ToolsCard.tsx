@@ -6,8 +6,9 @@ import {
   Package, 
   Globe, 
   Database
-} from '@tamagui/lucide-icons'
-import { Card } from '../../../components/common'
+} from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import { Card, ThemedIcon } from '../../../components/common'
 
 const TitleText = styled(Text, {
   color: '$onSurface',
@@ -61,7 +62,7 @@ interface ToolsCardProps {
 interface CategoryConfig {
   key: keyof Tools
   label: string
-  icon: any
+  icon: LucideIcon
 }
 
 const categories: CategoryConfig[] = [
@@ -91,7 +92,7 @@ export function ToolsCard({ tools }: ToolsCardProps) {
             alignItems="center"
             justifyContent="center"
           >
-            <Package size={20} color="$onTertiaryContainer" />
+            <ThemedIcon icon={Package} size={20} color="$onTertiaryContainer" />
           </XStack>
           <TitleText>技术工具栈</TitleText>
         </XStack>
@@ -106,7 +107,7 @@ export function ToolsCard({ tools }: ToolsCardProps) {
               {index > 0 && <DividerLine />}
               
               <XStack gap="$2" alignItems="center">
-                <IconComponent size={16} color="$onSurfaceVariant" />
+                <ThemedIcon icon={IconComponent} size={16} color="$onSurfaceVariant" />
                 <CategoryTitle>{category.label}</CategoryTitle>
               </XStack>
               

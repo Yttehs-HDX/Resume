@@ -1,5 +1,6 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
-import { Code2 } from '@tamagui/lucide-icons'
+import { Code2 } from 'lucide-react'
+import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
@@ -76,7 +77,7 @@ export function SkillCard({ skill }: SkillCardProps) {
             alignItems="center"
             justifyContent="center"
           >
-            <Code2 size={20} color="$onPrimaryContainer" />
+            <ThemedIcon icon={Code2} size={20} color="$onPrimaryContainer" />
           </XStack>
           <TitleText flex={1}>{skill.languages.join(' / ')}</TitleText>
         </XStack>

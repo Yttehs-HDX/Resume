@@ -20,7 +20,7 @@ build:
 	@$(PNPM) build
 
 preview:
-	@$(PNPM) dev
+	@$(PNPM) preview
 
 clean:
 	@rm -rf $(OUT_DIR)

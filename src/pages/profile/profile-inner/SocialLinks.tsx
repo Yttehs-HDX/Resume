@@ -1,6 +1,6 @@
 import { XStack, YStack, Text } from 'tamagui'
-import { Mail, Github, MessageSquare, Globe } from '@tamagui/lucide-icons'
-import { Card } from '../../../components/common/Card'
+import { Mail, GitBranch, MessageSquare, Globe } from 'lucide-react'
+import { Card, ThemedIcon } from '../../../components/common'
 
 interface SocialLinksProps {
   social: {
@@ -61,7 +61,7 @@ export function SocialLinks({ social }: SocialLinksProps) {
                   }}
                   width="100%"
                 >
-                  <Mail size={24} color="$primary" />
+                  <ThemedIcon icon={Mail} size={24} color="$primary" />
                   <YStack flex={1}>
                     <Text fontSize={14} fontWeight="500" color="$onSurface">
                       邮箱
@@ -101,7 +101,7 @@ export function SocialLinks({ social }: SocialLinksProps) {
               }}
               width="100%"
             >
-              <Github size={24} color="$primary" />
+              <ThemedIcon icon={GitBranch} size={24} color="$primary" />
               <YStack flex={1}>
                 <Text fontSize={14} fontWeight="500" color="$onSurface">
                   GitHub
@@ -139,7 +139,7 @@ export function SocialLinks({ social }: SocialLinksProps) {
               }}
               width="100%"
             >
-              <MessageSquare size={24} color="$primary" />
+              <ThemedIcon icon={MessageSquare} size={24} color="$primary" />
               <YStack flex={1}>
                 <Text fontSize={14} fontWeight="500" color="$onSurface">
                   酷安
@@ -177,7 +177,7 @@ export function SocialLinks({ social }: SocialLinksProps) {
               }}
               width="100%"
             >
-              <Globe size={24} color="$primary" />
+              <ThemedIcon icon={Globe} size={24} color="$primary" />
               <YStack flex={1}>
                 <Text fontSize={14} fontWeight="500" color="$onSurface">
                   博客

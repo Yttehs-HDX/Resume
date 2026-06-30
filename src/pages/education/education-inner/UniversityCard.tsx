@@ -1,5 +1,6 @@
 import { YStack, XStack, styled, Text } from 'tamagui'
-import { GraduationCap } from '@tamagui/lucide-icons'
+import { GraduationCap } from 'lucide-react'
+import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
@@ -73,7 +74,7 @@ export function UniversityCard({ university }: UniversityCardProps) {
             alignItems="center"
             justifyContent="center"
           >
-            <GraduationCap size={20} color="$onPrimaryContainer" />
+            <ThemedIcon icon={GraduationCap} size={20} color="$onPrimaryContainer" />
           </XStack>
           <YStack flex={1}>
             <TitleText>{university.name}</TitleText>

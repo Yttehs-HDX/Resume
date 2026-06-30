@@ -1,6 +1,8 @@
 import { XStack, Text, styled } from 'tamagui'
 import { NavLink } from 'react-router-dom'
-import { ReactNode, cloneElement, isValidElement } from 'react'
+import { ReactElement, ReactNode, isValidElement } from 'react'
+import type { LucideIcon } from 'lucide-react'
+import { ThemedIcon } from '../../common'
 
 interface DrawerItemProps {
   path: string
@@ -19,6 +21,10 @@ const IconWrapper = styled(XStack, {
  * Highlights when route is active
  */
 export function DrawerItem({ path, label, icon, onClose }: DrawerItemProps) {
+  const iconElement = isValidElement(icon)
+    ? icon as ReactElement<{ size?: number }>
+    : null
+
   return (
     <NavLink
       to={path}
@@ -45,10 +51,13 @@ export function DrawerItem({ path, label, icon, onClose }: DrawerItemProps) {
         >
           {icon && (
             <IconWrapper>
-              {isValidElement(icon) && cloneElement(icon, {
-                // @ts-ignore - color prop exists on lucide icons
-                color: isActive ? '$onSecondaryContainer' : '$onSurfaceVariant',
-              })}
+              {iconElement && (
+                <ThemedIcon
+                  icon={iconElement.type as LucideIcon}
+                  size={iconElement.props.size}
+                  color={isActive ? '$onSecondaryContainer' : '$onSurfaceVariant'}
+                />
+              )}
             </IconWrapper>
           )}
           <Text
