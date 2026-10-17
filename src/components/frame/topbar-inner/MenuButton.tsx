@@ -1,4 +1,5 @@
 import { Button } from 'tamagui'
+import { ThemedIcon } from '../../common'
 import { Menu } from 'lucide-react'
 
 interface MenuButtonProps {
@@ -12,16 +13,17 @@ interface MenuButtonProps {
 export function MenuButton({ onPress }: MenuButtonProps) {
   return (
     <Button
-      size="lg"
+      size={false}
       backgroundColor="surfaceContainerHighest hover:surfaceContainerHigh press:surfaceContainer"
       width={48}
       height={48}
       display="flex gtSm:none"
-      circular
+      borderRadius={24}
+      padding={0}
       onPress={onPress}
-      icon={Menu}
-      scaleIcon={1.4}
       aria-label="Toggle menu"
-    />
+    >
+      <ThemedIcon icon={Menu} size={24} color="$onSurface" />
+    </Button>
   )
 }
