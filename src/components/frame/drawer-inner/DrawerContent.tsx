@@ -6,7 +6,7 @@ import { YStack, styled } from 'tamagui'
  */
 export const DrawerContent = styled(YStack, {
   flex: 1,
-  paddingHorizontal: '$4',
-  gap: '$3',
-  style: { overflowY: 'auto' },
+  paddingHorizontal: "4",
+  gap: "3",
+  style: { overflowY: 'auto' }
 })

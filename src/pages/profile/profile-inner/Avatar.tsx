@@ -10,15 +10,11 @@ const AvatarContainer = styled(YStack, {
   height: 120,
   borderRadius: 60,
   overflow: 'hidden',
-  backgroundColor: '$surfaceContainerHighest',
+  backgroundColor: "surfaceContainerHighest",
   borderWidth: 4,
-  borderColor: '$primaryContainer',
-  shadowColor: '$shadowColor',
-  shadowOffset: { width: 0, height: 4 },
-  shadowOpacity: 0.15,
-  shadowRadius: 8,
-  elevation: 4,
-  
+  borderColor: "primaryContainer hover:primary",
+  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15) hover:0px 4px 8px rgba(0, 0, 0, 0.25)',
+  scale: '1 hover:1.05 press:0.98',
   variants: {
     size: {
       small: {
@@ -41,20 +37,9 @@ const AvatarContainer = styled(YStack, {
       },
     },
   } as const,
-  
   defaultVariants: {
     size: 'medium',
-  },
-  
-  hoverStyle: {
-    scale: 1.05,
-    borderColor: '$primary',
-    shadowOpacity: 0.25,
-  },
-  
-  pressStyle: {
-    scale: 0.98,
-  },
+  }
 })
 
 /**
@@ -63,14 +48,11 @@ const AvatarContainer = styled(YStack, {
  */
 const ProfileContainer = styled(YStack, {
   alignItems: 'center',
-  gap: '$4',
-  padding: '$6',
-  backgroundColor: '$surfaceContainerHigh',
-  borderRadius: '$6',
-  shadowColor: '$shadowColor',
-  shadowOffset: { width: 0, height: 2 },
-  shadowOpacity: 0.1,
-  shadowRadius: 4,
+  gap: "4",
+  padding: "6",
+  backgroundColor: "surfaceContainerHigh",
+  borderRadius: "6",
+  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'
 })
 
 /**
@@ -80,10 +62,9 @@ const ProfileContainer = styled(YStack, {
 const NameText = styled(BodyText, {
   fontSize: 28,
   fontWeight: '600',
-  color: '$onSurface',
+  color: "onSurface",
   textAlign: 'center',
   letterSpacing: -0.5,
-  
   variants: {
     variant: {
       display: {
@@ -100,10 +81,9 @@ const NameText = styled(BodyText, {
       },
     },
   } as const,
-  
   defaultVariants: {
     variant: 'display',
-  },
+  }
 })
 
 /**
@@ -112,10 +92,10 @@ const NameText = styled(BodyText, {
  */
 const TaglineText = styled(SecondaryText, {
   fontSize: 15,
-  lineHeight: 22,
+  lineHeight: "22px",
   textAlign: 'center',
   maxWidth: 520,
-  paddingHorizontal: '$4',
+  paddingHorizontal: "4"
 })
 
 /**

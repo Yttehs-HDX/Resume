@@ -12,8 +12,8 @@ export function ProfileHighlights({ highlightsMd }: ProfileHighlightsProps) {
   const content = typeof highlightsMd === 'string' ? highlightsMd.trim() : ''
 
   return (
-    <Card width="100%" flexDirection="column" gap="$3">
-      <Text fontSize={22} fontWeight="500" color="$onSurface">
+    <Card width="100%" flexDirection="column" gap="3">
+      <Text fontSize={22} fontWeight="500" color="onSurface">
         亮点
       </Text>
       {content.length > 0 ? <Markdown>{content}</Markdown> : null}

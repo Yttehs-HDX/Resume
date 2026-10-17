@@ -10,9 +10,9 @@ interface SpacerProps {
  */
 export function Spacer({ size = 'large' }: SpacerProps) {
   const heights = {
-    small: '$6',
-    medium: '$8',
-    large: '$10',
+    small: '6',
+    medium: '8',
+    large: '10',
   }
 
   return <YStack height={heights[size]} flexShrink={0} />

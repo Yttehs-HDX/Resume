@@ -5,10 +5,10 @@ import { Text as TamaguiText, styled } from 'tamagui'
  * Default styling for regular content text
  */
 export const BodyText = styled(TamaguiText, {
-  color: '$onSurface',
+  color: "onSurface",
   fontSize: 16,
-  lineHeight: 24,
-  letterSpacing: 0.15,
+  lineHeight: "24px",
+  letterSpacing: 0.15
 })
 
 /**
@@ -16,10 +16,10 @@ export const BodyText = styled(TamaguiText, {
  * Slightly muted text for less important content
  */
 export const SecondaryText = styled(TamaguiText, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 14,
-  lineHeight: 20,
-  letterSpacing: 0.25,
+  lineHeight: "20px",
+  letterSpacing: 0.25
 })
 
 /**
@@ -27,8 +27,8 @@ export const SecondaryText = styled(TamaguiText, {
  * Text styled for use on primary container backgrounds
  */
 export const PrimaryContainerText = styled(TamaguiText, {
-  color: '$onPrimaryContainer',
+  color: "onPrimaryContainer",
   fontSize: 16,
-  lineHeight: 24,
-  letterSpacing: 0.15,
+  lineHeight: "24px",
+  letterSpacing: 0.15
 })

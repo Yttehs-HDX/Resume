@@ -1,11 +1,11 @@
 import { XStack, Text, styled } from 'tamagui'
 
 const StyledDrawerTopBar = styled(XStack, {
-  backgroundColor: '$surfaceContainerHigh',
-  paddingHorizontal: '$8',
-  paddingVertical: '$4',
+  backgroundColor: "surfaceContainerHigh",
+  paddingHorizontal: "8",
+  paddingVertical: "4",
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'center'
 })
 
 interface DrawerTopBarProps {
@@ -19,7 +19,7 @@ interface DrawerTopBarProps {
 export function DrawerTopBar({ title = 'Navigation' }: DrawerTopBarProps) {
   return (
     <StyledDrawerTopBar>
-      <Text fontSize={22} fontWeight="600" color="$onSurfaceVariant">
+      <Text fontSize={22} fontWeight="600" color="onSurfaceVariant">
         {title}
       </Text>
     </StyledDrawerTopBar>

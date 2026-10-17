@@ -15,17 +15,11 @@ export function SourceCodeButton() {
       style={{ textDecoration: 'none' }}
     >
       <Button
-        size="$9"
-        circular
-        backgroundColor="$surfaceContainerHighest"
+        size="lg"
+        backgroundColor="surfaceContainerHighest hover:surfaceContainerHigh press:surfaceContainer"
         width={48}
         height={48}
-        hoverStyle={{
-          backgroundColor: '$surfaceContainerHigh',
-        }}
-        pressStyle={{
-          backgroundColor: '$surfaceContainer',
-        }}
+        circular
         icon={GitBranch}
         scaleIcon={1.4}
         aria-label="View source code"

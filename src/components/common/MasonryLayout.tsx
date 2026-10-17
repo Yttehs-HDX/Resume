@@ -14,12 +14,12 @@ interface MasonryLayoutProps {
  * 
  * @param children - Array of child elements to display
  * @param columns - Number of columns for desktop (default: 3)
- * @param gap - Gap between items (default: '$4')
+ * @param gap - Gap between items (default: '4')
  */
 export function MasonryLayout({ 
   children, 
   columns = 3, 
-  gap = '$4' 
+  gap = '4'
 }: MasonryLayoutProps) {
   const media = useMedia()
   

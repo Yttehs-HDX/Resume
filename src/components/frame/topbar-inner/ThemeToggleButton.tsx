@@ -13,17 +13,11 @@ interface ThemeToggleButtonProps {
 export function ThemeToggleButton({ theme, onToggle }: ThemeToggleButtonProps) {
   return (
     <Button
-      size="$9"
-      circular
-      backgroundColor="$surfaceContainerHighest"
+      size="lg"
+      backgroundColor="surfaceContainerHighest hover:surfaceContainerHigh press:surfaceContainer"
       width={48}
       height={48}
-      hoverStyle={{
-        backgroundColor: '$surfaceContainerHigh',
-      }}
-      pressStyle={{
-        backgroundColor: '$surfaceContainer',
-      }}
+      circular
       onPress={onToggle}
       icon={theme === 'light' ? Moon : Sun}
       scaleIcon={1.4}

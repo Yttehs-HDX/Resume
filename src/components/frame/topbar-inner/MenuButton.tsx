@@ -12,21 +12,12 @@ interface MenuButtonProps {
 export function MenuButton({ onPress }: MenuButtonProps) {
   return (
     <Button
-      size="$9"
-      circular
-      backgroundColor="$surfaceContainerHighest"
+      size="lg"
+      backgroundColor="surfaceContainerHighest hover:surfaceContainerHigh press:surfaceContainer"
       width={48}
       height={48}
-      display="flex"
-      $gtSm={{
-        display: 'none',
-      }}
-      hoverStyle={{
-        backgroundColor: '$surfaceContainerHigh',
-      }}
-      pressStyle={{
-        backgroundColor: '$surfaceContainer',
-      }}
+      display="flex gtSm:none"
+      circular
       onPress={onPress}
       icon={Menu}
       scaleIcon={1.4}

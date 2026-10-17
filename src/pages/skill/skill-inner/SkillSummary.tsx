@@ -4,33 +4,33 @@ import { ThemedIcon } from '../../../components/common'
 import { PrimaryCard } from '../../../components/common'
 
 const SectionTitle = styled(Text, {
-  color: '$onPrimaryContainer',
+  color: "onPrimaryContainer",
   fontSize: 14,
   fontWeight: '700',
-  lineHeight: 20,
+  lineHeight: "20px",
   letterSpacing: 0.1,
-  textTransform: 'uppercase',
+  textTransform: 'uppercase'
 })
 
 const TagChip = styled(XStack, {
-  backgroundColor: '$secondaryContainer',
-  paddingHorizontal: '$3',
-  paddingVertical: '$2',
-  borderRadius: '$2',
+  backgroundColor: "secondaryContainer",
+  paddingHorizontal: "3",
+  paddingVertical: "2",
+  borderRadius: "2"
 })
 
 const TagText = styled(Text, {
-  color: '$onSecondaryContainer',
+  color: "onSecondaryContainer",
   fontSize: 13,
-  lineHeight: 18,
-  letterSpacing: 0.25,
+  lineHeight: "18px",
+  letterSpacing: 0.25
 })
 
 const DividerLine = styled(XStack, {
   height: 1,
-  backgroundColor: '$onPrimaryContainer',
+  backgroundColor: "onPrimaryContainer",
   opacity: 0.12,
-  width: '100%',
+  width: '100%'
 })
 
 interface SkillSummary {
@@ -51,14 +51,14 @@ interface SkillSummaryProps {
 export function SkillSummary({ summary }: SkillSummaryProps) {
   return (
     <PrimaryCard>
-      <YStack gap="$4">
+      <YStack gap="4">
         {/* Core Competencies */}
-        <YStack gap="$3">
-          <XStack gap="$2" alignItems="center">
+        <YStack gap="3">
+          <XStack gap="2" alignItems="center">
             <ThemedIcon icon={Lightbulb} size={16} color="$onPrimaryContainer" />
             <SectionTitle>核心能力</SectionTitle>
           </XStack>
-          <XStack gap="$2" flexWrap="wrap">
+          <XStack gap="2" flexWrap="wrap">
             {summary.core.map((item, index) => (
               <TagChip key={index}>
                 <TagText>{item}</TagText>
@@ -70,12 +70,12 @@ export function SkillSummary({ summary }: SkillSummaryProps) {
         <DividerLine />
 
         {/* Architecture Patterns */}
-        <YStack gap="$3">
-          <XStack gap="$2" alignItems="center">
+        <YStack gap="3">
+          <XStack gap="2" alignItems="center">
             <ThemedIcon icon={Layers} size={16} color="$onPrimaryContainer" />
             <SectionTitle>架构模式</SectionTitle>
           </XStack>
-          <XStack gap="$2" flexWrap="wrap">
+          <XStack gap="2" flexWrap="wrap">
             {summary.architecture.map((item, index) => (
               <TagChip key={index}>
                 <TagText>{item}</TagText>
@@ -87,12 +87,12 @@ export function SkillSummary({ summary }: SkillSummaryProps) {
         <DividerLine />
 
         {/* Platforms */}
-        <YStack gap="$3">
-          <XStack gap="$2" alignItems="center">
+        <YStack gap="3">
+          <XStack gap="2" alignItems="center">
             <ThemedIcon icon={Monitor} size={16} color="$onPrimaryContainer" />
             <SectionTitle>技术平台</SectionTitle>
           </XStack>
-          <XStack gap="$2" flexWrap="wrap">
+          <XStack gap="2" flexWrap="wrap">
             {summary.platforms.map((item, index) => (
               <TagChip key={index}>
                 <TagText>{item}</TagText>
@@ -104,12 +104,12 @@ export function SkillSummary({ summary }: SkillSummaryProps) {
         <DividerLine />
 
         {/* Research Areas */}
-        <YStack gap="$3">
-          <XStack gap="$2" alignItems="center">
+        <YStack gap="3">
+          <XStack gap="2" alignItems="center">
             <ThemedIcon icon={Search} size={16} color="$onPrimaryContainer" />
             <SectionTitle>研究方向</SectionTitle>
           </XStack>
-          <XStack gap="$2" flexWrap="wrap">
+          <XStack gap="2" flexWrap="wrap">
             {summary.research.map((item, index) => (
               <TagChip key={index}>
                 <TagText>{item}</TagText>

@@ -1,4 +1,4 @@
-import { YStack } from 'tamagui'
+import { YStack, type TamaguiElement } from 'tamagui'
 import { useLocation } from 'react-router-dom'
 import { TopBar } from './TopBar'
 import { routes } from '../../pages/routes'
@@ -22,14 +22,14 @@ export function MainContent({
   children,
 }: MainContentProps) {
   const location = useLocation()
-  const scrollRef = useScrollReset<HTMLDivElement>()
+  const scrollRef = useScrollReset<HTMLElement & TamaguiElement>()
   
   // Find the current route label based on the current path
   const currentRoute = routes.find((route) => route.path === location.pathname)
   const currentTitle = currentRoute?.label || 'My Application'
 
   return (
-    <YStack flex={1} backgroundColor="$surfaceContainerHigh">
+    <YStack flex={1} minWidth={0} minHeight={0} backgroundColor="surfaceContainerHigh">
       <TopBar
         theme={theme}
         onToggleTheme={onToggleTheme}
@@ -40,16 +40,17 @@ export function MainContent({
       <YStack
         ref={scrollRef}
         flex={1}
-        borderTopLeftRadius="$6"
-        borderTopRightRadius="$6"
-        backgroundColor="$background"
+        minHeight={0}
+        borderTopLeftRadius="6"
+        borderTopRightRadius="6"
+        backgroundColor="background"
         style={{
-          overflowX: 'hidden',
-          overflowY: 'auto',
-          paddingBottom: 'var(--app-safe-bottom)',
-          paddingLeft: 'var(--app-safe-left)',
-          paddingRight: 'var(--app-safe-right)',
-        }}
+                overflowX: 'hidden',
+                overflowY: 'auto',
+                paddingBottom: 'var(--app-safe-bottom)',
+                paddingLeft: 'var(--app-safe-left)',
+                paddingRight: 'var(--app-safe-right)',
+              }}
       >
         {children}
       </YStack>

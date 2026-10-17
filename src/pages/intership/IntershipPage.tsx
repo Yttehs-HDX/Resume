@@ -9,9 +9,9 @@ import intershipData from '../../data/intership.json'
 export function IntershipPage() {
   return (
     <PageLayout>
-      <YStack gap="$5" width="100%">
+      <YStack gap="5" width="100%">
         {/* Internship Experience Section */}
-        <YStack gap="$4">
+        <YStack gap="4">
           {intershipData.internships.map((internship, index) => (
             <IntershipCard key={index} internship={internship} />
           ))}

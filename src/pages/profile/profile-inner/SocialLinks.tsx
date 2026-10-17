@@ -28,16 +28,16 @@ export function SocialLinks({ social }: SocialLinksProps) {
     <Card
       width="100%"
       flexDirection="column"
-      gap="$3"
+      gap="3"
     >
-      <Text fontSize={22} fontWeight="500" color="$onSurface" marginBottom="$2">
+      <Text fontSize={22} fontWeight="500" color="onSurface" marginBottom="2">
         联系方式
       </Text>
 
-      <YStack gap="$3" width="100%">
+      <YStack gap="3" width="100%">
         {/* Email Section */}
         {social.email && social.email.length > 0 && (
-          <YStack gap="$2" width="100%">
+          <YStack gap="2" width="100%">
             {social.email.map((email, index) => (
               <a
                 key={`email-${index}`}
@@ -46,27 +46,21 @@ export function SocialLinks({ social }: SocialLinksProps) {
               >
                 <XStack
                   alignItems="center"
-                  gap="$4"
-                  paddingVertical="$3"
-                  paddingHorizontal="$4"
-                  backgroundColor="$surfaceContainer"
-                  borderRadius="$3"
+                  gap="4"
+                  paddingVertical="3"
+                  paddingHorizontal="4"
+                  backgroundColor="surfaceContainer hover:surfaceContainerHigh press:surfaceContainerHighest"
+                  borderRadius="3"
                   cursor="pointer"
-                  hoverStyle={{
-                    backgroundColor: '$surfaceContainerHigh',
-                  }}
-                  pressStyle={{
-                    backgroundColor: '$surfaceContainerHighest',
-                    scale: 0.98,
-                  }}
+                  scale="press:0.98"
                   width="100%"
                 >
                   <ThemedIcon icon={Mail} size={24} color="$primary" />
                   <YStack flex={1}>
-                    <Text fontSize={14} fontWeight="500" color="$onSurface">
+                    <Text fontSize={14} fontWeight="500" color="onSurface">
                       邮箱
                     </Text>
-                    <Text fontSize={14} color="$onSurfaceVariant">
+                    <Text fontSize={14} color="onSurfaceVariant">
                       {email}
                     </Text>
                   </YStack>
@@ -86,27 +80,21 @@ export function SocialLinks({ social }: SocialLinksProps) {
           >
             <XStack
               alignItems="center"
-              gap="$4"
-              paddingVertical="$3"
-              paddingHorizontal="$4"
-              backgroundColor="$surfaceContainer"
-              borderRadius="$3"
+              gap="4"
+              paddingVertical="3"
+              paddingHorizontal="4"
+              backgroundColor="surfaceContainer hover:surfaceContainerHigh press:surfaceContainerHighest"
+              borderRadius="3"
               cursor="pointer"
-              hoverStyle={{
-                backgroundColor: '$surfaceContainerHigh',
-              }}
-              pressStyle={{
-                backgroundColor: '$surfaceContainerHighest',
-                scale: 0.98,
-              }}
+              scale="press:0.98"
               width="100%"
             >
               <ThemedIcon icon={GitBranch} size={24} color="$primary" />
               <YStack flex={1}>
-                <Text fontSize={14} fontWeight="500" color="$onSurface">
+                <Text fontSize={14} fontWeight="500" color="onSurface">
                   GitHub
                 </Text>
-                <Text fontSize={14} color="$onSurfaceVariant">
+                <Text fontSize={14} color="onSurfaceVariant">
                   @{social.github.username}
                 </Text>
               </YStack>
@@ -124,27 +112,21 @@ export function SocialLinks({ social }: SocialLinksProps) {
           >
             <XStack
               alignItems="center"
-              gap="$4"
-              paddingVertical="$3"
-              paddingHorizontal="$4"
-              backgroundColor="$surfaceContainer"
-              borderRadius="$3"
+              gap="4"
+              paddingVertical="3"
+              paddingHorizontal="4"
+              backgroundColor="surfaceContainer hover:surfaceContainerHigh press:surfaceContainerHighest"
+              borderRadius="3"
               cursor="pointer"
-              hoverStyle={{
-                backgroundColor: '$surfaceContainerHigh',
-              }}
-              pressStyle={{
-                backgroundColor: '$surfaceContainerHighest',
-                scale: 0.98,
-              }}
+              scale="press:0.98"
               width="100%"
             >
               <ThemedIcon icon={MessageSquare} size={24} color="$primary" />
               <YStack flex={1}>
-                <Text fontSize={14} fontWeight="500" color="$onSurface">
+                <Text fontSize={14} fontWeight="500" color="onSurface">
                   酷安
                 </Text>
-                <Text fontSize={14} color="$onSurfaceVariant">
+                <Text fontSize={14} color="onSurfaceVariant">
                   @{social.coolapk.username}
                 </Text>
               </YStack>
@@ -162,27 +144,21 @@ export function SocialLinks({ social }: SocialLinksProps) {
           >
             <XStack
               alignItems="center"
-              gap="$4"
-              paddingVertical="$3"
-              paddingHorizontal="$4"
-              backgroundColor="$surfaceContainer"
-              borderRadius="$3"
+              gap="4"
+              paddingVertical="3"
+              paddingHorizontal="4"
+              backgroundColor="surfaceContainer hover:surfaceContainerHigh press:surfaceContainerHighest"
+              borderRadius="3"
               cursor="pointer"
-              hoverStyle={{
-                backgroundColor: '$surfaceContainerHigh',
-              }}
-              pressStyle={{
-                backgroundColor: '$surfaceContainerHighest',
-                scale: 0.98,
-              }}
+              scale="press:0.98"
               width="100%"
             >
               <ThemedIcon icon={Globe} size={24} color="$primary" />
               <YStack flex={1}>
-                <Text fontSize={14} fontWeight="500" color="$onSurface">
+                <Text fontSize={14} fontWeight="500" color="onSurface">
                   博客
                 </Text>
-                <Text fontSize={14} color="$onSurfaceVariant">
+                <Text fontSize={14} color="onSurfaceVariant">
                   {social.blog.url}
                 </Text>
               </YStack>

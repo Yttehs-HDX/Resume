@@ -12,15 +12,12 @@ export const DrawerBackdrop = styled(YStack, {
   bottom: 0,
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
   zIndex: 999,
-  display: 'none',
-  '$gtSm': {
-    display: 'none',
-  },
+  display: "none gtSm:none",
   variants: {
     visible: {
       true: {
-        display: 'flex',
+        display: 'flex gtSm:none',
       },
     },
-  } as const,
+  } as const
 })

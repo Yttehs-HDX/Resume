@@ -9,9 +9,9 @@ import certificateData from '../../data/certificate.json'
 export function CertificatePage() {
   return (
     <PageLayout>
-      <YStack gap="$5" width="100%">
+      <YStack gap="5" width="100%">
         {/* Certificates Section */}
-        <YStack gap="$4">
+        <YStack gap="4">
           {certificateData.certificates.map((certificate, index) => (
             <CertificateCard key={index} certificate={certificate} />
           ))}

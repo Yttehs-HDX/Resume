@@ -5,14 +5,10 @@ import { Card as TamaguiCard, styled } from 'tamagui'
  * Material You design with elevation and rounded corners
  */
 export const Card = styled(TamaguiCard, {
-  elevate: true,
-  backgroundColor: '$surfaceContainerHigh',
-  padding: '$5',
-  borderRadius: '$4',
-  shadowColor: '$shadowColor',
-  shadowOffset: { width: 0, height: 1 },
-  shadowOpacity: 0.1,
-  shadowRadius: 3,
+  backgroundColor: "surfaceContainerHigh",
+  padding: "5",
+  borderRadius: "4",
+  boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.12)'
 })
 
 /**
@@ -20,12 +16,8 @@ export const Card = styled(TamaguiCard, {
  * Uses primary color scheme for emphasis
  */
 export const PrimaryCard = styled(TamaguiCard, {
-  elevate: true,
-  backgroundColor: '$primaryContainer',
-  padding: '$5',
-  borderRadius: '$4',
-  shadowColor: '$shadowColor',
-  shadowOffset: { width: 0, height: 2 },
-  shadowOpacity: 0.12,
-  shadowRadius: 4,
+  backgroundColor: "primaryContainer",
+  padding: "5",
+  borderRadius: "4",
+  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.12)'
 })

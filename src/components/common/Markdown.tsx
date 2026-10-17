@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { YStack, styled } from 'tamagui'
+import { YStack, html, styled } from 'tamagui'
 
 type MarkdownTone = 'default' | 'primary'
 
@@ -12,50 +12,50 @@ type MarkdownBlock =
   | { type: 'paragraph'; text: string }
   | { type: 'list'; items: string[] }
 
-const Paragraph = styled('p', {
+const Paragraph = styled(html.p, {
   margin: 0,
   fontSize: 16,
-  lineHeight: 24,
+  lineHeight: "24px",
   letterSpacing: 0.15,
   color: 'inherit',
 })
 
-const List = styled('ul', {
+const List = styled(html.ul, {
   margin: 0,
-  paddingLeft: '$4',
+  paddingLeft: "4",
   listStyleType: 'disc',
   display: 'flex',
   flexDirection: 'column',
-  gap: '$2',
+  gap: "2",
+  color: 'inherit'
+})
+
+const ListItem = styled(html.li, {
   color: 'inherit',
 })
 
-const ListItem = styled('li', {
-  color: 'inherit',
-})
-
-const InlineText = styled('span', {
+const InlineText = styled(html.span, {
   fontSize: 16,
-  lineHeight: 24,
+  lineHeight: "24px",
   letterSpacing: 0.15,
   color: 'inherit',
 })
 
-const StrongText = styled('strong', {
+const StrongText = styled(html.strong, {
   fontWeight: '600',
   color: 'inherit',
 })
 
-const CodeText = styled('code', {
+const CodeText = styled(html.code, {
   fontFamily:
     'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
   fontSize: 14,
-  lineHeight: 20,
-  paddingHorizontal: '$1',
-  paddingVertical: '$1',
-  borderRadius: '$2',
-  backgroundColor: '$surfaceContainerHigh',
-  color: 'inherit',
+  lineHeight: "20px",
+  paddingInline: "1",
+  paddingBlock: "1",
+  borderRadius: "2",
+  backgroundColor: "surfaceContainerHigh",
+  color: 'inherit'
 })
 
 const listItemPattern = /^[-*+]\s+/
@@ -155,10 +155,10 @@ export function Markdown({ children, tone = 'default' }: MarkdownProps) {
     return null
   }
 
-  const textColor = tone === 'primary' ? '$onPrimaryContainer' : '$onSurface'
+  const textColor = tone === 'primary' ? 'onPrimaryContainer' : 'onSurface'
 
   return (
-    <YStack gap="$2" width="100%" color={textColor}>
+    <YStack gap="2" width="100%" color={textColor}>
       {blocks.map((block, blockIndex) => {
         if (block.type === 'paragraph') {
           return (
