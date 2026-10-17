@@ -4,26 +4,26 @@ import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
-  color: '$onSurface',
+  color: "onSurface",
   fontSize: 18,
   fontWeight: '700',
-  lineHeight: 26,
-  letterSpacing: 0.1,
+  lineHeight: "26px",
+  letterSpacing: 0.1
 })
 
 const DescriptionText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 14,
-  lineHeight: 20,
-  letterSpacing: 0.25,
+  lineHeight: "20px",
+  letterSpacing: 0.25
 })
 
 const DateText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 13,
-  lineHeight: 18,
+  lineHeight: "18px",
   letterSpacing: 0.25,
-  fontWeight: '500',
+  fontWeight: '500'
 })
 
 interface BlogPost {
@@ -48,13 +48,14 @@ export function BlogCard({ post }: BlogCardProps) {
 
   return (
     <Card
-      pressStyle={{ scale: 0.98, opacity: 0.9 }}
+      scale="press:0.98"
+      opacity="press:0.9"
       cursor="pointer"
       onPress={handleCardPress}
     >
-      <YStack gap="$4" width="100%">
+      <YStack gap="4" width="100%">
         {/* Header: Blog Title & Link Icon */}
-        <XStack alignItems="center" justifyContent="space-between" gap="$2">
+        <XStack alignItems="center" justifyContent="space-between" gap="2">
           <TitleText flex={1} numberOfLines={2} ellipsizeMode="tail">
             {post.title}
           </TitleText>
@@ -65,7 +66,7 @@ export function BlogCard({ post }: BlogCardProps) {
         <DescriptionText>{post.description}</DescriptionText>
 
         {/* Date */}
-        <XStack alignItems="center" gap="$2">
+        <XStack alignItems="center" gap="2">
           <ThemedIcon icon={Calendar} size={16} color="$onSurfaceVariant" />
           <DateText>{post.date}</DateText>
         </XStack>

@@ -6,34 +6,34 @@ import { Card } from '../../../components/common'
 import languageColors from './program_language_color.json'
 
 const TitleText = styled(Text, {
-  color: '$onSurface',
+  color: "onSurface",
   fontSize: 18,
   fontWeight: '700',
-  lineHeight: 26,
-  letterSpacing: 0.1,
+  lineHeight: "26px",
+  letterSpacing: 0.1
 })
 
 const DescriptionText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 14,
-  lineHeight: 20,
-  letterSpacing: 0.25,
+  lineHeight: "20px",
+  letterSpacing: 0.25
 })
 
 const StatText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 12,
-  lineHeight: 16,
+  lineHeight: "16px",
   letterSpacing: 0.4,
-  fontWeight: '500',
+  fontWeight: '500'
 })
 
 const LanguageText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 13,
-  lineHeight: 18,
+  lineHeight: "18px",
   letterSpacing: 0.25,
-  fontWeight: '500',
+  fontWeight: '500'
 })
 
 interface GithubRepo {
@@ -115,13 +115,14 @@ export function GithubCard({ repo }: GithubCardProps) {
 
   return (
     <Card
-      pressStyle={{ scale: 0.98, opacity: 0.9 }}
+      scale="press:0.98"
+      opacity="press:0.9"
       cursor="pointer"
       onPress={handleCardPress}
     >
-      <YStack gap="$4" width="100%">
+      <YStack gap="4" width="100%">
         {/* Header: Repository Name & Link Icon */}
-        <XStack alignItems="center" justifyContent="space-between" gap="$2">
+        <XStack alignItems="center" justifyContent="space-between" gap="2">
           <TitleText flex={1} numberOfLines={1} ellipsizeMode="tail">
             {repo.owner}/{repo.repo}
           </TitleText>
@@ -129,36 +130,36 @@ export function GithubCard({ repo }: GithubCardProps) {
         </XStack>
 
         {/* Description */}
-        <YStack gap="$2">
+        <YStack gap="2">
           {repo.description.map((line, index) => (
             <DescriptionText key={index}>{line}</DescriptionText>
           ))}
         </YStack>
 
         {/* Stats & Language Row */}
-        <XStack alignItems="center" justifyContent="space-between" flexWrap="wrap" gap="$3">
+        <XStack alignItems="center" justifyContent="space-between" flexWrap="wrap" gap="3">
           {/* Language Badge */}
-          <XStack alignItems="center" gap="$2" flexShrink={0}>
+          <XStack alignItems="center" gap="2" flexShrink={0}>
             <Circle size={12} backgroundColor={languageColor} />
             <LanguageText>{repo.lang}</LanguageText>
           </XStack>
 
           {/* Stats */}
-          <XStack alignItems="center" gap="$3" flexWrap="wrap">
+          <XStack alignItems="center" gap="3" flexWrap="wrap">
             {/* Stars */}
-            <XStack alignItems="center" gap="$2">
+            <XStack alignItems="center" gap="2">
               <ThemedIcon icon={Star} size={16} color="$onSurfaceVariant" />
               <StatText>{formatStat(stats.stars)}</StatText>
             </XStack>
 
             {/* Forks */}
-            <XStack alignItems="center" gap="$2">
+            <XStack alignItems="center" gap="2">
               <ThemedIcon icon={GitFork} size={16} color="$onSurfaceVariant" />
               <StatText>{formatStat(stats.forks)}</StatText>
             </XStack>
 
             {/* Watchers */}
-            <XStack alignItems="center" gap="$2">
+            <XStack alignItems="center" gap="2">
               <ThemedIcon icon={Eye} size={16} color="$onSurfaceVariant" />
               <StatText>{formatStat(stats.watchers)}</StatText>
             </XStack>

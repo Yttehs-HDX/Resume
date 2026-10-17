@@ -9,16 +9,16 @@ import educationData from '../../data/education.json'
 export function EducationPage() {
   return (
     <PageLayout>
-      <YStack gap="$5" width="100%">
+      <YStack gap="5" width="100%">
         {/* University Education Section */}
-        <YStack gap="$4">
+        <YStack gap="4">
           {educationData.universities.map((university, index) => (
             <UniversityCard key={index} university={university} />
           ))}
         </YStack>
 
         {/* Extracurricular Activities Section */}
-        <YStack gap="$4">
+        <YStack gap="4">
           {educationData.extracurriculars.map((activity, index) => (
             <ExtracurricularCard key={index} activity={activity} />
           ))}

@@ -16,7 +16,7 @@ export function ProfilePage() {
 
   return (
     <PageLayout>
-      <YStack gap="$6" width="100%">
+      <YStack gap="6" width="100%">
         <Avatar
           fullName={profileData.fullName}
           avatarUrl={profileData.avatarUrl}

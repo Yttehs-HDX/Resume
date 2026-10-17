@@ -33,21 +33,14 @@ export function DrawerItem({ path, label, icon, onClose }: DrawerItemProps) {
     >
       {({ isActive }) => (
         <XStack
-          paddingVertical="$3"
-          paddingHorizontal="$4"
-          borderRadius="$6"
-          backgroundColor={isActive ? '$secondaryContainer' : 'transparent'}
+          paddingVertical="3"
+          paddingHorizontal="4"
+          borderRadius="6"
+          backgroundColor={isActive ? 'secondaryContainer' : 'transparent hover:surfaceContainerHighest'}
           cursor="pointer"
-          gap="$3"
+          gap="3"
           alignItems="center"
-          hoverStyle={{
-            backgroundColor: isActive
-              ? '$secondaryContainer'
-              : '$surfaceContainerHighest',
-          }}
-          pressStyle={{
-            opacity: 0.8,
-          }}
+          opacity="press:0.8"
         >
           {icon && (
             <IconWrapper>
@@ -63,7 +56,7 @@ export function DrawerItem({ path, label, icon, onClose }: DrawerItemProps) {
           <Text
             fontSize={16}
             fontWeight={isActive ? '600' : '400'}
-            color={isActive ? '$onSecondaryContainer' : '$onSurface'}
+            color={isActive ? 'onSecondaryContainer' : 'onSurface'}
             letterSpacing={0.25}
           >
             {label}

@@ -11,39 +11,39 @@ import type { LucideIcon } from 'lucide-react'
 import { Card, ThemedIcon } from '../../../components/common'
 
 const TitleText = styled(Text, {
-  color: '$onSurface',
+  color: "onSurface",
   fontSize: 18,
   fontWeight: '700',
-  lineHeight: 26,
-  letterSpacing: 0.1,
+  lineHeight: "26px",
+  letterSpacing: 0.1
 })
 
 const CategoryTitle = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 14,
   fontWeight: '600',
-  lineHeight: 20,
-  letterSpacing: 0.1,
+  lineHeight: "20px",
+  letterSpacing: 0.1
 })
 
 const ToolChip = styled(XStack, {
-  backgroundColor: '$tertiaryContainer',
-  paddingHorizontal: '$3',
-  paddingVertical: '$2',
-  borderRadius: '$2',
+  backgroundColor: "tertiaryContainer",
+  paddingHorizontal: "3",
+  paddingVertical: "2",
+  borderRadius: "2"
 })
 
 const ToolText = styled(Text, {
-  color: '$onTertiaryContainer',
+  color: "onTertiaryContainer",
   fontSize: 13,
-  lineHeight: 18,
-  letterSpacing: 0.25,
+  lineHeight: "18px",
+  letterSpacing: 0.25
 })
 
 const DividerLine = styled(XStack, {
   height: 1,
-  backgroundColor: '$outlineVariant',
-  width: '100%',
+  backgroundColor: "outlineVariant",
+  width: '100%'
 })
 
 interface Tools {
@@ -81,13 +81,13 @@ const categories: CategoryConfig[] = [
 export function ToolsCard({ tools }: ToolsCardProps) {
   return (
     <Card>
-      <YStack gap="$4">
+      <YStack gap="4">
         {/* Header */}
-        <XStack gap="$2" alignItems="center">
+        <XStack gap="2" alignItems="center">
           <XStack
             width={40}
             height={40}
-            backgroundColor="$tertiaryContainer"
+            backgroundColor="tertiaryContainer"
             borderRadius={20}
             alignItems="center"
             justifyContent="center"
@@ -103,15 +103,15 @@ export function ToolsCard({ tools }: ToolsCardProps) {
           const IconComponent = category.icon
           
           return (
-            <YStack key={category.key} gap="$3">
+            <YStack key={category.key} gap="3">
               {index > 0 && <DividerLine />}
               
-              <XStack gap="$2" alignItems="center">
+              <XStack gap="2" alignItems="center">
                 <ThemedIcon icon={IconComponent} size={16} color="$onSurfaceVariant" />
                 <CategoryTitle>{category.label}</CategoryTitle>
               </XStack>
               
-              <XStack gap="$2" flexWrap="wrap">
+              <XStack gap="2" flexWrap="wrap">
                 {toolsList.map((tool, toolIndex) => (
                   <ToolChip key={toolIndex}>
                     <ToolText>{tool}</ToolText>

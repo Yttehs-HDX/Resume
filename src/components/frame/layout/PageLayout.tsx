@@ -7,9 +7,9 @@ import { Spacer } from '../../common'
  */
 const PageContainer = styled(YStack, {
   flex: 1,
-  padding: '$6',
-  gap: '$5',
-  backgroundColor: '$background',
+  padding: "6",
+  gap: "5",
+  backgroundColor: "background"
 })
 
 /**

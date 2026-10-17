@@ -10,7 +10,7 @@ import skillData from '../../data/skill.json'
 export function SkillPage() {
   return (
     <PageLayout>
-      <YStack gap="$5" width="100%">
+      <YStack gap="5" width="100%">
         {/* Skills Summary Section */}
         <SkillSummary summary={skillData.summary} />
 
@@ -18,7 +18,7 @@ export function SkillPage() {
         <ToolsCard tools={skillData.tools} />
 
         {/* Individual Skills Section */}
-        <YStack gap="$4">
+        <YStack gap="4">
           {skillData.skills.map((skill, index) => (
             <SkillCard key={index} skill={skill} />
           ))}

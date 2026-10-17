@@ -12,8 +12,8 @@ export function LookingForCard({ lookingForMd }: LookingForCardProps) {
   const content = typeof lookingForMd === 'string' ? lookingForMd.trim() : ''
 
   return (
-    <PrimaryCard width="100%" flexDirection="column" gap="$3">
-      <Text fontSize={22} fontWeight="500" color="$onPrimaryContainer">
+    <PrimaryCard width="100%" flexDirection="column" gap="3">
+      <Text fontSize={22} fontWeight="500" color="onPrimaryContainer">
         正在寻找
       </Text>
       {content.length > 0 ? <Markdown tone="primary">{content}</Markdown> : null}

@@ -4,48 +4,48 @@ import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
-  color: '$onSurface',
+  color: "onSurface",
   fontSize: 20,
   fontWeight: '600',
-  lineHeight: 28,
-  letterSpacing: 0.15,
+  lineHeight: "28px",
+  letterSpacing: 0.15
 })
 
 const SubtitleText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 16,
-  lineHeight: 24,
-  letterSpacing: 0.15,
+  lineHeight: "24px",
+  letterSpacing: 0.15
 })
 
 const CaptionText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 14,
-  lineHeight: 20,
-  letterSpacing: 0.4,
+  lineHeight: "20px",
+  letterSpacing: 0.4
 })
 
 const BodyText = styled(Text, {
-  color: '$onSurface',
+  color: "onSurface",
   fontSize: 14,
-  lineHeight: 20,
-  letterSpacing: 0.25,
+  lineHeight: "20px",
+  letterSpacing: 0.25
 })
 
 const RoleChip = styled(XStack, {
-  backgroundColor: '$primaryContainer',
-  paddingHorizontal: '$3',
-  paddingVertical: '$2',
-  borderRadius: '$2',
-  alignSelf: 'flex-start',
+  backgroundColor: "primaryContainer",
+  paddingHorizontal: "3",
+  paddingVertical: "2",
+  borderRadius: "2",
+  alignSelf: 'flex-start'
 })
 
 const RoleText = styled(Text, {
-  color: '$onPrimaryContainer',
+  color: "onPrimaryContainer",
   fontSize: 13,
-  lineHeight: 18,
+  lineHeight: "18px",
   letterSpacing: 0.25,
-  fontWeight: '500',
+  fontWeight: '500'
 })
 
 interface Internship {
@@ -72,13 +72,13 @@ export function IntershipCard({ internship }: IntershipCardProps) {
 
   return (
     <Card>
-      <YStack gap="$3">
+      <YStack gap="3">
         {/* Header with Icon and Company Name */}
-        <XStack gap="$3" alignItems="center">
+        <XStack gap="3" alignItems="center">
           <XStack
             width={40}
             height={40}
-            backgroundColor="$primaryContainer"
+            backgroundColor="primaryContainer"
             borderRadius={20}
             alignItems="center"
             justifyContent="center"
@@ -91,7 +91,7 @@ export function IntershipCard({ internship }: IntershipCardProps) {
         </XStack>
 
         {/* Department and Date */}
-        <YStack gap="$1">
+        <YStack gap="1">
           <SubtitleText>{internship.department}</SubtitleText>
           <CaptionText>{formatDate(internship.startDate, internship.endDate)}</CaptionText>
         </YStack>
@@ -103,12 +103,12 @@ export function IntershipCard({ internship }: IntershipCardProps) {
 
         {/* Description/Responsibilities */}
         {internship.description && internship.description.length > 0 && (
-          <YStack gap="$2" paddingTop="$1">
+          <YStack gap="2" paddingTop="1">
             <CaptionText fontWeight="600">工作内容</CaptionText>
-            <YStack gap="$2">
+            <YStack gap="2">
               {internship.description.map((desc, index) => (
-                <XStack key={index} gap="$2" alignItems="flex-start">
-                  <Text color="$onSurfaceVariant" fontSize={14}>•</Text>
+                <XStack key={index} gap="2" alignItems="flex-start">
+                  <Text color="onSurfaceVariant" fontSize={14}>•</Text>
                   <BodyText flex={1}>{desc}</BodyText>
                 </XStack>
               ))}

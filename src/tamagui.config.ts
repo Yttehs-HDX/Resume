@@ -103,7 +103,6 @@ const customTokens = createTokens({
     10: 48,
     11: 56,
     12: 64,
-    true: 16,
   },
   size: {
     0: 0,
@@ -119,7 +118,6 @@ const customTokens = createTokens({
     10: 48,
     11: 56,
     12: 64,
-    true: 16,
   },
   // Material You border radius specifications
   radius: {
@@ -133,7 +131,6 @@ const customTokens = createTokens({
     7: 32,
     8: 40,
     9: 48,
-    true: 12,
   },
   zIndex: {
     0: 0,

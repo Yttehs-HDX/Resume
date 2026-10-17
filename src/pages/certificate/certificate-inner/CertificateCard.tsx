@@ -4,36 +4,36 @@ import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
-  color: '$onSurface',
+  color: "onSurface",
   fontSize: 18,
   fontWeight: '700',
-  lineHeight: 26,
-  letterSpacing: 0.1,
+  lineHeight: "26px",
+  letterSpacing: 0.1
 })
 
 const DateText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 12,
-  lineHeight: 16,
+  lineHeight: "16px",
   letterSpacing: 0.5,
   fontWeight: '500',
-  textTransform: 'uppercase',
+  textTransform: 'uppercase'
 })
 
 const LevelBadge = styled(XStack, {
-  backgroundColor: '$tertiary',
-  paddingHorizontal: '$2',
-  paddingVertical: '$2.5',
-  borderRadius: '$3',
-  alignSelf: 'flex-start',
+  backgroundColor: "tertiary",
+  paddingHorizontal: "2",
+  paddingVertical: "2-5",
+  borderRadius: "3",
+  alignSelf: 'flex-start'
 })
 
 const LevelText = styled(Text, {
-  color: '$onTertiary',
+  color: "onTertiary",
   fontSize: 14,
-  lineHeight: 20,
+  lineHeight: "20px",
   letterSpacing: 0.1,
-  fontWeight: '700',
+  fontWeight: '700'
 })
 
 interface Certificate {
@@ -56,12 +56,12 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
 
   return (
     <Card>
-      <XStack gap="$4" alignItems="center" width="100%">
+      <XStack gap="4" alignItems="center" width="100%">
         {/* Icon Section - Different colors based on award status */}
         <XStack
           width={56}
           height={56}
-          backgroundColor={hasAward ? '$tertiaryContainer' : '$secondaryContainer'}
+          backgroundColor={hasAward ? 'tertiaryContainer' : 'secondaryContainer'}
           borderRadius={28}
           alignItems="center"
           justifyContent="center"
@@ -75,7 +75,7 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
         </XStack>
 
         {/* Content Section */}
-        <YStack flex={1} gap="$2">
+        <YStack flex={1} gap="2">
           {/* Certificate Name */}
           <TitleText>{certificate.name}</TitleText>
           

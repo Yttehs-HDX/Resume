@@ -4,32 +4,32 @@ import { ThemedIcon } from '../../../components/common'
 import { Card } from '../../../components/common'
 
 const TitleText = styled(Text, {
-  color: '$onSurface',
+  color: "onSurface",
   fontSize: 18,
   fontWeight: '600',
-  lineHeight: 24,
-  letterSpacing: 0.15,
+  lineHeight: "24px",
+  letterSpacing: 0.15
 })
 
 const SubtitleText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 15,
-  lineHeight: 22,
-  letterSpacing: 0.15,
+  lineHeight: "22px",
+  letterSpacing: 0.15
 })
 
 const CaptionText = styled(Text, {
-  color: '$onSurfaceVariant',
+  color: "onSurfaceVariant",
   fontSize: 14,
-  lineHeight: 20,
-  letterSpacing: 0.4,
+  lineHeight: "20px",
+  letterSpacing: 0.4
 })
 
 const BodyText = styled(Text, {
-  color: '$onSurface',
+  color: "onSurface",
   fontSize: 14,
-  lineHeight: 20,
-  letterSpacing: 0.25,
+  lineHeight: "20px",
+  letterSpacing: 0.25
 })
 
 interface Extracurricular {
@@ -55,13 +55,13 @@ export function ExtracurricularCard({ activity }: ExtracurricularCardProps) {
 
   return (
     <Card>
-      <YStack gap="$3">
+      <YStack gap="3">
         {/* Header with Icon and Title */}
-        <XStack gap="$3" alignItems="center">
+        <XStack gap="3" alignItems="center">
           <XStack
             width={40}
             height={40}
-            backgroundColor="$tertiaryContainer"
+            backgroundColor="tertiaryContainer"
             borderRadius={20}
             alignItems="center"
             justifyContent="center"
@@ -74,14 +74,14 @@ export function ExtracurricularCard({ activity }: ExtracurricularCardProps) {
         </XStack>
 
         {/* Role and Date */}
-        <YStack gap="$1">
+        <YStack gap="1">
           <SubtitleText>{activity.role}</SubtitleText>
           <CaptionText>{formatDate(activity.startDate, activity.endDate)}</CaptionText>
         </YStack>
 
         {/* Description */}
         {activity.description && activity.description.length > 0 && (
-          <YStack gap="$2">
+          <YStack gap="2">
             {activity.description.map((desc, index) => (
               <BodyText key={index}>{desc}</BodyText>
             ))}

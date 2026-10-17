@@ -1,4 +1,5 @@
 import { Button } from 'tamagui'
+import { ThemedIcon } from '../../common'
 import { GitBranch } from 'lucide-react'
 import basicData from '../../../data/basic.json'
 
@@ -15,21 +16,16 @@ export function SourceCodeButton() {
       style={{ textDecoration: 'none' }}
     >
       <Button
-        size="$9"
-        circular
-        backgroundColor="$surfaceContainerHighest"
+        size={false}
+        backgroundColor="surfaceContainerHighest hover:surfaceContainerHigh press:surfaceContainer"
         width={48}
         height={48}
-        hoverStyle={{
-          backgroundColor: '$surfaceContainerHigh',
-        }}
-        pressStyle={{
-          backgroundColor: '$surfaceContainer',
-        }}
-        icon={GitBranch}
-        scaleIcon={1.4}
+        borderRadius={24}
+        padding={0}
         aria-label="View source code"
-      />
+      >
+        <ThemedIcon icon={GitBranch} size={24} color="$onSurface" />
+      </Button>
     </a>
   )
 }

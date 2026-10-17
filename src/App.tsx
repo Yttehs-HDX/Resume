@@ -32,7 +32,7 @@ export function App() {
     <TamaguiProvider config={tamaguiConfig} defaultTheme={getSystemTheme()}>
       <Theme name={theme}>
         <BrowserRouter>
-          <XStack fullscreen>
+          <XStack position="absolute" inset={0}>
             <Drawer name={profileData.name} isOpen={isDrawerOpen} onClose={closeDrawer} />
 
             <MainContent
